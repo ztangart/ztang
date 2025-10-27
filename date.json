@@ -1,0 +1,2215 @@
+{
+  "urls": {
+    "欧洲-匈牙利": [
+      {
+        "id": 1761291851700,
+        "title": "布达佩斯博物馆",
+        "url": "https://www.mfab.hu/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394153237,
+        "title": "雕塑艺术博物馆",
+        "url": "https://www.szepmuveszeti.hu/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "欧洲-荷兰": [
+      {
+        "id": 1761291938976,
+        "title": "荷兰国立博物馆",
+        "url": "https://www.rijksmuseum.nl/zh/visit",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "欧洲-意大利": [
+      {
+        "id": 1761293424390,
+        "title": "漫步意大利",
+        "url": "https://www.walksofitaly.com/",
+        "description": "一个意大利旅行组织的网站，里面有很多“旅游照”。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761293997319,
+        "title": "GALLERIA BORGHESE（博尔盖塞美术馆）",
+        "url": "https://www.collezionegalleriaborghese.it/en",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761294021730,
+        "title": "GALLERIA BORGHESE（博尔盖塞美术馆简介）",
+        "url": "https://zh.borghese.gallery/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761294713383,
+        "title": "Pinacoteca di Brera（布雷拉美术馆）",
+        "url": "https://pinacotecabrera.org/en/",
+        "description": "米兰",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761294898240,
+        "title": "THE CLEVELANDMUSEUM OF ART（克利夫兰艺术博物馆）",
+        "url": "https://www.clevelandart.org/home",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393699903,
+        "title": "乌菲齐美术馆",
+        "url": "https://www.uffizi.it/en",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393897833,
+        "title": "在线虚拟指导-乌菲齐美术馆",
+        "url": "https://www.virtualuffizi.com/zh/",
+        "description": "佛罗伦萨",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394057358,
+        "title": "Veneranda Biblioteca Ambrosiana",
+        "url": "https://ambrosiana.it/en/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394599473,
+        "title": "巴杰罗美术馆",
+        "url": "https://bargellomusei.it/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394630047,
+        "title": "学院美术馆",
+        "url": "https://www.galleriaaccademiafirenze.it/en/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "日本": [
+      {
+        "id": 1761295802477,
+        "title": "大阪市立美术馆",
+        "url": "https://www.osaka-art-museum.jp/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761299709898,
+        "title": "日本木刻版画",
+        "url": "https://ukiyo-e.org/",
+        "description": "浮世绘等作品。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "欧洲-法国": [
+      {
+        "id": 1761295855383,
+        "title": "巴黎博物馆",
+        "url": "https://www.parismusees.paris.fr/fr",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "美国-综合": [
+      {
+        "id": 1761295520420,
+        "title": "美国国家美术馆",
+        "url": "https://www.nga.gov/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761302803756,
+        "title": "大都会艺术博物馆",
+        "url": "https://www.metmuseum.org/",
+        "description": "The Metropolitan Museum of Art。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761302810603,
+        "title": "国际印刷博物馆",
+        "url": "https://www.printmuseum.org/",
+        "description": "The International Printing Museum",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761302822707,
+        "title": "美国艺术博物馆",
+        "url": "https://americanart.si.edu/",
+        "description": "史密森尼学会下设组织。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761302848275,
+        "title": "亚洲艺术国家博物馆",
+        "url": "https://asia.si.edu/",
+        "description": "NATIONAL MUSEUM Of ASIANART，史密森尼学会下设组织。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761302858325,
+        "title": "史密森尼学会",
+        "url": "https://www.si.edu/",
+        "description": "Smithsonian。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "英国-综合": [
+      {
+        "id": 1761295453580,
+        "title": "英国国家美术馆",
+        "url": "https://www.nationalgallery.org.uk/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761295830573,
+        "title": "大英博物馆",
+        "url": "https://www.britishmuseum.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "中国-上海市": [
+      {
+        "id": 1761300033654,
+        "title": "中华艺术宫",
+        "url": "https://www.artmuseumonline.org/art/art/index.html",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311227575,
+        "title": "复旦印谱文献虚拟图书馆",
+        "url": "https://yin.fudan.edu.cn/#/home",
+        "description": "2019年，复旦大学图书馆基于林章松先生捐赠，建设了“印藏——印谱文献虚拟图书馆”，向互联网用户提供丰富的数字化印谱文献资源。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "中国-甘肃省": [
+      {
+        "id": 1761296429998,
+        "title": "敦煌研究院",
+        "url": "https://www.dha.ac.cn/index.htm",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "中国-河南省": [
+      {
+        "id": 1761287323877,
+        "title": "河南博物院",
+        "url": "https://www.chnmus.net/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761287349190,
+        "title": "郑州博物馆",
+        "url": "https://www.hnzzmuseum.com/index",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-浙江省": [
+      {
+        "id": 1761289687212,
+        "title": "中国美术学院美术馆",
+        "url": "https://caam.caa.edu.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761289843727,
+        "title": "中国国际设计博物馆",
+        "url": "https://cdm.caa.edu.cn/#/home",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761290024056,
+        "title": "中国美术学院民艺博物馆",
+        "url": "https://cm.caa.edu.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-湖北省": [
+      {
+        "id": 1761287387897,
+        "title": "湖北省博物馆",
+        "url": "https://hbsbwg.cjyun.org/home/index.html",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-湖南省": [
+      {
+        "id": 1761287462962,
+        "title": "湖南博物院",
+        "url": "https://www.hnmuseum.com/zh-hans",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-四川省": [
+      {
+        "id": 1761287362863,
+        "title": "成都博物馆",
+        "url": "https://cdmuseum.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-山东省": [
+      {
+        "id": 1761288552832,
+        "title": "滕州博物馆",
+        "url": "http://www.tengzhoumuseum.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "中国-北京市": [
+      {
+        "id": 1761287399553,
+        "title": "中国国家博物馆",
+        "url": "https://www.chnmuseum.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761287409572,
+        "title": "故宫博物院",
+        "url": "https://www.dpm.org.cn/Home.html",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761289857227,
+        "title": "中央美术学院美术馆",
+        "url": "https://www.cafamuseum.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761287376205,
+        "title": "保利艺术博物馆",
+        "url": "http://www.polyartmuseum.com/sy",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761300827315,
+        "title": "UCCA",
+        "url": "https://www.ucca.org.cn/",
+        "description": "尤伦斯当代艺术中心",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "中国-台湾省": [
+      {
+        "id": 1761287500495,
+        "title": "台湾博物馆",
+        "url": "https://www.ntm.gov.tw/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      }
+    ],
+    "在线数据库-画廊市场": [
+      {
+        "id": 1761300247660,
+        "title": "Alamy社区",
+        "url": "https://www.alamy.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [
+          "商用图像"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761300458978,
+        "title": "artnet",
+        "url": "https://www.artnet.com/",
+        "description": "当代艺术画廊",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761300575740,
+        "title": "十竹斋",
+        "url": "https://www.bambooart.net/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761300480983,
+        "title": "荣宝斋",
+        "url": "https://www.rongbaozhai.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304216556,
+        "title": "Artchive",
+        "url": "https://www.artchive.com/",
+        "description": "一个在线艺术画廊。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304173927,
+        "title": "Arthive",
+        "url": "https://arthive.com/zh",
+        "description": "一个集中画家、收藏家和艺术品经销商的社区，旨在让艺术品发布、收藏、管理、买卖变得更加容易。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761300270556,
+        "title": "视觉中国",
+        "url": "https://www.vcg.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [
+          "商用图像"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761304347409,
+        "title": "WahooArt",
+        "url": "https://es.wahooart.com/",
+        "description": "美术复制品画廊，同时拥有广泛的艺术家艺术品和传记数据库。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304470849,
+        "title": "奇文雲海",
+        "url": "https://qwyh.com/",
+        "description": "有一些自主设计的免费字体。奇文雲海設計顧問（北京）成立於2004年，是一家專注視覺設計、品牌方案、出版策劃、空間設計的設計機構。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393057386,
+        "title": "feel the art",
+        "url": "https://app.fta.art/zh",
+        "description": "具有app端，可创建自己的画廊。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "在线数据库-百科资讯": [
+      {
+        "id": 1761304700655,
+        "title": "百度百科-艺术百科",
+        "url": "https://baike.baidu.com/art",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304767152,
+        "title": "美术网",
+        "url": "https://www.mei-shu.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304781292,
+        "title": "张雄艺术网",
+        "url": "https://www.zxart.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304863797,
+        "title": "中央美术学院艺术资讯网",
+        "url": "https://www.cafa.com.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304912013,
+        "title": "中国书画网",
+        "url": "http://www.chinashj.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304920179,
+        "title": "美术百科",
+        "url": "http://www.artpc.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761303836399,
+        "title": "MutualArt",
+        "url": "https://www.mutualart.com/",
+        "description": "一个艺术百科和艺术市场的网站。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761303995952,
+        "title": "THE ART STORY",
+        "url": "https://www.theartstory.org/",
+        "description": "一个艺术百科指南网站。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304612633,
+        "title": "中国文艺网",
+        "url": "https://www.cflac.org.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304636013,
+        "title": "央博官网",
+        "url": "https://yangbo.cctv.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304667213,
+        "title": "艺术中国",
+        "url": "http://art.china.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304990204,
+        "title": "Artlib世界艺术鉴赏库",
+        "url": "https://www.artlib.cn/login",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761299796702,
+        "title": "百度百科-博物馆计划",
+        "url": "https://baike.baidu.com/museum",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305162825,
+        "title": "艺术百科全书",
+        "url": "http://www.visual-arts-cork.com/",
+        "description": "Art Encyclopedia",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304728633,
+        "title": "雅昌艺术网",
+        "url": "https://www.artron.net/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761304748006,
+        "title": "卓克艺术中心",
+        "url": "http://www.zhuokearts.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394081726,
+        "title": "艺术百科",
+        "url": "https://www.pic699.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394516738,
+        "title": "ArtHerstory",
+        "url": "https://artherstory.net/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "在线数据库-数字平台": [
+      {
+        "id": 1761288717165,
+        "title": "鲤画美术馆",
+        "url": "https://lihuams.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761289820058,
+        "title": "ArchDaily",
+        "url": "https://www.archdaily.cn/cn?ad_name=small-logo",
+        "description": "全球建筑平台",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761290310224,
+        "title": "世界珍宝馆",
+        "url": "https://zbg.art/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761290450113,
+        "title": "Jstor-图像",
+        "url": "https://www.jstor.org/images",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761291108291,
+        "title": "collection（探索健康和人类体验的免费博物馆和图书馆）",
+        "url": "https://wellcomecollection.org/",
+        "description": "Wellcome Collection 是一个免费的博物馆和图书馆",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761295060449,
+        "title": " Gallerix",
+        "url": "https://gallerix.asia/",
+        "description": "Gallerix网站自 2009 年起开始运营，目前是世界上最大的虚拟绘画博物馆之一，既有经典绘画，也有当代作家的作品。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296167882,
+        "title": "盖蒂艺术",
+        "url": "https://www.getty.edu/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296270788,
+        "title": "ArtsLife",
+        "url": "https://artslife.com/",
+        "description": "意大利米兰",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296493424,
+        "title": "数字敦煌",
+        "url": "https://www.e-dunhuang.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296763640,
+        "title": "数字丝绸之路",
+        "url": "https://dsr.nii.ac.jp/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296823256,
+        "title": "中国汉代图像信息数据库",
+        "url": "http://art.han-art.net/main.asp?mod=guest&lang=",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761299666121,
+        "title": "联合国世界遗产",
+        "url": "https://whc.unesco.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761299747729,
+        "title": "Theoi 项目",
+        "url": "https://www.theoi.com/",
+        "description": "这是一个探索希腊神话和古典文学和艺术中的众神的网站。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761303769042,
+        "title": "DANAE",
+        "url": "https://www.danae.io/",
+        "description": "当代数字艺术平台。DANAE成立于2021年，在这里区块链、数字艺术和策展需求相遇。该平台以其创新的艺术合作和标志性项目而脱颖而出，例如KoheiNawa在巴黎创作的纪念雕塑Ether(平等)，以及艺术家JudyChicago的参与性数字作品的策展，该作品在纽约新博物馆举行了回顾展。在她的推动下，DANAE成为当代数字艺术的重要参与者，通过结合丰富的艺术资源、技术创新和对新兴艺术家的支持，以及对成熟艺术家的培养。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761293261139,
+        "title": "名画档案",
+        "url": "https://art.ss.net.tw/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761290795282,
+        "title": "wikiart",
+        "url": "https://www.wikiart.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761296349290,
+        "title": "画园网",
+        "url": "https://www.budarts.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311410973,
+        "title": "翰墨风雅碑帖网",
+        "url": "http://www.beitiewang.com/Index.html",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393775046,
+        "title": "classicalcanvas",
+        "url": "https://classicalcanvas.org/",
+        "description": "个人小站，补充用。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394309163,
+        "title": "artvee",
+        "url": "https://artvee.com/",
+        "description": "个人小站",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761394879059,
+        "title": "Unesco数字博物馆",
+        "url": "https://museum.unesco.org/",
+        "description": "该博物馆将作品3D扫描至云上。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "期刊杂志-综合": [
+      {
+        "id": 1761308798086,
+        "title": "美国：历史和生活",
+        "url": "https://about.ebsco.com/zh-cn/products/research-databases/america-history-and-life ",
+        "description": "America: History and Life 收录了经过严格筛选且被索引的开放获取 (OA) 期刊，包括 168 种全球 OA 期刊，该数字还将持续增长。一旦经过收录验证和认证，这些 OA 期刊将使用高质量的主题索引和复杂、精确的全文链接进行处理。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308979338,
+        "title": "加州大学eScholarship计划",
+        "url": "https://escholarship.org/",
+        "description": "加州大学(University of California)eScholarship计划。该计划为研究机构和学者提供开源的学术资源，目前已经收录28976篇期刊论文、48822篇学位论文、2196本学术专著。可直接下载pdf格式，无需注册登录。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309648768,
+        "title": "国立情报学研究所",
+        "url": "https://cir.nii.ac.jp/",
+        "description": "CiNii是日本国立情报研究所(National Institute of Informatics，简称NII) 运营的学术论文数据库，收录了日本各学术机构及团体的期刊论文和大学学报论文，并可通过检索获取日本国会图书馆“日文期刊索引数据库”所收录的论文，索引文献较多，并含有相当数量的全文文献。部分论文标题下有跳转链接，可供参阅或下载。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393219848,
+        "title": "罗马帝国时代",
+        "url": "https://romanempiretimes.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "世界古籍-中国古籍综合": [
+      {
+        "id": 1761306263519,
+        "title": "中华古籍智慧化服务平台",
+        "url": "https://guji.nlc.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306273711,
+        "title": "识典古籍",
+        "url": "https://www.shidianguji.com/?page_from=profile",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306290759,
+        "title": "全球漢籍影像開放集成系統",
+        "url": "https://guji.wenxianxue.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306302788,
+        "title": "中华古籍资源库",
+        "url": "http://read.nlc.cn/thematDataSearch/toGujiIndex",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306728510,
+        "title": "中华古典文库",
+        "url": "https://www.zhonghuashu.com/",
+        "description": "个人小站，补充用。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306742879,
+        "title": "中国哲学书电子化计划",
+        "url": "https://ctext.org/zh",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306779913,
+        "title": "百万古籍库",
+        "url": "https://www.fozhu920.com/",
+        "description": "个人小站，旁且杂，补充用。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306801139,
+        "title": "古籍文献知识图谱网",
+        "url": "https://cnkgraph.com/",
+        "description": "对部分古籍进行了初步数字化，地图标注历代名人。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761307058259,
+        "title": "上海图书馆古籍联合目录及循证平台",
+        "url": "https://gj.library.sh.cn/index",
+        "description": "目前收錄有1400余家機構的古籍館藏目錄，該項目旨在藉由分佈式雲平臺技術和關聯語義技術，實現各館現存古籍珍藏的聯合查詢、規範控制，並提供學者循證版本、考鏡流藏之功用。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761307191708,
+        "title": "民国时期文献",
+        "url": "http://read.nlc.cn/specialResourse/minguoIndex",
+        "description": "“民国时期文献”是国家图书馆自建的数字化平台，包括民国图书、民国法律、民国期刊和民国报纸四个子库。其中民国图书资源库有民国图书96497种，民国法律资源库有8113条民国时期颁布的法律法规，民国期刊资源库有民国期刊5708种，民国报纸资源库报纸种类较少，仅有《益世报》《华北日报》《新华日报》和《大刚报》4种，但内容十分清晰。上述资源均可登录国家图书馆读者云门户后在线阅读。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761307229430,
+        "title": "近代图书知识库-上海图书馆",
+        "url": "https://jdts.library.sh.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306316246,
+        "title": "中华古籍资源库",
+        "url": "https://jingdian.ancientbooks.cn/6",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306331446,
+        "title": "汉籍全文资料库",
+        "url": "https://hanchi.ihp.sinica.edu.tw/ihp/hanji.htm",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306371840,
+        "title": "日本所藏中文古籍數據庫",
+        "url": "http://kanji.zinbun.kyoto-u.ac.jp/kanseki?detail",
+        "description": "不稳定。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306382963,
+        "title": "书同文古籍数据库",
+        "url": "https://guji.unihan.com.cn/",
+        "description": "需要注册申请。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306423029,
+        "title": "籍合网",
+        "url": "ttps://www.ancientbooks.cn/",
+        "description": "费用较高，具有木版年画、殷墟甲骨、中华石刻等各专题数据库。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306444568,
+        "title": "高校古文献資源庫读者检索系统",
+        "url": "http://rbsc.calis.edu.cn:8086/aopac/jsp/indexXyjg.jsp",
+        "description": "不稳定。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306680171,
+        "title": "文心阁古籍数据库",
+        "url": "http://gu.gujiyun.cn/wenxinge/home/doc/index.do",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309616532,
+        "title": "汇典网",
+        "url": "https://www.gujidh.com/home",
+        "description": "需付费，基于上海古籍出版社相关古籍资源。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761312194970,
+        "title": "汉典重光",
+        "url": "https://wenyuan.aliyun.com/home",
+        "description": "古籍数字化平台",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761312274918,
+        "title": "哈佛燕京图书馆善本古籍馆藏",
+        "url": "https://www.shidianguji.com/collection/harvard-yenching?enter_from=shidian",
+        "description": "哈佛大学馆藏中国珍稀善本全文数据库。（不稳定入口：Chinese Rare Books - CURIOSity Digital Collections哈佛大学馆藏中国珍稀善本全文数据库）",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396009944,
+        "title": "5000言国学经典",
+        "url": "https://5000yan.com/",
+        "description": "个人小站，杂乱补充用。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "世界古籍-外国古籍综合": [
+      {
+        "id": 1761308074620,
+        "title": "日本国立公文書館 デジタルアーカイブ",
+        "url": "https://www.digital.archives.go.jp/",
+        "description": "具有古籍插图、地图等图像资源。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308094541,
+        "title": "石刻拓本石刻拓本メニュー",
+        "url": "http://kanji.zinbun.kyoto-u.ac.jp/db-machine/imgsrv/takuhon/t_menu.html",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308114174,
+        "title": "CBETA 線上閱讀",
+        "url": "https://cbetaonline.cn/zh/",
+        "description": "主要收录佛经古籍",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308822634,
+        "title": "国立国会図書館デジタルコレクション",
+        "url": "https://dl.ndl.go.jp/",
+        "description": "国立国会图书馆数字收藏是可以检索、阅览国立国会图书馆收集、保存的数字资料的服务（收集、保存的网站、CD/DVD等成套软件除外），涉及图书、杂志、古典资料、博士论文、学术机构、公文等电子资源。可输入中文繁体字检索，可在线阅览及下载大量图书资源，不少论文可全文pdf下载。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308847368,
+        "title": "世界历史资源中心",
+        "url": "https://www.gale.com/Gale",
+        "description": "Gale是Cengage Group的一部分，与世界各地的图书馆员和教育工作者合作，通过用户友好的技术将学习者与基本内容联系起来，增强体验并提高学习成果。65年来，Gale与世界各地的学术机构、学校和公共图书馆合作，帮助发现知识和见解，推动传统研究的边界，并在生活的各个领域促进学习者的发展。我们在为学生、教育工作者和图书馆提供权威内容方面有着悠久的历史，并尊重我们作为值得信赖的信息出版商和聚合者的角色。我们的团队很自豪能够帮助图书馆向多元化的学习者群体提供必要的内容。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308868601,
+        "title": "上海图书馆 - 馆藏旧版西文文献目录数据库",
+        "url": "http://search.library.sh.cn/jiuxiwen/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308937053,
+        "title": "德国数字图书馆",
+        "url": "https://www.deutsche-digitale-bibliothek.de/newspaper",
+        "description": "德国数字图书馆（The Deutsche Digitale Bibliothek）报刊数据库（German Newspaper Portal）。收录了1671至1950年间的历史报刊。本数据库支持全文检索，并可按新闻标题、报刊发售地、发售时间浏览。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309006053,
+        "title": "英国国家档案馆",
+        "url": "https://www.nationalarchives.gov.uk/",
+        "description": "英国国家档案馆。该网站的“研究指南”( research guides ）一栏目前被归纳为12个主题：家庭史，主要涉及服军役记录、遗嘱和人口普查数据等方面；第一次世界大战及第二次世界大战，主要涉及第一次世界大战和第二次世界大战期间的各项军事档案文献，如士兵名册等以及大战中的国际关系等。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309199634,
+        "title": "韩国古籍综合数据库",
+        "url": "http://db.itkc.or.krriss/",
+        "description": "韩国古典综合数据库是一个综合数据库，可以图文对照，全文检索。主要栏目：古典翻译书（고전번역서）、古典原文（고전원문）、韩国文集丛刊（한국문집총간）、朝鲜王朝实录（조선왕조실록）、承政院日记（승정원일기）、日省录（일성록）、经书圣读（경서성독）等等。该数据库收集了大量汉文古籍可供查阅。（该站网址是正确的，但在中国大陆地区偶尔会遇到无法打开的情况。）——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "世界古籍-世界古籍专题": [
+      {
+        "id": 1761308281228,
+        "title": "全球博览会档案：博览会的历史",
+        "url": "https://www.library.upenn.edu/news/worlds-fairs-global-history",
+        "description": "“AMD历史与文化珍稀史料数据库集成”子库之一。收录一个多世纪以来记录了全球著名博览会的历史的各类文献资料，时间覆盖1851-1967年，资料源自世界各地档案馆的馆藏，这些资料包括博览会纪念物、纪念品和个人的记述，以及来自组织委员会的官方记录和国际接待方的官方记录。包括小册子、导游手册、官方目录、期刊、附录和函件在内的材料，从规划阶段到展会结束后留下来的“文化遗产”，包罗万象。还有丰富的可视化材料，包括地图、照片、明信片和插图等。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308328381,
+        "title": "虚拟上海 | Virtual Shanghai",
+        "url": "https://www.virtualshanghai.net/%E6%95%B0%E6%8D%AE/%E8%A1%A8%E6%A0%BC",
+        "description": "“虚拟上海”平台开放空间数据下载。在过去的数十年中，我们积累了大量上海乃至全国的地理空间数据，以此为基础制作了很多GIS矢量图层。当然，由于上海是我们最主要的研究区域，所以有关这座城市的信息相对要全面一些。我们开放了一系列矢量图层供公众使用，它们分别归入了以下四个子库：“上海基础地图”（Shanghai_Basics）、“上海专题地图”（Shanghai_Topics）、“中国基础地图”（China_Basics）以及“中国专题地图”（China_Topics）。“基础地图”主要涉及行政区划（区、县、人口普查）和水文地理等主题，而“专题地图”则关注了一些特定的对象，如人口、死亡和战争等。“基础地图”可以容易地在各种专题研究中反复使用。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308332115,
+        "title": "全球传教团和神学团体",
+        "url": "https://databases.lib.sfu.ca/record/61245133270003610/Global-Missions-and-Theology",
+        "description": "该档案通过主要领导者、普通传教士和重要教会成员的个人叙述、组织记录和传记，提供对19世纪传教活动和仪式的独特见解。此外，还强调了遥远国家和地区，如非洲、斐济和南桑威奇群岛、印度、中国、东南亚、日本和夏威夷的活动。总计23869页，时间范围：1800-1899年，档案来源：Lost Cause Press。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308352792,
+        "title": "历史专著专辑（11个系列）",
+        "url": "https://about.ebsco.com/zh-cn/products/digital-archives/atla-historical-monographs-collectionAtla",
+        "description": "Atla历史专著专辑（11个系列）为历史和宗教研究领域的研究人员提供了超过1,000万页和29,000份有关宗教思想和实践的文档。十一个专题系列为研究人员提供了从13世纪到1922 年的专业内容。研究人员可以查看原始呈现的所有版式、图形和绘图，这些资源为美国和世界历史上的宗教提供背景和观点。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761307215091,
+        "title": "盛宣怀档案知识库-上海图书馆",
+        "url": "https://sd.library.sh.cn/sd/home/index",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308150671,
+        "title": "明实录、清实录",
+        "url": "https://sillok.history.go.kr/mc/main.do;jsessionid=09qSPVs3GCFIQDdZ6bsB9G5WqdTSbvusbyZmnHgR.node30",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761307122263,
+        "title": "两岸关系族谱资料数据库",
+        "url": "http://www.lazpsjk.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306952900,
+        "title": "儒藏",
+        "url": "https://www.rulib.cn/#/",
+        "description": "彙集了最具影響力和代表性的儒學文獻670種，包括傳世文獻、出土文獻和海外文獻，總體規模約2億字。採用最能代表儒家傳統的經、史、子、集四部分類法，按部、類、屬進行分類（出土文獻另列）。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308560173,
+        "title": "历史与文化珍稀史料数据库集成",
+        "url": "https://www.amexplorer.amdigital.co.uk/AMD",
+        "description": "本套数据库由英国AMD（Adam Matthew Digital）学术出版社推出，国内由CINFO提供各项服务与支持，共包含75个数据库，内容涉及世界各国历史、政治、文化与文学等研究范畴，包含珍贵档案、珍稀史料和珍藏手稿等丰富内容，使用界面十分友好，极具美感，获取文献便捷，全面助力于学术研究与主题研讨。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308588448,
+        "title": "探索时代：航海地理大发现（The Age of Exploration）",
+        "url": "https://encyclopediavirginia.org/entries/exploration-the-age-of/",
+        "description": "“AMD历史与文化珍稀史料数据库集成”子库之一。文献收藏聚焦航海时代与全球发现，从早期瓦斯科·达伽马（Vasco da Gama）到克里斯多弗·哥伦布（Christopher Columbus）的航行，从地理大发现到寻找“新世界”，从欧洲全球海外殖民到东西方贸易航道的全面开辟最后到极地航行。探索时间范围跨越5个多世纪内容（时间覆盖：1410-1920年），包括全球探索，科学发现，欧洲殖民扩张，领土争端和贸易航线的开拓，以及发现新大陆与征服新领土。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308607813,
+        "title": "剑桥档案编研在线（GAE）",
+        "url": "https://www.cambridge.org/cm/universitypress/subjects/history/series/cambridge-archive-editions",
+        "description": "GAE基于原始资料的大型数据库，来源为英国国家档案馆和大英博物馆。其内容包括18-20世纪的民族遗产、国家政治、社会、历史、领土和民族等方面问题的大量传真文件、地图等原始资料。这些文件大多来自英国国家档案馆，涉及的主题主要包括领土边界的形成、索赔、争端等。这套文件共分为四个系列，分别是“近东、中东系列”（Near＆Middle East）、“斯拉夫、巴尔干系列”（Slavic＆Balkan）、“东亚、东南亚系列”（East ＆South-East Asia）、“北美系列”（North America），其中第一部分数量最为庞大，超过了960卷。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308631371,
+        "title": "医疗服务与战争年代（Medical Services and Warfare）",
+        "url": "https://www.medicalservicesandwarfare.amdigital.co.uk/",
+        "description": "　“AMD历史与文化珍稀史料数据库集成”子库之一。从军事、科学、专家和个人的视角探索战争前线伤员损伤、治疗和疾病等内容。有关研究人士可以从中研究战争医疗服务的历史，包括X射线、整形手术、假肢、康复、护理以及战后心理治疗等内容，其中收录的文献来源广泛，如英国护士和统计学家弗罗伦斯·南丁格尔(Florence Nightingale)的个人来往信件，大量志愿者、护士、救护车司机的日记，红十字协会的医疗记录与资料等，文献涉及的战争包括克里米亚战争、第二次布尔战争、美国内战和一战等。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308651650,
+        "title": "国际社会史研究所（IISH）",
+        "url": "https://issg.amsterdam/en",
+        "description": "国际社会史研究所-IISG是一个独特的研究所，在全球范围内为科学和社会服务。在国际一级，它产生并提供关于社会不平等的（长期）起源、影响和后果的可靠信息和见解。为了促进这一点，它为全世界的社会历史学家建立了一个国际中心。它提供和制作历史资料和数据，促进社会历史研究，并在开创性的研究项目中进行国际合作。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308674638,
+        "title": "现代世界的形成（The Making of the Modern World）",
+        "url": "https://www.gale.com/primary-sources/the-making-of-the-modern-world",
+        "description": "第一部分：“Goldsmiths-Kress经济学书库，1450—1850年”，结合了两大杰出图书馆馆藏——伦敦大学参议院图书馆的Goldsmiths经济学书库和哈佛大学商学院的Kress商业与经济学文库。这些文献资料有专著、丛书、政治宣传册、宽幅单页文献、公告等。出版物超过61000种，全文超过1200万页。涵盖了商业、金融、社会环境、政治、贸易和运输等领域。\n　第二部分：“1851—1914年”，该系列被带入20世纪早期，主要包含专著、报告、通信、演讲、调研等，扩宽了Gale资源在社会、经济和商业历史以及政治学、技术、工业化和现代企业诞生等方面的国际覆盖。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308690724,
+        "title": "移民史：全球移民潮（ Migration to New Worlds）",
+        "url": "https://www.migration.amdigital.co.uk/",
+        "description": "“AMD历史与文化珍稀史料数据库集成”子库之一。收录跨越两个世纪(19世纪初期到20世纪末期)的大规模移民潮的珍贵资料，源自全球各地二十多家图书馆或档案馆的珍贵馆藏文献资料，主要收录了移民到美国、加拿大和澳大利亚的欧洲移民们的经历，也收录了由中国、日本等亚洲国家移民到美国的经历记述，涵盖大量资料，包括日记、来往信件、旅行日志和剪贴簿等，还包含有官方的文档记录等。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308707638,
+        "title": "游记、景观和世界历史（Travel Writing, Spectacle and World History）",
+        "url": "https://www.travelwriting.amdigital.co.uk/",
+        "description": "收录了主要历史事件的第一手资料，以及妇女生活的详细兴趣与题材，提供了城市、文化与民俗的快照，描绘了现代旅游与旅行业的发展。内容主要有：移民与日常生活，教务工作，美国的边境生活，教育，观光、假日与旅游，民俗、文化与休闲等。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761308897513,
+        "title": "中世纪手稿数据库",
+        "url": "https://digitizedmedievalmanuscripts.org/data",
+        "description": "DMMapp是一个独立的倡议，致力于简化对数字化中世纪手稿的访问。这是一个由创始人兼开发者Giulio Menna，MA和联合创始人Marjolein de Vos，MA的项目。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309085462,
+        "title": "朝鲜王朝实录",
+        "url": "https://sillok.history.go.kr/main/main.do",
+        "description": "《朝鲜王朝实录》，又称《李朝实录》，是朝鲜王朝重要的历史典籍，载有君主敕教、大臣疏启、法律条文、外交文书、君臣对话、重大事项讨论记录等，大部分以汉文记录，于历朝鼎革之时编纂而成。其中也有很多涉及中国的史料。该网站为韩文，原书内容是以韩文、汉字、原书图片三种方式保存数据，中国读者可在搜索栏输入汉字繁体字关键词进行检索。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309136934,
+        "title": "世界史问题",
+        "url": "https://worldhistorymatters.org/",
+        "description": "界史问题（World History Matters）是一个开放的教育资源，为世界和全球历史教师、学者和学生提供同行评审的内容。它结合了世界历史事务中列出的大多数网站的内容。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309160896,
+        "title": "网络历史资料计划",
+        "url": "https://sourcebooks.fordham.edu/index.asp",
+        "description": "这是一个公共领域和允许复制的历史文本的集合，干净地呈现（没有广告或过度的布局），用于教育用途。这里的原始资料主要用于高中和大学/学院课程。从一开始，该网站就对学生应该获得的资源采取了非常广泛的看法，以及长期以来与“西方文明”历史方法相关的文件，也提供了许多关于拜占庭、伊斯兰、犹太、印度、东亚和非洲历史的信息。你还会发现许多与女性历史和LGBT研究特别相关的文件。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309179414,
+        "title": "朝鲜时代法令资料数据库",
+        "url": "https://db.history.go.kr/joseon/law.do",
+        "description": "该数据库中收录了朝鲜王朝时期的各类法令文献，可以中文繁体字关键词进行检索。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761312098872,
+        "title": "数字化《永乐大典》",
+        "url": "https://yongle.shidianguji.com/?",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761312161069,
+        "title": "东巴文汉文合璧《创世纪》知识库",
+        "url": "http://csj.nlc.cn/",
+        "description": "备用识典古籍入口：https://www.shidianguji.com/chuangshiji?enter_from=shidian。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761312233721,
+        "title": "旧文库",
+        "url": "https://jiuwenku.com/",
+        "description": "旧文库主要提供建国前的历史资料,其次是建国初期的资料,不提供1977年后的资料。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395264236,
+        "title": "Gale Scholar原始历史档案数据库",
+        "url": "https://gale.com/",
+        "description": "Gale Scholar 是Gale公司的大型数据库集成产品。通过该平台可以访问43个数据库，1.7亿页的珍稀原始资源，最早的历史资料可以追溯到15世纪。资料类型包括图书、地图、照片、报纸、手稿、期刊、视频和音频等。档案来源包括：大英图书馆、美国国会图书馆、苏格兰国家图书馆、爱尔兰国家图书馆、美国国家档案馆、英国国家档案馆、哈佛大学、耶鲁大学、牛津大学、剑桥大学、哥伦比亚大学、约克大学图书馆等。数据库平台还提供了先进的文本分析和数据可视化工具，帮助用户以全新的方式和途径分析信息。涉及丰富的学科主题，包括经济、历史、社会、国际关系、文学、地理、政治、法律等。——港澳台及海外历史文献公众号。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395297084,
+        "title": "珍稀原始典藏档案（Archives Unbound）",
+        "url": "https://www.lib.polyu.edu.hk/databases/archives-unbound-asian-studies",
+        "description": "Gale Scholar子库之一。AU数据库项目自2009年启动以来，已经出版了300多个档案库。别具优势的主题有：美国外交政策、美国公民权利、全球事务与殖民地研究以及现代历史。更宽泛的主题有：非裔美国人研究、美洲印第安人研究、亚洲研究、英国历史、大屠杀研究、LGBT研究、拉丁美洲和加勒比海地区研究、中东研究、政治学、宗教研究和女性研究。珍稀原始典藏档案项目包含超过29万份文件，共计1200万页文献。每个档案库从1200页到20万页不等。档案来源：美国国家档案馆、美国国务院图书馆、美国国会图书馆、美国总统图书馆、英国国家档案馆、大英图书馆、美国联邦调查局图书馆等。——港澳台及海外历史文献公众号。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396120157,
+        "title": "中医古籍",
+        "url": "https://www.zysj.com.cn/",
+        "description": "中医古籍主题网站，内容仅供参考！",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "电子书-外国": [
+      {
+        "id": 1761309066000,
+        "title": "OverDrive",
+        "url": "https://www.overdrive.com/",
+        "description": "不稳定，浙江图书馆有接入口。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761290439672,
+        "title": "Jstor",
+        "url": "https://www.jstor.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": []
+      },
+      {
+        "id": 1761309500344,
+        "title": "坦福大学图书馆",
+        "url": "https://library.stanford.edu/",
+        "description": "斯坦福大学图书馆的藏书包括数十万本珍本书籍以及数十份中世纪和早期现代手稿、楔形文字板和纸莎草纸。有大量的个人和公司档案可供探索（包括巴克明斯特·富勒、苹果公司、墨西哥裔美国人法律辩护基金以及诗人和艺术家如艾伦·金斯堡、罗伯特·克里利和露丝·阿萨瓦等的材料）。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395049660,
+        "title": "NPR：我们喜爱的书推荐榜单",
+        "url": "https://apps.npr.org/best-books/#view=covers&year=2024",
+        "description": "根据不同的分类和年份，推荐好评的书籍，可惜大多是英文书。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "组织与机构-综合": [
+      {
+        "id": 1761306980378,
+        "title": "汉学研究中心",
+        "url": "https://ccs.ncl.edu.tw/index.aspx",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309353209,
+        "title": "历史与社会高等研究所",
+        "url": "https://www.lishiyushehui.cn/",
+        "description": "历史与社会高等研究所网站分为中、英文两版。中文网站包含首页、课程、成员、书刊、学生、工作稿、研究资助、专著奖励、最新文章、关于我们共十个板块，英文网站包含Homepage、Courses、Faculty、Publications、Students、Working Papers、Newest Articles、About Us共八个板块——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309553586,
+        "title": "计量历史研究会",
+        "url": "https://www.cliometrics.org/",
+        "description": "气候测量学会积极促进会员参与其他学术团体。除了年会之外，气候计量学会还赞助年度联合社会科学协会会议和西方经济协会会议。该学会长期以来也是国际经济史协会的成员组织，赞助国际经济史大会的会议。自1992年以来，该学会提供了欧洲历史经济学学会的双重会员选择。作为年度气候测量会议的产物，气候测量学会与其他学术组织合作，举办了八次世界气候测量大会。迄今为止，来自世界各地的500多名经济史学家作为具有里程碑意义的研究论文的作者和讨论者参加了这些世界大会。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309575583,
+        "title": "国际社会史研究所",
+        "url": "https://iisg.amsterdam/en",
+        "description": "国际社会史研究所关注过去五个世纪全球的劳工和社会运动。我们提供可持续的信息获取途径，研究工作和社会不平等之间的关系，并与社会团体合作。在全球劳工历史、劳工关系和社会运动领域，我们仍然是一个积极参与的独立知识机构。因此，我们建立在过去五个世纪在全球劳工历史领域提供信息、进行基础研究和产生知识的悠久传统之上。——港澳台及海外历史文献公众号",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393332478,
+        "title": "MYTHCHUK",
+        "url": "https://myths.com.ua/en/",
+        "description": "西方古代的传说与神话知识库。（备用接口：https://myths.com.ua/en/roman-mythology/myths-and-legends/the-myth-of-the-rape-of-the-sabine-women.php）",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393369953,
+        "title": "西方古代神话网",
+        "url": "https://ancientmythology.net/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393405064,
+        "title": "罗马神话",
+        "url": "https://roman.mythologyworldwide.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395380612,
+        "title": "东京文化财研究所",
+        "url": "https://www.tobunken.go.jp/index_j.html",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395429442,
+        "title": "東アジア美術研究室",
+        "url": "https://cpdb.ioc.u-tokyo.ac.jp/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395463508,
+        "title": "東アジア人文情報学研究センタ一",
+        "url": "http://www.kita.zinbun.kyoto-u.ac.jp/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "电子书-中国": [
+      {
+        "id": 1761309386038,
+        "title": "國立臺灣大學圖書館",
+        "url": "http://www.lib.ntu.edu.tw/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "字典-书法字典": [
+      {
+        "id": 1761309986055,
+        "title": "书法字典",
+        "url": "https://www.shufazidian.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761310123047,
+        "title": "以观书法",
+        "url": "https://web.ygsf.com/#/home?VNK=03d899fc",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311344160,
+        "title": "搜字体",
+        "url": "https://www.souziti.com/",
+        "description": "字体识别网站，是提供给设计师的字体识别工具和字体搜索查找助手，用户只需要上传一张图片并根据向导操作即可查询图片文字是什么字体。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311381757,
+        "title": "字鉴",
+        "url": "https://api.shufashibie.com/page/index.html",
+        "description": "单字拍照、图片辨认。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311597035,
+        "title": "异体字字典",
+        "url": "https://dict.variants.moe.edu.tw/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "字典-篆刻字典": [
+      {
+        "id": 1761310020960,
+        "title": "篆刻之家",
+        "url": "http://www.z12345.com/#",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311245514,
+        "title": "篆体时刻",
+        "url": "http://www.dullr.com/zhuanke.php",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "世界古籍-中国诗词": [
+      {
+        "id": 1761311969161,
+        "title": "搜韵",
+        "url": "https://sou-yun.cn/index.aspx",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309768455,
+        "title": "诗词志",
+        "url": "https://shicizhi.com/Trending",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309779269,
+        "title": "古诗文网",
+        "url": "https://www.gushiwen.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761309789403,
+        "title": "品诗文网",
+        "url": "https://www.pinshiwen.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "百科": [
+      {
+        "id": 1761306142582,
+        "title": "中华语文知识库",
+        "url": "https://www.chinese-linguipedia.org/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306209516,
+        "title": "辞海在线",
+        "url": "http://www.dacihai.com.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306214291,
+        "title": "数字辞海",
+        "url": "https://www.cihai.com.cn/home",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306231554,
+        "title": "历代人物",
+        "url": "https://www.inindex.com/biog",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761393547998,
+        "title": "英伦百科全书",
+        "url": "https://www.britannica.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395541037,
+        "title": "求闻百科",
+        "url": "https://www.qiuwenbaike.cn/wiki/Qiuwen:%E9%A6%96%E9%A1%B5",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395560984,
+        "title": "许可百科",
+        "url": "https://licence.qiuwenbaike.cn/wiki/Qiuwen:%E9%A6%96%E9%A1%B5",
+        "description": "许可百科是志愿者参与修订的、以收录各类符合“开放版权”（Open Licensing）特征“版权许可证”为主的网络百科全书。 通过收录各类“版权许可证”及相关内容，许可百科旨在支持“求闻”系列计划有关推广“开放版权”及“自由及开源软件”（Free and open-source software）等理念的使命。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397225316,
+        "title": "全历史",
+        "url": "https://www.allhistory.com/",
+        "description": "挺好的一个网站，可惜运营太差。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397250287,
+        "title": "世界历史百科全书",
+        "url": "https://www.worldhistory.org/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397269290,
+        "title": "伊朗百科全书",
+        "url": "https://www.iranicaonline.org/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397294549,
+        "title": "中国大百科全书网络版",
+        "url": "https://www.zgbk.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397460621,
+        "title": "在线百科",
+        "url": "https://www.howstuffworks.com/",
+        "description": "有个百科测试功能。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "资讯博客": [
+      {
+        "id": 1761304900345,
+        "title": "文化-人民网",
+        "url": "http://culture.people.com.cn/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761310072417,
+        "title": "北大文化书法网",
+        "url": "https://shufa.pku.edu.cn/index.htm",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395155725,
+        "title": "visuals + editorial graphics",
+        "url": "https://blog.apps.npr.org/",
+        "description": "一个国外独立博客，具体没明白做什么的，似乎有趣。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395347700,
+        "title": "中国社会科学网",
+        "url": "https://www.cssn.cn/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395360450,
+        "title": "中国民俗学网",
+        "url": "https://www.chinafolklore.org/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395581496,
+        "title": "化石网",
+        "url": "http://uua.cn/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395589874,
+        "title": "瓷网",
+        "url": "http://www.zhongguociwang.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395617834,
+        "title": "中国科普博览",
+        "url": "https://www.kepu.net.cn/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "综合": [
+      {
+        "id": 1761395764470,
+        "title": "日历网",
+        "url": "https://www.rili.com.cn/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395885565,
+        "title": "历史车轮网",
+        "url": "https://www.lishichelun.com/tool",
+        "description": "一些历史学习小工具。历史车轮网是一个历史数据可视化工具的集合，为学者和爱好者提供帮助。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761395921818,
+        "title": "卦爻网-详细黄历",
+        "url": "https://guayao.net/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761397128500,
+        "title": "云应用软件",
+        "url": "https://mobisystems.com/ja-jp",
+        "description": "没有中文版。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "字典-字典词典": [
+      {
+        "id": 1761305916579,
+        "title": "字统网",
+        "url": "https://zi.tools/",
+        "description": "查字好用。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305955983,
+        "title": "数字化《说文解字》",
+        "url": "https://szsw.bnu.edu.cn/#/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305939003,
+        "title": "如是古籍字典",
+        "url": "https://dict.rushi-ai.net/",
+        "description": "有敦煌俗字典、台湾异体字字典、高丽藏异体字字典。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305983876,
+        "title": "國際電腦漢字及異體字知識庫",
+        "url": "https://chardb.iis.sinica.edu.tw/",
+        "description": "不稳定。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306050654,
+        "title": "古今文字集成",
+        "url": "http://ccamc.co/index.php",
+        "description": "有汉字、西夏文、契丹文、女真文、女书、八思巴文。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306073349,
+        "title": "古音小镜·历史语言学",
+        "url": "http://www.kaom.net/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306100740,
+        "title": "书同文汉字网",
+        "url": "https://hanzi.unihan.com.cn/",
+        "description": "具有简繁、古今等文字对比功能；拼音加调；教学与资料库。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305688523,
+        "title": "中华字典",
+        "url": "https://www.zhzidian.com",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305868802,
+        "title": "汉典",
+        "url": "https://www.zdic.net/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305879160,
+        "title": "在线新华字典",
+        "url": "http://xh.5156edu.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761305893161,
+        "title": "汉字全息资源应用系统",
+        "url": "https://qxk.bnu.edu.cn/#/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761306115005,
+        "title": "小学堂",
+        "url": "https://xiaoxue.iis.sinica.edu.tw/",
+        "description": "不稳定。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311572990,
+        "title": "词典网",
+        "url": "https://www.cidianwang.com/",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311848914,
+        "title": "在线汉语字典",
+        "url": "http://xh.5156edu.com/page/z1324m2822j19188.html",
+        "description": "本页为谦词页，页末附有在线成语词典 反义词查询 近义词查询 歇后语大全 文言文翻译 古诗词大全 万年历 中文转拼音 简体繁体转换 语文网导航。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311715512,
+        "title": "成语大全",
+        "url": "https://www.hgcha.com/chengyu/",
+        "description": "汉语查，本站字典、词典、成语等汉语国学数据仅供参考，最终以新华字典、汉语词典、成语词典等书籍为准。",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761311735119,
+        "title": "汉语大辞典",
+        "url": "http://m.hydcd.cn/cy/gushi/index.htm",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396931184,
+        "title": "韦氏词典",
+        "url": "https://www.merriam-webster.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [
+          "英语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761396937033,
+        "title": "日语辞书",
+        "url": "https://japanknowledge.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [
+          "日语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761396946972,
+        "title": "韩语汉字词典",
+        "url": "https://oriental-dic.dankook.ac.kr/index",
+        "description": "东洋研究院",
+        "date": "2025/10/25",
+        "tags": [
+          "韩语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761396969291,
+        "title": "剑桥英语词典",
+        "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [
+          "英语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761397003515,
+        "title": "牛津英语词典",
+        "url": "https://www.oed.com/?tl=true",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [
+          "英语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761397142741,
+        "title": "日语词典",
+        "url": "https://www.weblio.jp/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [
+          "日语"
+        ],
+        "level": 1
+      },
+      {
+        "id": 1761397174256,
+        "title": "Mojo日语辞书",
+        "url": "https://www.mojidict.com/",
+        "description": "刚开始还不错，现在收费略高。",
+        "date": "2025/10/25",
+        "tags": [
+          "日语"
+        ],
+        "level": 1
+      }
+    ],
+    "游戏": [
+      {
+        "id": 1761396229080,
+        "title": "Poki (宝玩) - 免费在线小游戏",
+        "url": "https://poki.com/zh",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396255091,
+        "title": "在线小游戏",
+        "url": "https://www.jxgame.net/",
+        "description": "精挑细选益智游戏小盒子，无需下载，直接在浏览器中畅玩扫雷、五子棋、黑白棋等经典游戏",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396302231,
+        "title": "数独",
+        "url": "https://thesudoku.com/zh",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396312919,
+        "title": "数独",
+        "url": "https://sudokuhit.com/zh/rongyi/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "语言-英语": [
+      {
+        "id": 1761395735907,
+        "title": "英语兔",
+        "url": "https://yingyutu.com/",
+        "description": "一个不错的英语学习站",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396559723,
+        "title": "牛津语言",
+        "url": "https://languages.oup.com/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "语言-日语": [
+      {
+        "id": 1761396601110,
+        "title": "日本语-新华网",
+        "url": "https://jp.news.cn/index.htm",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396624632,
+        "title": "日本语教育",
+        "url": "https://japanese-language-education.com/",
+        "description": "有免费课，有收费课。",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      },
+      {
+        "id": 1761396717802,
+        "title": "日语学习资源",
+        "url": "http://www.jpstation.top/weChatServices/JPStation/resourcesList",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "语言-综合": [
+      {
+        "id": 1761396848955,
+        "title": "北京语音大学网络教学平台",
+        "url": "https://blcumooc.fy.chaoxing.com/portal/",
+        "description": "",
+        "date": "2025/10/25",
+        "tags": [],
+        "level": 1
+      }
+    ],
+    "电子书下载": [
+      {
+        "id": 1761311899936,
+        "title": "bookget 数字古籍图书下载工具",
+        "url": "https://github.com/deweizhu/bookget?tab=readme-ov-file",
+        "description": "",
+        "date": "2025/10/24",
+        "tags": [],
+        "level": 1
+      }
+    ]
+  },
+  "timestamp": "2025-10-25T13:04:27.665Z"
+}
