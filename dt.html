@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>高德地图搜索</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+    }
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    #keyword {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #map-container {
+      flex: 1;
+      border: 1px solid #ccc;
+    }
+    #panel {
+      height: 200px;
+      overflow-y: auto;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>高德地图搜索</h1>
+  <div class="container">
+    <div class="search-box">
+      <input id="keyword" type="text" placeholder="输入地点关键词（如：北京大学）">
+      <button onclick="search()">搜索</button>
+    </div>
+    <div id="map-container"></div>
+    <div id="panel"></div>
+  </div>
+
+  <!-- 替换 YOUR_AMAP_KEY 为你的高德 API Key -->
+  <script src="https://webapi.amap.com/maps?v=2.0&key=YOUR_AMAP_KEY"></script>
+  <script>
+    let map, placeSearch;
+
+    // 初始化地图
+    map = new AMap.Map('map-container', {
+      zoom: 11,
+      center: [116.404, 39.915]
+    });
+
+    // 加载搜索插件
+    AMap.plugin('AMap.PlaceSearch', function() {
+      placeSearch = new AMap.PlaceSearch({
+        city: '北京',
+        map: map,
+        panel: 'panel'
+      });
+    });
+
+    // 搜索函数
+    function search() {
+      const keyword = document.getElementById('keyword').value.trim();
+      if (!keyword) {
+        alert('请输入搜索关键词');
+        return;
+      }
+      if (placeSearch) {
+        placeSearch.search(keyword);
+      }
+    }
+
+    // 回车键搜索
+    document.getElementById('keyword').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') search();
+    });
+  </script>
+</body>
+</html>
