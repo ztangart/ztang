@@ -2406,6 +2406,33 @@
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', init);
     </script>
+// 在页面加载完成后自动加载JSON数据
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取当前页面URL，如果是GitHub Pages，会自动构建正确的路径
+    const dataUrl = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/data.json';
+    
+    fetch(dataUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('网络响应不正常: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('数据加载成功:', data);
+            // 将加载的数据赋值给页面的urls变量
+            if (data.urls) {
+                urls = data.urls;
+                // 重新渲染网址列表
+                renderUrlList();
+            }
+        })
+        .catch(error => {
+            console.error('加载数据时出错:', error);
+            // 如果加载失败，可以使用默认数据或提示用户
+            console.log('使用默认数据或空数据继续运行');
+        });
+});
 
 
 </body></html>
