@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)file:///https://github.com/ztangart/ztang/blob/6f059bed45e917bdc474f34ec1296d5001b2e9ba/date.json-->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兆堂艺术人文</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+            background-attachment: fixed;
+            color: #333;
+            padding-top: 120px;
+            min-height: 100vh;
+        }
+
+        /* 导航栏样式 - 风格 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-title {
+            color: #000;
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 30px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-title:hover {
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        .category-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .category-btn {
+            background: transparent;
+            color: #666;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-btn:hover {
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .category-btn.active {
+            background: #000;
+            color: white;
+        }
+
+        /* 侧边栏样式 - 风格 */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 70px;
+            width: 250px;
+            height: calc(100vh - 75px); /* 调整高度以适应导航栏 */
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2px 0;
+            overflow-y: auto;
+            z-index: 999;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 1px 0 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .group-container {
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 8px;
+        }
+
+        .group-header:hover {
+            background: #e0e0e0;
+            border-color: #d0d0d0;
+        }
+
+        .group-title {
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .group-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .group-action-btn {
+            background: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            color: #666;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .group-action-btn:hover {
+            background: #e0e0e0;
+            color: #000;
+            border-color: #c0c0c0;
+            transform: scale(1.05);
+        }
+
+        .add-url-btn {
+            background: #000;
+            border: 1px solid #000;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .add-url-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        .sub-items {
+            padding-left: 15px;
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .sub-items.collapsed {
+            max-height: 0;
+        }
+
+        .sub-item {
+            color: #666;
+            padding: 10px 10px; /* 减少左侧padding */
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            border-radius: 6px;
+            margin: 4px 0;
+            border-left: 3px solid transparent; /* 用于选中状态 */
+        }
+
+        .sub-item:hover {
+            background: #f5f5f5;
+            color: #000;
+            transform: translateX(5px);
+        }
+
+        .sub-item.selected {
+            background: #000;
+            color: white;
+            border-left: 3px solid #000;
+        }
+
+        .sub-item.level-1 {
+            padding-left: 10px; /* 减少左侧padding */
+            font-size: 14px;
+        }
+
+        .sub-item.level-2 {
+            padding-left: 25px; /* 减少左侧padding */
+            font-size: 13px;
+        }
+
+        .sub-item.level-3 {
+            padding-left: 40px; /* 减少左侧padding */
+            font-size: 12px;
+        }
+
+        .sub-item-actions {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none;
+        }
+
+        .sub-item:hover .sub-item-actions {
+            display: flex;
+        }
+
+        .sub-action-btn {
+            background: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            color: #666;
+            cursor: pointer;
+            font-size: 11px;
+            margin-left: 5px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-action-btn:hover {
+            background: #e0e0e0;
+            color: #000;
+            border-color: #c0c0c0;
+        }
+
+        /* 添加表单位置 */
+        .add-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            z-index: 100;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #333;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group .tag-input-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 8px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            min-height: 40px;
+        }
+
+        .tag-input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #333;
+            font-size: 14px;
+            outline: none;
+            padding: 5px;
+        }
+
+        .tag-item {
+            background: #000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .remove-tag-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .btn {
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-danger {
+            background: #e64545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c63535;
+        }
+
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        /* 网址列表样式 */
+        .url-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+            padding-right: 10px; /* 防止最右边的卡片被滚动条遮挡 */
+        }
+
+        .url-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(20px);
+            position: relative;
+            cursor: move;
+        }
+
+        .url-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .url-content {
+            padding: 11px;
+        }
+
+        .url-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #000;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            height: 20px;
+            overflow: hidden;
+            line-height: 1.2;
+        }
+
+        .url-title:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .url-desc {
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            font-size: 12px;
+            height: 32px;
+            overflow: hidden;
+        }
+
+        .url-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .url-tag {
+            background: #f5f5f5;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .url-tag:hover {
+            background: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        .card-actions {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            display: flex;
+            gap: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .url-card:hover .card-actions {
+            opacity: 1;
+        }
+
+        .action-btn {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        .edit-btn {
+            background: rgba(255, 159, 10, 0.8);
+        }
+
+        .edit-btn:hover {
+            background: rgba(255, 159, 10, 1);
+        }
+
+        .delete-btn {
+            background: rgba(230, 69, 69, 0.8);
+        }
+
+        .delete-btn:hover {
+            background: rgba(230, 69, 69, 1);
+        }
+
+        /* 数据管理对话框 */
+        .data-dialog {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .data-dialog-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .dialog-title {
+            color: #000;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dialog-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn {
+            background: #000;
+            color: white;
+        }
+
+        .export-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .import-btn {
+            background: #ff9f0a;
+            color: white;
+        }
+
+        .import-btn:hover {
+            background: #e68f09;
+            transform: translateY(-2px);
+        }
+
+        .cancel-btn {
+            background: #e64545;
+            color: white;
+        }
+
+        .cancel-btn:hover {
+            background: #c63535;
+            transform: translateY(-2px);
+        }
+
+        /* 捐赠页面样式 */
+        .donate-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .donate-content {
+            max-width: 800px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .donate-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .donate-title {
+            color: #000;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .donate-text {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .close-donate {
+            background: #e64545;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .close-donate:hover {
+            background: #c63535;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 69, 69, 0.3);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 250px;
+                top: 180px;
+                height: calc(100vh - 180px);
+            }
+            .main-content {
+                margin-left: 250px;
+            }
+            .url-list {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .category-container {
+                margin-top: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+            body {
+                padding-top: 170px;
+            }
+            .nav-title {
+                font-size: 22px;
+            }
+            .add-form {
+                padding: 20px;
+            }
+            
+            .donate-content {
+                margin: 50px auto;
+                padding: 20px;
+            }
+        }
+
+        @media (max-height: 700px) and (orientation: landscape) {
+            .sidebar {
+                height: calc(100vh - 180px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-title" onclick="goHome()">兆堂</div>
+        <div class="category-container">
+            <button class="category-btn" id="ancientBtn" onclick="showCategory(&#39;ancient&#39;)">图像</button>
+            <button class="category-btn" id="modernBtn" onclick="showCategory(&#39;modern&#39;)">文本</button>
+            <button class="category-btn active" id="toolsBtn" onclick="showCategory(&#39;tools&#39;)">工具库</button>
+            <button class="category-btn" id="mediaBtn" onclick="showCategory(&#39;media&#39;)">自媒体</button>
+            <button class="category-btn" id="dataBtn" onclick="showDataManagement()">数据管理</button>
+            <button class="category-btn" id="donateBtn" onclick="showDonate()">捐赠</button>
+        </div>
+    </nav>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="group-container" id="ancientGroup" style="display: none;">
+            <div class="group-header" onclick="toggleGroup(&#39;ancientItems&#39;)">
+                <div class="group-title">
+                    <span class="toggle-icon">▼</span> 图像
+                </div>
+                <div class="group-actions">
+                    <button class="add-url-btn" onclick="showAddForm(null); event.stopPropagation();">+</button>
+                    <button class="group-action-btn" onclick="addGroupItem(&#39;ancientItems&#39;); event.stopPropagation();">+</button>
+                </div>
+            </div>
+            <div class="sub-items" id="ancientItems">
+                <div class="sub-item level-1" data-group="中国" onclick="selectSubItem(this, &#39;中国&#39;)" draggable="true">
+                    <span class="toggle-icon">▼</span> 中国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="中国-北京市" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 北京市
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="中国-上海市" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 上海市
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="中国-浙江省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 浙江省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="中国-河南省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 河南省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="中国-山东省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 山东省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="中国-四川省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 四川省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="中国-湖北省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 湖北省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                
+                <div class="sub-item level-2" data-group="中国-湖南省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 湖南省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                
+                
+                <div class="sub-item level-2" data-group="中国-甘肃省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 甘肃省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="中国-台湾省" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 台湾省
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="sub-item level-1" data-group="英国" onclick="selectSubItem(this, &#39;英国&#39;)" draggable="true">
+                    <span class="toggle-icon">▼</span> 英国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="英国-综合" style="display: block; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▼</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-1" data-group="美国" onclick="selectSubItem(this, &#39;美国&#39;)" draggable="true">
+                    <span class="toggle-icon">▼</span> 美国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="美国-综合" style="display: none; opacity: 1;" draggable="true">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="sub-item level-1" data-group="欧洲" onclick="selectSubItem(this, &#39;欧洲&#39;)" draggable="true">
+                    <span class="toggle-icon">▶</span> 欧洲
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="欧洲-法国" onclick="selectSubItem(this, &#39;欧洲-法国&#39;)" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 法国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="欧洲-匈牙利" onclick="selectSubItem(this, &#39;欧洲-匈牙利&#39;)" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 匈牙利
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="欧洲-荷兰" onclick="selectSubItem(this, &#39;欧洲-荷兰&#39;)" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 荷兰
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-2" data-group="欧洲-意大利" onclick="selectSubItem(this, &#39;欧洲-意大利&#39;)" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 意大利
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-1" data-group="日本" onclick="selectSubItem(this, &#39;日本&#39;)" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 日本
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="在线数据库" onclick="selectSubItem(this, &#39;在线数据库&#39;)" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▼</span> 在线数据库
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="在线数据库-百科资讯" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▼</span> 百科资讯
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="在线数据库-画廊市场" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▼</span> 画廊市场
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="在线数据库-数字平台" onclick="selectSubItem(this, &#39;在线数据库-组织机构&#39;)" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▼</span> 数字平台
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+            <div class="sub-item level-1" data-group="综合" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div></div>
+        </div>
+        
+        <div class="group-container" id="modernGroup" style="display: none;">
+            <div class="group-header" onclick="toggleGroup(&#39;modernItems&#39;)">
+                <div class="group-title">
+                    <span class="toggle-icon">▼</span> 文本
+                </div>
+                <div class="group-actions">
+                    <button class="add-url-btn" onclick="showAddForm(null); event.stopPropagation();">+</button>
+                    <button class="group-action-btn" onclick="addGroupItem(&#39;modernItems&#39;); event.stopPropagation();">+</button>
+                </div>
+            </div>
+            <div class="sub-items" id="modernItems">
+                <div class="sub-item level-1 selected" data-group="百科" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 百科
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+                <div class="sub-item level-1" data-group="资讯博客" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 资讯博客
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="组织与机构" onclick="selectSubItem(this, &#39;机构组织&#39;)" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 组织与机构
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="组织与机构-综合" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div>
+            <div class="sub-item level-1" data-group="世界古籍" draggable="true">
+                    <span class="toggle-icon">▶</span> 世界古籍
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="世界古籍-中国古籍综合" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 中国古籍综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="世界古籍-外国古籍综合" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 外国古籍综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="世界古籍-世界古籍专题" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 世界古籍专题
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="世界古籍-中国诗词" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 中国诗词
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="期刊杂志" draggable="true">
+                    <span class="toggle-icon">▶</span> 期刊杂志
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="期刊杂志-综合" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="电子书" draggable="true">
+                    <span class="toggle-icon">▶</span> 电子书
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="电子书-中国" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 中国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="电子书-外国" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 外国
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div></div>
+        </div>
+        
+        <div class="group-container" id="toolsGroup" style="display: block;">
+            <div class="group-header" onclick="toggleGroup(&#39;toolsItems&#39;)">
+                <div class="group-title">
+                    <span class="toggle-icon">▼</span> 工具库
+                </div>
+                <div class="group-actions">
+                    <button class="add-url-btn" onclick="showAddForm(null); event.stopPropagation();">+</button>
+                    <button class="group-action-btn" onclick="addGroupItem(&#39;toolsItems&#39;); event.stopPropagation();">+</button>
+                </div>
+            </div>
+            <div class="sub-items" id="toolsItems">
+            <div class="sub-item level-1 selected" data-group="综合" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="字典" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 字典
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="字典-字典词典" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 字典词典
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="字典-书法字典" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 书法字典
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="字典-篆刻字典" draggable="true" style="opacity: 1; display: none;">
+                    <span class="toggle-icon">▶</span> 篆刻字典
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="语言" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 语言
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="语言-综合" draggable="true" style="display: none;">
+                    <span class="toggle-icon">▶</span> 综合
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="语言-英语" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 英语
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-2" data-group="语言-日语" draggable="true" style="display: none; opacity: 1;">
+                    <span class="toggle-icon">▶</span> 日语
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="教育" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 教育
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="游戏" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 游戏
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="电子书下载" draggable="true" style="opacity: 1;">
+                    <span class="toggle-icon">▶</span> 电子书下载
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div></div>
+        </div>
+        
+        <div class="group-container" id="mediaGroup" style="display: none;">
+            <div class="group-header" onclick="toggleGroup(&#39;mediaItems&#39;)">
+                <div class="group-title">
+                    <span class="toggle-icon">▼</span> 自媒体
+                </div>
+                <div class="group-actions">
+                    <button class="add-url-btn" onclick="showAddForm(null); event.stopPropagation();">+</button>
+                    <button class="group-action-btn" onclick="addGroupItem(&#39;mediaItems&#39;); event.stopPropagation();">+</button>
+                </div>
+            </div>
+            <div class="sub-items" id="mediaItems">
+            <div class="sub-item level-1" data-group="善本古籍" draggable="true">
+                    <span class="toggle-icon">▶</span> 善本古籍
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div><div class="sub-item level-1" data-group="港澳台及海外历史文献" draggable="true">
+                    <span class="toggle-icon">▶</span> 港澳台及海外历史文献
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                </div></div>
+        </div>
+        
+        <!-- 标签搜索框 -->
+        <div class="tag-search-container" style="position: sticky; bottom: 0; background: rgba(255, 255, 255, 0.95); padding: 15px; border-top: 1px solid rgba(0, 0, 0, 0.05); backdrop-filter: blur(20px);">
+            <div class="tag-search-box">
+                <input type="text" class="tag-search-input" id="tagSearchInput" placeholder="输入标签搜索..." oninput="showTagSuggestions()" onkeypress="handleTagSearchKeyPress(event)">
+                <button class="tag-search-btn" onclick="searchByTag()">🔍</button>
+            </div>
+            <div class="tag-suggestions" id="tagSuggestions" style="display: none;"></div>
+            <button class="sort-btn" id="sortBtn" onclick="toggleSort()">排序: 默认</button>
+        </div>
+    </aside>
+
+    <!-- 主内容区域 -->
+    <main class="main-content" id="mainContent" style="margin-left: 280px;">
+        <div class="add-form" id="addForm" style="display: none;">
+            <h3 style="color: #000; margin-bottom: 20px; text-align: center;">添加新网址</h3>
+            <form id="urlForm">
+                <div class="form-group">
+                    <label for="title">标题:</label>
+                    <input type="text" id="title" required="" placeholder="请输入网址标题">
+                </div>
+                <div class="form-group">
+                    <label for="url">网址:</label>
+                    <input type="url" id="url" required="" placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="description">简介:</label>
+                    <textarea id="description" placeholder="请输入网址简介"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags">标签:</label>
+                    <div class="tag-input-container">
+                        <input type="text" class="tag-input" id="tagInput" placeholder="输入标签后按回车添加" onkeypress="addTagOnEnter(event)">
+                        <div id="tagList" class="tag-list"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn">确定</button>
+                <button type="button" class="btn btn-danger" onclick="hideAddForm()">取消</button>
+            </form>
+        </div>
+
+        <div class="url-list" id="urlList"></div>
+    </main>
+
+    <!-- 数据管理对话框 -->
+    <div class="data-dialog" id="dataDialog" style="display: none;">
+        <div class="data-dialog-content">
+            <h3 class="dialog-title">数据管理</h3>
+            <button class="dialog-btn export-btn" onclick="exportData()">导出</button>
+            <button class="dialog-btn import-btn" onclick="importData()">导入</button>
+            <button class="dialog-btn cancel-btn" onclick="hideDataManagement()">取消</button>
+        </div>
+    </div>
+
+    <!-- 捐赠页面 -->
+    <div class="donate-page" id="donatePage" style="display: none;">
+        <div class="donate-content">
+            <div class="donate-header">
+                <h2 class="donate-title">支持我们</h2>
+                <p class="donate-text">感谢您对兆堂的支持！您的捐赠将帮助我们持续维护和改进平台，为用户提供更好的服务。除经济捐赠外我们也期待来自您的技术与知识支持，还有您宝贵的建议。</p>
+                <p class="contact-info">微信：Mnemosyne-CAA<br>公众号：兆堂艺术人文</p>
+            </div>
+            <button class="close-donate" onclick="hideDonate()">关闭</button>
+        </div>
+    </div>
+
+    <script>
+        // 存储当前选择的分类
+        let currentCategory = 'ancient';
+        // 存储当前选中的分组
+        let currentSelectedSubItem = null;
+        // 存储当前显示的分组
+        let currentDisplayGroup = null;
+        // 存储当前搜索标签
+        let currentSearchTag = null;
+        // 存储当前输入的标签
+        let currentTags = [];
+        // 存储排序状态
+        let isSorted = false;
+
+        // 存储网址数据 - 按分组组织
+        let urls = {};
+
+        // 初始化页面
+        function init() {
+            // 默认展开所有一级分组
+            document.querySelectorAll('.sub-items').forEach(item => {
+                item.classList.remove('collapsed');
+            });
+            
+            // 默认折叠所有二级及以下分组
+            document.querySelectorAll('.sub-item.level-2, .sub-item.level-3').forEach(item => {
+                item.style.display = 'none';
+            });
+            
+            renderUrlList();
+            document.getElementById('urlForm').addEventListener('submit', addUrl);
+            
+            // 默认显示主页（图像分类）
+            goHome();
+            
+            // 为所有分组项添加事件监听器
+            updateGroupItemEventListeners();
+            
+            // 为侧边栏添加拖动排序事件监听器
+            addSidebarDragEventListeners();
+        }
+
+        // 更新分组项事件监听器
+        function updateGroupItemEventListeners() {
+            const subItems = document.querySelectorAll('.sub-item');
+            subItems.forEach(item => {
+                // 获取分组名称
+                const groupName = item.getAttribute('data-group');
+                // 添加新的事件监听器
+                item.onclick = function(event) {
+                    // 如果点击的是操作按钮或展开/收起图标，不执行选中功能
+                    if (event.target.classList.contains('sub-action-btn') || 
+                        event.target.classList.contains('remove-tag-btn') || 
+                        event.target.classList.contains('toggle-icon') ||
+                        event.target.tagName === 'BUTTON') {
+                        return;
+                    }
+                    
+                    // 否则选中该分组
+                    selectSubItem(this, groupName);
+                };
+                
+                // 为展开/收起图标添加点击事件
+                const toggleIcon = item.querySelector('.toggle-icon');
+                if (toggleIcon) {
+                    toggleIcon.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleSubItem(item);
+                    };
+                }
+            });
+        }
+
+        // 为侧边栏添加拖动排序事件监听器
+        function addSidebarDragEventListeners() {
+            const subItems = document.querySelectorAll('.sub-item');
+            subItems.forEach(item => {
+                item.draggable = true;
+                item.addEventListener('dragstart', handleSidebarDragStart);
+                item.addEventListener('dragover', handleSidebarDragOver);
+                item.addEventListener('drop', handleSidebarDrop);
+                item.addEventListener('dragend', handleSidebarDragEnd);
+            });
+        }
+
+        // 侧边栏拖动开始事件
+        function handleSidebarDragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.getAttribute('data-group'));
+            e.dataTransfer.effectAllowed = 'move';
+            e.target.style.opacity = '0.5';
+        }
+
+        // 侧边栏拖动经过事件
+        function handleSidebarDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        }
+
+        // 侧边栏拖放事件
+        function handleSidebarDrop(e) {
+            e.preventDefault();
+            e.target.style.opacity = '1';
+            
+            const draggedGroupName = e.dataTransfer.getData('text/plain');
+            const targetGroupName = e.target.getAttribute('data-group');
+            
+            // 确保拖动的是不同的分组
+            if (draggedGroupName !== targetGroupName) {
+                const container = e.target.parentNode;
+                
+                // 获取拖动元素和目标元素
+                const draggedElement = document.querySelector(`[data-group="${draggedGroupName}"]`);
+                const targetElement = document.querySelector(`[data-group="${targetGroupName}"]`);
+                
+                // 获取所有子项并排序
+                const allSubItems = Array.from(container.querySelectorAll('.sub-item'));
+                
+                // 找到拖动元素和目标元素的索引
+                const draggedIndex = allSubItems.findIndex(item => item.getAttribute('data-group') === draggedGroupName);
+                const targetIndex = allSubItems.findIndex(item => item.getAttribute('data-group') === targetGroupName);
+                
+                // 重新排序元素
+                if (draggedIndex !== -1 && targetIndex !== -1) {
+                    // 移除拖动的元素
+                    container.removeChild(draggedElement);
+                    
+                    // 在目标元素之前插入拖动的元素
+                    if (draggedIndex < targetIndex) {
+                        // 如果拖动元素在目标元素之前，插入到目标元素之后
+                        container.insertBefore(draggedElement, targetElement.nextSibling);
+                    } else {
+                        // 如果拖动元素在目标元素之后，插入到目标元素之前
+                        container.insertBefore(draggedElement, targetElement);
+                    }
+                }
+                
+                // 更新所有分组项的事件监听器
+                updateGroupItemEventListeners();
+            }
+        }
+
+        // 侧边栏拖动结束事件
+        function handleSidebarDragEnd(e) {
+            e.target.style.opacity = '1';
+        }
+
+        // 检查分组是否有子项
+        function hasChildren(element) {
+            const groupName = element.getAttribute('data-group');
+            const allSubItems = document.querySelectorAll('.sub-item');
+            
+            for (let item of allSubItems) {
+                const itemGroupName = item.getAttribute('data-group');
+                if (itemGroupName.startsWith(groupName + '-') && 
+                    itemGroupName.split('-').length === groupName.split('-').length + 1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // 切换子项展开/收起
+        function toggleSubItem(element) {
+            const groupName = element.getAttribute('data-group');
+            const allSubItems = document.querySelectorAll('.sub-item');
+            
+            // 查找属于当前分组的子项并切换显示状态
+            for (let item of allSubItems) {
+                const itemGroupName = item.getAttribute('data-group');
+                if (itemGroupName.startsWith(groupName + '-') && 
+                    itemGroupName.split('-').length === groupName.split('-').length + 1) {
+                    if (item.style.display === 'none') {
+                        item.style.display = 'block';
+                        item.style.opacity = '1';
+                        // 更新展开图标
+                        const icon = item.querySelector('.toggle-icon');
+                        if (icon) icon.textContent = '▼';
+                    } else {
+                        item.style.display = 'none';
+                        // 更新展开图标
+                        const icon = item.querySelector('.toggle-icon');
+                        if (icon) icon.textContent = '▶';
+                    }
+                }
+            }
+            
+            // 更新当前项的展开图标
+            const icon = element.querySelector('.toggle-icon');
+            if (icon) {
+                if (element.style.display !== 'none') {
+                    icon.textContent = hasChildren(element) ? '▼' : '▶';
+                }
+            }
+        }
+
+        // 显示分类内容
+        function showCategory(category) {
+            currentCategory = category;
+            
+            // 更新按钮状态
+            document.getElementById('ancientBtn').classList.toggle('active', category === 'ancient');
+            document.getElementById('modernBtn').classList.toggle('active', category === 'modern');
+            document.getElementById('mediaBtn').classList.toggle('active', category === 'media');
+            document.getElementById('toolsBtn').classList.toggle('active', category === 'tools');
+            document.getElementById('dataBtn').classList.toggle('active', category === 'data');
+            document.getElementById('donateBtn').classList.toggle('active', category === 'donate');
+            
+            // 隐藏所有侧边栏分组
+            document.getElementById('ancientGroup').style.display = 'none';
+            document.getElementById('modernGroup').style.display = 'none';
+            document.getElementById('mediaGroup').style.display = 'none';
+            document.getElementById('toolsGroup').style.display = 'none';
+            
+            // 显示对应的侧边栏分组
+            document.getElementById(category + 'Group').style.display = 'block';
+            
+            // 重置当前显示分组
+            currentDisplayGroup = null;
+            currentSearchTag = null;
+            
+            // 重新渲染网址列表 - 显示当前分类的所有网址
+            renderUrlList();
+        }
+
+        // 切换分组展开/收起
+        function toggleGroup(groupId) {
+            const group = document.getElementById(groupId);
+            const header = group.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (group.classList.contains('collapsed')) {
+                group.classList.remove('collapsed');
+                icon.textContent = '▼';
+            } else {
+                group.classList.add('collapsed');
+                icon.textContent = '▶';
+            }
+        }
+
+        // 选择分组项
+        function selectSubItem(element, groupName) {
+            // 移除之前选中的样式
+            if (currentSelectedSubItem) {
+                currentSelectedSubItem.classList.remove('selected');
+            }
+            
+            // 添加当前选中的样式
+            element.classList.add('selected');
+            currentSelectedSubItem = element;
+            
+            // 设置当前显示分组
+            currentDisplayGroup = groupName;
+            
+            // 重置搜索标签
+            currentSearchTag = null;
+            document.getElementById('tagSearchInput').value = '';
+            
+            // 渲染当前分组的网址
+            renderUrlList();
+        }
+
+        // 显示添加表单
+        function showAddForm(selectedItem) {
+            document.getElementById('addForm').style.display = 'block';
+            // 重置标签列表
+            currentTags = [];
+            updateTagDisplay();
+        }
+
+        // 隐藏添加表单
+        function hideAddForm() {
+            document.getElementById('addForm').style.display = 'none';
+            document.getElementById('urlForm').reset();
+            // 重置标签列表
+            currentTags = [];
+            updateTagDisplay();
+        }
+
+        // 添加标签到列表
+        function addTag(tag) {
+            if (tag && !currentTags.includes(tag)) {
+                currentTags.push(tag);
+                updateTagDisplay();
+                document.getElementById('tagInput').value = '';
+            }
+        }
+
+        // 从列表中移除标签
+        function removeTag(tag) {
+            currentTags = currentTags.filter(t => t !== tag);
+            updateTagDisplay();
+        }
+
+        // 更新标签显示
+        function updateTagDisplay() {
+            const tagList = document.getElementById('tagList');
+            tagList.innerHTML = '';
+            
+            currentTags.forEach(tag => {
+                const tagElement = document.createElement('div');
+                tagElement.className = 'tag-item';
+                tagElement.innerHTML = `
+                    ${tag}
+                    <button class="remove-tag-btn" onclick="removeTag('${tag}')">×</button>
+                `;
+                tagList.appendChild(tagElement);
+            });
+        }
+
+        // 在输入框按回车添加标签
+        function addTagOnEnter(event) {
+            if (event.key === 'Enter') {
+                const tagInput = document.getElementById('tagInput');
+                addTag(tagInput.value.trim());
+                event.preventDefault();
+            }
+        }
+
+        // 添加分组项
+        function addGroupItem(containerId) {
+            const newItemText = prompt('请输入新的分组名称：');
+            if (newItemText) {
+                const container = document.getElementById(containerId);
+                const newItem = document.createElement('div');
+                newItem.className = 'sub-item level-1';
+                newItem.setAttribute('data-group', newItemText);
+                
+                newItem.innerHTML = `
+                    <span class="toggle-icon">▶</span> ${newItemText}
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                `;
+                
+                // 添加点击事件来选中分组
+                newItem.onclick = function(event) {
+                    // 如果点击的是操作按钮或展开/收起图标，不执行选中功能
+                    if (event.target.classList.contains('sub-action-btn') || 
+                        event.target.classList.contains('remove-tag-btn') || 
+                        event.target.classList.contains('toggle-icon') ||
+                        event.target.tagName === 'BUTTON') {
+                        return;
+                    }
+                    
+                    // 否则选中该分组
+                    selectSubItem(this, newItemText);
+                };
+                
+                // 为展开/收起图标添加点击事件
+                const toggleIcon = newItem.querySelector('.toggle-icon');
+                if (toggleIcon) {
+                    toggleIcon.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleSubItem(newItem);
+                    };
+                }
+                
+                // 添加拖动事件监听器
+                newItem.draggable = true;
+                newItem.addEventListener('dragstart', handleSidebarDragStart);
+                newItem.addEventListener('dragover', handleSidebarDragOver);
+                newItem.addEventListener('drop', handleSidebarDrop);
+                newItem.addEventListener('dragend', handleSidebarDragEnd);
+                
+                container.appendChild(newItem);
+            }
+        }
+
+        // 添加子分组项
+        function addGroupSubItem(button) {
+            const subItem = button.closest('.sub-item');
+            const parentGroup = subItem.getAttribute('data-group');
+            const subGroupName = prompt('请输入子分组名称：');
+            if (subGroupName) {
+                const fullGroupName = parentGroup + '-' + subGroupName;
+                const newItem = document.createElement('div');
+                newItem.className = 'sub-item level-2';
+                newItem.setAttribute('data-group', fullGroupName);
+                
+                newItem.innerHTML = `
+                    <span class="toggle-icon">▶</span> ${subGroupName}
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                `;
+                
+                // 添加点击事件来选中分组
+                newItem.onclick = function(event) {
+                    // 如果点击的是操作按钮或展开/收起图标，不执行选中功能
+                    if (event.target.classList.contains('sub-action-btn') || 
+                        event.target.classList.contains('remove-tag-btn') || 
+                        event.target.classList.contains('toggle-icon') ||
+                        event.target.tagName === 'BUTTON') {
+                        return;
+                    }
+                    
+                    // 否则选中该分组
+                    selectSubItem(this, fullGroupName);
+                };
+                
+                // 为展开/收起图标添加点击事件
+                const toggleIcon = newItem.querySelector('.toggle-icon');
+                if (toggleIcon) {
+                    toggleIcon.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleSubItem(newItem);
+                    };
+                }
+                
+                // 添加拖动事件监听器
+                newItem.draggable = true;
+                newItem.addEventListener('dragstart', handleSidebarDragStart);
+                newItem.addEventListener('dragover', handleSidebarDragOver);
+                newItem.addEventListener('drop', handleSidebarDrop);
+                newItem.addEventListener('dragend', handleSidebarDragEnd);
+                
+                // 找到父分组所在的容器
+                const containerId = getContainerIdByCategory(currentCategory);
+                const container = document.getElementById(containerId);
+                
+                // 查找父分组元素
+                const parentElement = document.querySelector(`[data-group="${parentGroup}"]`);
+                
+                // 找到父分组在容器中的位置
+                const parentIndex = Array.from(container.children).indexOf(parentElement);
+                
+                // 如果父分组存在，插入到父分组之后的下一个同级子分组之前
+                if (parentIndex !== -1) {
+                    // 查找下一个同级子分组（即下一个level-1元素或下一个以相同父分组开头的子分组）
+                    let insertAfter = parentElement;
+                    for (let i = parentIndex + 1; i < container.children.length; i++) {
+                        const nextElement = container.children[i];
+                        const nextGroup = nextElement.getAttribute('data-group');
+                        
+                        // 如果是同级子分组（即以相同父分组开头的分组）
+                        if (nextGroup && nextGroup.startsWith(parentGroup + '-')) {
+                            // 如果当前子分组的名称按字母顺序应在下一个子分组之前，则插入到此处
+                            if (nextGroup > fullGroupName) {
+                                insertAfter = container.children[i - 1];
+                                break;
+                            }
+                            insertAfter = nextElement;
+                        } else {
+                            // 如果遇到其他父分组的子项，则插入到上一个子分组之后
+                            break;
+                        }
+                    }
+                    
+                    // 插入新子分组
+                    if (insertAfter.nextSibling) {
+                        container.insertBefore(newItem, insertAfter.nextSibling);
+                    } else {
+                        container.appendChild(newItem);
+                    }
+                } else {
+                    container.appendChild(newItem);
+                }
+            }
+        }
+
+        // 根据当前分类获取对应的容器ID
+        function getContainerIdByCategory(category) {
+            switch(category) {
+                case 'ancient': return 'ancientItems';
+                case 'modern': return 'modernItems';
+                case 'media': return 'mediaItems';
+                case 'tools': return 'toolsItems';
+                default: return 'ancientItems';
+            }
+        }
+
+        // 编辑分组项
+        function editSubItem(button) {
+            const subItem = button.closest('.sub-item');
+            const currentText = subItem.textContent.trim().replace('E', '').replace('X', '').replace('+', '').replace('▶', '').replace('▼', '').trim();
+            const groupName = subItem.getAttribute('data-group');
+            const parentGroup = groupName.includes('-') ? groupName.split('-')[0] : groupName;
+            const subGroupName = groupName.includes('-') ? groupName.split('-')[1] : groupName;
+            
+            const newText = prompt('编辑分组名称：', currentText);
+            if (newText) {
+                let newGroupName = groupName;
+                if (groupName.includes('-')) {
+                    newGroupName = parentGroup + '-' + newText;
+                } else {
+                    newGroupName = newText;
+                }
+                
+                // 更新分组名称
+                subItem.setAttribute('data-group', newGroupName);
+                const icon = subItem.querySelector('.toggle-icon').textContent;
+                subItem.innerHTML = `
+                    <span class="toggle-icon">${icon}</span> ${newText}
+                    <div class="sub-item-actions">
+                        <button class="sub-action-btn" onclick="addGroupSubItem(this); event.stopPropagation();">+</button>
+                        <button class="sub-action-btn" onclick="editSubItem(this); event.stopPropagation();">E</button>
+                        <button class="sub-action-btn" onclick="deleteSubItem(this); event.stopPropagation();">X</button>
+                    </div>
+                `;
+                
+                // 重新添加点击事件
+                subItem.onclick = function(event) {
+                    // 如果点击的是操作按钮或展开/收起图标，不执行选中功能
+                    if (event.target.classList.contains('sub-action-btn') || 
+                        event.target.classList.contains('remove-tag-btn') || 
+                        event.target.classList.contains('toggle-icon') ||
+                        event.target.tagName === 'BUTTON') {
+                        return;
+                    }
+                    
+                    // 否则选中该分组
+                    selectSubItem(this, newGroupName);
+                };
+                
+                // 为展开/收起图标添加点击事件
+                const toggleIcon = subItem.querySelector('.toggle-icon');
+                if (toggleIcon) {
+                    toggleIcon.onclick = function(e) {
+                        e.stopPropagation();
+                        toggleSubItem(subItem);
+                    };
+                }
+                
+                // 重新添加拖动事件监听器
+                subItem.draggable = true;
+                subItem.addEventListener('dragstart', handleSidebarDragStart);
+                subItem.addEventListener('dragover', handleSidebarDragOver);
+                subItem.addEventListener('drop', handleSidebarDrop);
+                subItem.addEventListener('dragend', handleSidebarDragEnd);
+                
+                // 更新所有网址数据中的分组名称
+                updateUrlGroupNames(groupName, newGroupName);
+                
+                // 如果当前显示的分组是被修改的分组，更新显示
+                if (currentDisplayGroup === groupName) {
+                    currentDisplayGroup = newGroupName;
+                }
+                
+                // 重新渲染网址列表
+                renderUrlList();
+            }
+        }
+
+        // 更新所有网址数据中的分组名称
+        function updateUrlGroupNames(oldGroupName, newGroupName) {
+            // 如果旧分组名下有网址数据，更新它们的分组名
+            if (urls[oldGroupName]) {
+                // 将网址数据移动到新分组名下
+                urls[newGroupName] = urls[oldGroupName];
+                // 删除旧分组名下的数据
+                delete urls[oldGroupName];
+            }
+            
+            // 检查是否存在以旧分组名为前缀的子分组（例如：中国-北京 -> 美国-北京）
+            for (const key in urls) {
+                if (key.startsWith(oldGroupName + '-')) {
+                    // 计算新的子分组名
+                    const subGroupName = key.substring(oldGroupName.length + 1);
+                    const newSubGroupName = newGroupName + '-' + subGroupName;
+                    
+                    // 移动子分组数据
+                    urls[newSubGroupName] = urls[key];
+                    delete urls[key];
+                }
+            }
+        }
+
+        // 删除分组项
+        function deleteSubItem(button) {
+            if (confirm('确定要删除这个分组吗？')) {
+                const subItem = button.closest('.sub-item');
+                const groupName = subItem.getAttribute('data-group');
+                
+                // 检查是否有该分组的网址数据
+                if (urls[groupName] && urls[groupName].length > 0) {
+                    if (confirm('该分组下有网址数据，删除后数据将一并删除，确定继续吗？')) {
+                        delete urls[groupName];
+                    } else {
+                        return;
+                    }
+                }
+                
+                subItem.remove();
+                renderUrlList();
+            }
+        }
+
+        // 添加网址
+        function addUrl(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const url = document.getElementById('url').value;
+            const description = document.getElementById('description').value;
+            
+            // 检查是否已存在相同的网址
+            for (const group in urls) {
+                if (Array.isArray(urls[group])) {
+                    const existingUrl = urls[group].find(item => item.url === url);
+                    if (existingUrl) {
+                        alert('该网址已存在！');
+                        return;
+                    }
+                }
+            }
+            
+            // 使用当前选中的分组
+            const group = currentDisplayGroup || '综合';
+
+            // 创建分组数据结构
+            if (!urls[group]) {
+                urls[group] = [];
+            }
+
+            const newUrl = {
+                id: Date.now(),
+                title,
+                url,
+                description,
+                date: new Date().toLocaleDateString(),
+                tags: [...currentTags], // 使用当前标签列表
+                level: 1 // 默认为一级内容
+            };
+
+            urls[group].push(newUrl);
+            
+            // 立即更新网址列表（避免闪动的关键修改）
+            if (currentDisplayGroup === group || !currentDisplayGroup) {
+                renderUrlList();
+            }
+            
+            // 重置表单并隐藏
+            document.getElementById('urlForm').reset();
+            currentTags = [];
+            updateTagDisplay();
+            hideAddForm();
+        }
+
+        // 递归获取分组下的所有内容（包括子分组内容）
+        function getAllGroupContent(groupName) {
+            let allContent = [];
+            
+            // 添加当前分组的网址
+            if (urls[groupName] && Array.isArray(urls[groupName])) {
+                allContent = allContent.concat(urls[groupName]);
+            }
+            
+            // 查找所有子分组并递归添加它们的内容
+            for (const potentialSubGroup in urls) {
+                // 检查是否为子分组（以当前分组名开头）
+                if (potentialSubGroup.startsWith(groupName + '-')) {
+                    if (urls[potentialSubGroup] && Array.isArray(urls[potentialSubGroup])) {
+                        allContent = allContent.concat(urls[potentialSubGroup]);
+                    }
+                }
+            }
+            
+            return allContent;
+        }
+
+        // 渲染网址列表 - 只显示当前选中分组的网址
+        function renderUrlList() {
+            const urlList = document.getElementById('urlList');
+            urlList.innerHTML = '';
+
+            // 如果正在进行标签搜索
+            if (currentSearchTag) {
+                // 遍历所有分组的所有网址
+                for (const group in urls) {
+                    if (Array.isArray(urls[group])) {
+                        urls[group].forEach(item => {
+                            // 检查是否包含搜索标签
+                            if (item.tags && item.tags.includes(currentSearchTag)) {
+                                const card = document.createElement('div');
+                                card.className = 'url-card';
+                                card.draggable = true;
+                                card.setAttribute('data-url-id', item.id);
+                                card.setAttribute('data-url-group', group);
+                                card.innerHTML = `
+                                    <div class="url-content">
+                                        <a href="${item.url}" target="_blank" class="url-title">${item.title}</a>
+                                        <div class="url-desc">${item.description}</div>
+                                        <div class="url-tags">
+                                            ${item.tags && item.tags.length > 0 ? 
+                                                item.tags.map(tag => 
+                                                    `<span class="url-tag" onclick="searchByTag('${tag}')">${tag}</span>`
+                                                ).join('') : 
+                                                '<span class="url-tag" style="opacity: 0.5;">无标签</span>'
+                                            }
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="action-btn edit-btn" onclick="editUrl(${item.id}, '${group}')">E</button>
+                                            <button class="action-btn delete-btn" onclick="deleteUrl(${item.id}, '${group}')">X</button>
+                                        </div>
+                                    </div>
+                                `;
+                                urlList.appendChild(card);
+                            }
+                        });
+                    }
+                }
+                return; // 结束函数，不再执行下面的逻辑
+            }
+
+            // 如果没有选中任何分组，显示当前分类的所有网址
+            if (!currentDisplayGroup) {
+                // 根据当前分类获取对应的分组
+                let groupsToDisplay = [];
+                if (currentCategory === 'ancient') {
+                    // 图像分类 - 显示所有子分组
+                    groupsToDisplay = getAllSubGroups('ancientItems');
+                } else if (currentCategory === 'modern') {
+                    // 文本分类 - 显示所有子分组
+                    groupsToDisplay = getAllSubGroups('modernItems');
+                } else if (currentCategory === 'media') {
+                    // 自媒体分类 - 显示所有子分组
+                    groupsToDisplay = getAllSubGroups('mediaItems');
+                } else if (currentCategory === 'tools') {
+                    // 工具库分类 - 显示所有子分组
+                    groupsToDisplay = getAllSubGroups('toolsItems');
+                }
+
+                // 遍历所有要显示的分组
+                groupsToDisplay.forEach(groupName => {
+                    if (urls[groupName] && Array.isArray(urls[groupName])) {
+                        urls[groupName].forEach(item => {
+                            const card = document.createElement('div');
+                            card.className = 'url-card';
+                            card.draggable = true;
+                            card.setAttribute('data-url-id', item.id);
+                            card.setAttribute('data-url-group', groupName);
+                            card.innerHTML = `
+                                <div class="url-content">
+                                    <a href="${item.url}" target="_blank" class="url-title">${item.title}</a>
+                                    <div class="url-desc">${item.description}</div>
+                                    <div class="url-tags">
+                                        ${item.tags && item.tags.length > 0 ? 
+                                            item.tags.map(tag => 
+                                                `<span class="url-tag" onclick="searchByTag('${tag}')">${tag}</span>`
+                                            ).join('') : 
+                                            '<span class="url-tag" style="opacity: 0.5;">无标签</span>'
+                                        }
+                                    </div>
+                                    <div class="card-actions">
+                                        <button class="action-btn edit-btn" onclick="editUrl(${item.id}, '${groupName}')">E</button>
+                                        <button class="action-btn delete-btn" onclick="deleteUrl(${item.id}, '${groupName}')">X</button>
+                                    </div>
+                                </div>
+                            `;
+                            urlList.appendChild(card);
+                        });
+                    }
+                });
+            } else {
+                // 如果选中了特定分组，显示该分组及其子分组的所有网址
+                const allGroupContent = getAllGroupContent(currentDisplayGroup);
+                
+                // 如果启用了排序，则按标题字母顺序排序
+                if (isSorted) {
+                    allGroupContent.sort((a, b) => a.title.localeCompare(b.title, 'zh-CN'));
+                }
+                
+                allGroupContent.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'url-card';
+                    card.draggable = true;
+                    card.setAttribute('data-url-id', item.id);
+                    card.setAttribute('data-url-group', currentDisplayGroup);
+                    card.innerHTML = `
+                        <div class="url-content">
+                            <a href="${item.url}" target="_blank" class="url-title">${item.title}</a>
+                            <div class="url-desc">${item.description}</div>
+                            <div class="url-tags">
+                                ${item.tags && item.tags.length > 0 ? 
+                                    item.tags.map(tag => 
+                                        `<span class="url-tag" onclick="searchByTag('${tag}')">${tag}</span>`
+                                    ).join('') : 
+                                    '<span class="url-tag" style="opacity: 0.5;">无标签</span>'
+                                }
+                            </div>
+                            <div class="card-actions">
+                                <button class="action-btn edit-btn" onclick="editUrl(${item.id}, '${currentDisplayGroup}')">E</button>
+                                <button class="action-btn delete-btn" onclick="deleteUrl(${item.id}, '${currentDisplayGroup}')">X</button>
+                            </div>
+                        </div>
+                    `;
+                    urlList.appendChild(card);
+                });
+            }
+            
+            // 为所有卡片添加拖动事件监听器
+            addDragEventListeners();
+        }
+
+        // 获取所有子分组名称
+        function getAllSubGroups(containerId) {
+            const container = document.getElementById(containerId);
+            const subItems = container.querySelectorAll('.sub-item[data-group]');
+            const groups = [];
+            
+            subItems.forEach(item => {
+                const groupName = item.getAttribute('data-group');
+                if (groupName && !groups.includes(groupName)) {
+                    groups.push(groupName);
+                }
+            });
+            
+            return groups;
+        }
+
+        // 编辑网址
+        function editUrl(id, groupName) {
+            if (!urls[groupName]) {
+                urls[groupName] = [];
+            }
+            
+            const url = urls[groupName].find(item => item.id === id);
+            if (url) {
+                document.getElementById('title').value = url.title;
+                document.getElementById('url').value = url.url;
+                document.getElementById('description').value = url.description;
+                
+                // 设置标签
+                currentTags = url.tags || [];
+                updateTagDisplay();
+                
+                // 从原分组中移除项目
+                urls[groupName] = urls[groupName].filter(item => item.id !== id);
+                if (urls[groupName].length === 0) {
+                    delete urls[groupName];
+                }
+                
+                // 显示编辑表单
+                document.getElementById('addForm').style.display = 'block';
+            }
+        }
+
+        // 删除网址
+        function deleteUrl(id, groupName) {
+            if (confirm('确定要删除这个网址吗？')) {
+                if (urls[groupName]) {
+                    urls[groupName] = urls[groupName].filter(item => item.id !== id);
+                    if (urls[groupName].length === 0) {
+                        delete urls[groupName];
+                    }
+                    renderUrlList();
+                }
+            }
+        }
+
+        // 获取所有标签
+        function getAllTags() {
+            const allTags = new Set();
+            for (const group in urls) {
+                if (Array.isArray(urls[group])) {
+                    urls[group].forEach(item => {
+                        if (item.tags && Array.isArray(item.tags)) {
+                            item.tags.forEach(tag => allTags.add(tag));
+                        }
+                    });
+                }
+            }
+            return Array.from(allTags);
+        }
+
+        // 显示标签建议
+        function showTagSuggestions() {
+            const input = document.getElementById('tagSearchInput').value.toLowerCase();
+            const suggestions = document.getElementById('tagSuggestions');
+            const allTags = getAllTags();
+            
+            if (input.length > 0) {
+                const filteredTags = allTags.filter(tag => 
+                    tag.toLowerCase().includes(input)
+                );
+                
+                if (filteredTags.length > 0) {
+                    suggestions.innerHTML = '';
+                    filteredTags.forEach(tag => {
+                        const item = document.createElement('div');
+                        item.className = 'tag-suggestion-item';
+                        item.textContent = tag;
+                        item.onclick = () => {
+                            document.getElementById('tagSearchInput').value = tag;
+                            suggestions.style.display = 'none';
+                            searchByTag(tag);
+                        };
+                        suggestions.appendChild(item);
+                    });
+                    suggestions.style.display = 'block';
+                } else {
+                    suggestions.style.display = 'none';
+                }
+            } else {
+                suggestions.style.display = 'none';
+            }
+        }
+
+        // 按标签搜索
+        function searchByTag(tag = null) {
+            if (!tag) {
+                tag = document.getElementById('tagSearchInput').value;
+            }
+            
+            if (tag) {
+                currentSearchTag = tag;
+                currentDisplayGroup = null; // 清除当前分组选择
+                renderUrlList();
+            } else {
+                currentSearchTag = null;
+                renderUrlList();
+            }
+        }
+
+        // 处理标签搜索输入框的回车事件
+        function handleTagSearchKeyPress(event) {
+            if (event.key === 'Enter') {
+                searchByTag();
+            }
+        }
+
+        // 点击页面其他地方隐藏标签建议
+        document.addEventListener('click', function(event) {
+            const suggestions = document.getElementById('tagSuggestions');
+            const searchInput = document.getElementById('tagSearchInput');
+            
+            if (!suggestions.contains(event.target) && !searchInput.contains(event.target)) {
+                suggestions.style.display = 'none';
+            }
+        });
+
+        // 显示捐赠页面
+        function showDonate() {
+            document.getElementById('donatePage').style.display = 'block';
+        }
+
+        // 隐藏捐赠页面
+        function hideDonate() {
+            document.getElementById('donatePage').style.display = 'none';
+        }
+
+        // 显示数据管理对话框
+        function showDataManagement() {
+            document.getElementById('dataDialog').style.display = 'flex';
+        }
+
+        // 隐藏数据管理对话框
+        function hideDataManagement() {
+            document.getElementById('dataDialog').style.display = 'none';
+        }
+
+        // 回到主页功能
+        function goHome() {
+            // 重置所有状态
+            currentCategory = 'ancient';
+            currentDisplayGroup = null;
+            currentSearchTag = null;
+            isSorted = false;
+            document.getElementById('sortBtn').textContent = '排序: 默认';
+            document.getElementById('sortBtn').classList.remove('active');
+            
+            // 更新按钮状态
+            document.getElementById('ancientBtn').classList.add('active');
+            document.getElementById('modernBtn').classList.remove('active');
+            document.getElementById('mediaBtn').classList.remove('active');
+            document.getElementById('toolsBtn').classList.remove('active');
+            document.getElementById('dataBtn').classList.remove('active');
+            document.getElementById('donateBtn').classList.remove('active');
+            
+            // 隐藏所有侧边栏分组
+            document.getElementById('ancientGroup').style.display = 'block';
+            document.getElementById('modernGroup').style.display = 'none';
+            document.getElementById('mediaGroup').style.display = 'none';
+            document.getElementById('toolsGroup').style.display = 'none';
+            
+            // 清空搜索框
+            document.getElementById('tagSearchInput').value = '';
+            
+            // 重新渲染网址列表
+            renderUrlList();
+        }
+
+        // 切换排序功能
+        function toggleSort() {
+            isSorted = !isSorted;
+            const sortBtn = document.getElementById('sortBtn');
+            
+            if (isSorted) {
+                sortBtn.textContent = '排序: A-Z';
+                sortBtn.classList.add('active');
+            } else {
+                sortBtn.textContent = '排序: 默认';
+                sortBtn.classList.remove('active');
+            }
+            
+            renderUrlList();
+        }
+
+        // 导出JSON数据
+        function exportData() {
+            const dataToExport = {
+                urls: urls,
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(dataToExport, null, 2);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `兆堂数据_${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            
+            // 清理
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+            
+            // 隐藏对话框
+            hideDataManagement();
+        }
+
+        // 导入JSON数据
+        function importData() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            
+            input.onchange = function(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const importedData = JSON.parse(e.target.result);
+                        
+                        if (importedData.urls) {
+                            // 确认是否覆盖现有数据
+                            if (confirm('是否要覆盖当前数据？\n注意：这将替换所有现有的网址和分组数据')) {
+                                urls = importedData.urls;
+                                alert('数据导入成功！');
+                                renderUrlList();
+                            }
+                        } else {
+                            alert('文件格式不正确，缺少urls数据');
+                        }
+                    } catch (error) {
+                        alert('文件解析失败，请确认文件格式正确');
+                    }
+                };
+                reader.readAsText(file);
+            };
+            
+            document.body.appendChild(input);
+            input.click();
+            document.body.removeChild(input);
+            
+            // 隐藏对话框
+            hideDataManagement();
+        }
+
+        // 添加拖动事件监听器
+        function addDragEventListeners() {
+            const cards = document.querySelectorAll('.url-card');
+            cards.forEach(card => {
+                card.addEventListener('dragstart', handleDragStart);
+                card.addEventListener('dragover', handleDragOver);
+                card.addEventListener('drop', handleDrop);
+            });
+            
+            // 为侧边栏分组项添加拖放事件
+            const subItems = document.querySelectorAll('.sub-item');
+            subItems.forEach(item => {
+                item.addEventListener('dragover', handleDragOver);
+                item.addEventListener('drop', handleDrop);
+            });
+        }
+
+        // 拖动开始事件
+        function handleDragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.getAttribute('data-url-id'));
+            e.dataTransfer.setData('text/group', e.target.getAttribute('data-url-group'));
+            e.dataTransfer.effectAllowed = 'move';
+        }
+
+        // 拖动经过事件
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        }
+
+        // 拖放事件
+        function handleDrop(e) {
+            e.preventDefault();
+            
+            const urlId = e.dataTransfer.getData('text/plain');
+            const oldGroup = e.dataTransfer.getData('text/group');
+            
+            // 检查是否拖到了侧边栏分组项上
+            const target = e.target.closest('.sub-item');
+            if (target) {
+                const newGroup = target.getAttribute('data-group');
+                
+                // 如果拖到分组项上，移动网址到新分组
+                moveUrlToGroup(urlId, oldGroup, newGroup);
+            }
+        }
+
+        // 移动网址到新分组
+        function moveUrlToGroup(urlId, oldGroup, newGroup) {
+            // 从原分组中找到并移除网址
+            if (urls[oldGroup] && Array.isArray(urls[oldGroup])) {
+                const urlIndex = urls[oldGroup].findIndex(item => item.id == urlId);
+                if (urlIndex !== -1) {
+                    const url = urls[oldGroup][urlIndex];
+                    urls[oldGroup].splice(urlIndex, 1);
+                    
+                    // 如果原分组为空，删除该分组
+                    if (urls[oldGroup].length === 0) {
+                        delete urls[oldGroup];
+                    }
+                    
+                    // 添加到新分组
+                    if (!urls[newGroup]) {
+                        urls[newGroup] = [];
+                    }
+                    urls[newGroup].push(url);
+                    
+                    // 重新渲染列表
+                    renderUrlList();
+                }
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+
+</body></html>
