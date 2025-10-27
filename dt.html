@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>高德地图搜索示例</title>
-  <style>
-    #container {
-      width: 100%;
-      height: 500px;
-    }
-    #search-box {
-      margin: 10px 0;
-      padding: 8px;
-      width: 300px;
-    }
-  </style>
-
-  <!-- 引入高德地图 JS API -->
-  <script src="https://webapi.amap.com/maps?v=2.0&key=da1c084878bdd9a0003e9db6d7f7de88"></script>
+    <meta charset="UTF-8">
+    <title>高德地图嵌入示例</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=	da1c084878bdd9a0003e9db6d7f7de88"></script>
+    <style>
+        #mapContainer { width: 100%; height: 500px; }
+    </style>
 </head>
 <body>
+    <div id="mapContainer"></div>
+    <input type="text" id="keyword" placeholder="输入地点关键字">
+    <button onclick="searchPlace()">搜索</button>
 
-  <input type="text" id="search-box" placeholder="请输入地点名称" />
-  <button onclick="searchPlace()">搜索</button>
-
-  <div id="container"></div>
-
-  <script>
-    // 初始化地图
-    const map = new AMap.Map('container', {
-      zoom: 10,               // 初始缩放级别
-      center: [116.397428, 39.90923] // 默认中心点（北京）
-    });
-
-    // 搜索函数
-    function searchPlace() {
-      const keyword = document.getElementById('search-box').value.trim();
-      if (!keyword) return;
-
-      AMap.plugin('AMap.PlaceSearch', () => {
-        const placeSearch = new AMap.PlaceSearch({
-          map: map,
-          pageSize: 10,
-          pageIndex: 1
+    <script>
+        // 初始化地图
+        var map = new AMap.Map('mapContainer', {
+            zoom: 12,          // 缩放级别
+            center: [116.397428, 39.90923] // 中心点坐标（北京）
         });
 
-        placeSearch.search(keyword, (status, result) => {
-          if (status === 'complete' && result.info === 'OK') {
-            console.log('搜索成功', result);
-          } else {
-            alert('未找到相关地点');
-          }
+        // 添加控件
+        map.addControl(new AMap.Scale());     // 比例尺
+        map.addControl(new AMap.ToolBar());   // 缩放控件
+
+        // 创建信息窗口
+        var infoWindow = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -30) });
+
+        // 初始化地点搜索
+        var placeSearch = new AMap.PlaceSearch({
+            map: map
         });
-      });
-    }
 
-    // 回车键搜索
-    document.getElementById('search-box').addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') searchPlace();
-    });
-  </script>
+        // 搜索函数
+        function searchPlace() {
+            var keyword = document.getElementById('keyword').value;
+            placeSearch.search(keyword, function(status, result) {
+                if (status === 'complete' && result.info === 'OK') {
+                    // 搜索结果处理
+                    var pois = result.poiList.pois;
+                    if (pois.length > 0) {
+                        map.setCenter(pois[0].location);
+                        addMarker(pois[0]);
+                    }
+                }
+            });
+        }
 
+        // 添加标记
+        function addMarker(poi) {
+            var marker = new AMap.Marker({
+                position: poi.location,
+                map: map
+            });
+            
+            marker.on('click', function() {
+                infoWindow.setContent(`
+                    <div>
+                        <h3>${poi.name}</h3>
+                        <p>地址：${poi.address}</p>
+                    </div>
+                `);
+                infoWindow.open(map, marker.getPosition());
+            });
+        }
+    </script>
 </body>
 </html>
