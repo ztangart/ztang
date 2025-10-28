@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- 现代化网站管理系统 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兆堂</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="display: inline-block; cursor: pointer; text-decoration: none; color: inherit;">兆堂</a>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">图像</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item" data-category="各国">各国</a>
+                                <a href="#" class="dropdown-item" data-category="中国">中国</a>
+                                <a href="#" class="dropdown-item" data-category="英国">英国</a>
+                                <a href="#" class="dropdown-item" data-category="美国">美国</a>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="欧洲">欧洲</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="意大利">意大利</a>
+                                        <a href="#" class="dropdown-item" data-category="法国">法国</a>
+                                        <a href="#" class="dropdown-item" data-category="荷兰">荷兰</a>
+                                        <a href="#" class="dropdown-item" data-category="匈牙利">匈牙利</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="dropdown-item" data-category="日本">日本</a>
+                                <a href="#" class="dropdown-item" data-category="商业组织">商业组织</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">文本</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item" data-category="百科">百科</a>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="古籍文献">古籍文献</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="中国古籍">中国古籍</a>
+                                        <a href="#" class="dropdown-item" data-category="外国古籍">外国古籍</a>
+                                        <a href="#" class="dropdown-item" data-category="专题古籍">专题古籍</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="期刊杂志">期刊杂志</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="期刊">期刊</a>
+                                        <a href="#" class="dropdown-item" data-category="杂志">杂志</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="dropdown-item" data-category="组织机构">组织机构</a>
+                                <a href="#" class="dropdown-item" data-category="网文">网文</a>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="图书">图书</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="图书馆">图书馆</a>
+                                        <a href="#" class="dropdown-item" data-category="资讯">资讯</a>
+                                        <a href="#" class="dropdown-item" data-category="工具">工具</a>
+                                        <a href="#" class="dropdown-item" data-category="出版社">出版社</a>
+                                        <a href="#" class="dropdown-item" data-category="宗教">宗教</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">工具</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item" data-category="字典">字典</a>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="教育">教育</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="课程">课程</a>
+                                        <a href="#" class="dropdown-item" data-category="语言">语言</a>
+                                        <a href="#" class="dropdown-item" data-category="写作">写作</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="dropdown-item" data-category="AI">AI</a>
+                                <a href="#" class="dropdown-item" data-category="办公">办公</a>
+                                <a href="#" class="dropdown-item" data-category="图表">图表</a>
+                                <a href="#" class="dropdown-item" data-category="图片">图片</a>
+                                <a href="#" class="dropdown-item" data-category="视频">视频</a>
+                                <a href="#" class="dropdown-item" data-category="游戏">游戏</a>
+                                <a href="#" class="dropdown-item" data-category="设计">设计</a>
+                                <div class="dropdown dropdown-nested">
+                                    <a href="#" class="dropdown-toggle dropdown-item" data-category="IT工具">IT工具</a>
+                                    <div class="dropdown-content dropdown-content-nested">
+                                        <a href="#" class="dropdown-item" data-category="编程">编程</a>
+                                        <a href="#" class="dropdown-item" data-category="应用工具">应用工具</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">资讯</a>
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item" data-category="艺术">艺术</a>
+                                <a href="#" class="dropdown-item" data-category="文化">文化</a>
+                                <a href="#" class="dropdown-item" data-category="教育">教育</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">数据管理</a>
+                            <div class="dropdown-content">
+                                <button id="export-btn" class="btn btn-secondary" style="width: 100%; text-align: left;">导出数据</button>
+                                <button id="reload-btn" class="btn btn-secondary" style="width: 100%; text-align: left;">重新加载数据</button>
+                                <button id="import-btn" class="btn btn-secondary" style="width: 100%; text-align: left;">导入数据</button>
+                                <button id="add-site-btn" class="btn btn-secondary" style="width: 100%; text-align: left;">添加网站</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle">捐赠</a>
+                            <div class="dropdown-content">
+                                <div style="padding: 16px;">
+                                    <h4>支持我们</h4>
+                                    <p>感谢您对兆堂的支持！您的捐赠将帮助我们持续维护和改进平台，为用户提供更好的服务。我们也期待来自您的技术与知识支持，还有您宝贵的建议。</p>
+                                    <p>微信：Mnemosyne-CAA</p>
+                                    <p>公众号：兆堂艺术人文</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <input type="text" id="search-input" placeholder="搜索..." class="search-input-small">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" title="排序">排序</a>
+                    <div class="dropdown-content">
+                        <a href="#" id="sort-by-name" class="dropdown-item" data-sort="name">按字母顺序排序</a>
+                        <a href="#" id="sort-by-level" class="dropdown-item" data-sort="level">按重要程度排序</a>
+                    </div>
+                </div>
+                <input type="file" id="import-input" accept=".json" style="display: none;">
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content" style="background-color: white;">
+        <div class="container" style="border-radius: 8px; overflow: hidden;">
+            <!-- 网站网格 -->
+            <div id="sites-grid" class="sites-grid">
+                <!-- 网站卡片将通过JavaScript动态生成 -->
+                <div class="empty-state" id="empty-state">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <p>暂无网站数据</p>
+                    <p class="empty-state-hint">点击"添加网站"按钮开始添加</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加/编辑网站模态框 -->
+    <div id="site-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">添加网站</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="site-form">
+                    <div class="form-group">
+                        <label for="site-title">网站标题 *</label>
+                        <input type="text" id="site-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="site-url">网站URL *</label>
+                        <input type="url" id="site-url" required placeholder="https://">
+                    </div>
+                    <div class="form-group">
+                        <label for="site-description">网站描述</label>
+                        <textarea id="site-description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="site-category">分类 *</label>
+                        <input type="text" id="site-category" required placeholder="自动使用当前选中的分类，或手动输入">
+                        <button type="button" id="select-category-btn" class="btn btn-secondary" style="margin-top: 8px; width: 100%;">从菜单中选择分类</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="site-tags">标签 (用逗号分隔)</label>
+                        <input type="text" id="site-tags" placeholder="标签1, 标签2, 标签3">
+                    </div>
+                    <div class="form-group">
+                        <label for="site-level">重要程度</label>
+                        <select id="site-level">
+                            <option value="1">一般</option>
+                            <option value="2" selected>重要</option>
+                            <option value="3">非常重要</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-btn" class="btn btn-secondary">取消</button>
+                <button id="save-btn" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 确认删除模态框 -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-header">
+                <h2>确认删除</h2>
+                <button id="close-delete-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除这个网站吗？此操作不可撤销。</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-delete-btn" class="btn btn-secondary">取消</button>
+                <button id="confirm-delete-btn" class="btn btn-danger">删除</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 分类选择模态框 -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>选择分类</h2>
+                <button id="close-category-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="category-selector" class="category-selector">
+                    <!-- 分类选择器内容将通过JavaScript动态生成 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-category-btn" class="btn btn-secondary">取消</button>
+                <button id="confirm-category-btn" class="btn btn-primary">确认选择</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 消息提示 -->
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
