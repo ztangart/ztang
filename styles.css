@@ -42,6 +42,13 @@ body {
     padding-top: 80px; /* 为固定导航栏留出空间 */
 }
 
+/* 响应式body padding */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* 移动端收起状态的导航栏高度 */
+    }
+}
+
 /* 容器 */
 .container {
     width: 100%;
@@ -69,6 +76,7 @@ body {
     padding: var(--spacing-md) 0;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.95);
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .navbar .container {
@@ -76,6 +84,32 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+}
+
+/* 汉堡菜单按钮样式 */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease;
+    z-index: 110;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle svg {
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active svg {
+    transform: rotate(90deg);
 }
 
 .logo {
@@ -284,20 +318,73 @@ body {
 
 /* 响应式导航 */
 @media (max-width: 768px) {
+  /* 显示汉堡菜单按钮 */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* 默认隐藏导航菜单 */
+  .navbar.collapsed {
+    max-height: 60px;
+    overflow: hidden;
+    padding: var(--spacing-sm) 0;
+  }
+  
   .navbar .container {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
   
+  /* 主导航和操作区域在移动端垂直排列 */
+  .main-nav,
+  .nav-actions {
+    width: 100%;
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 0.3s ease;
+  }
+  
+  .navbar.collapsed .main-nav,
+  .navbar.collapsed .nav-actions {
+    max-height: 0;
+    margin-top: -16px;
+    margin-bottom: -16px;
+  }
+  
+  /* 调整下拉菜单样式 */
   .main-nav ul {
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    gap: 8px;
   }
   
   .nav-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+  
+  /* 搜索框在移动端宽度100% */
+  .search-input-small {
     width: 100%;
-    justify-content: flex-end;
+  }
+  
+  /* 下拉菜单调整为在父元素下方显示 */
+  .dropdown-content {
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  
+  /* 嵌套下拉菜单调整 */
+  .dropdown-content-nested {
+    position: relative;
+    left: 0;
+    margin-left: 20px;
+    margin-top: 4px;
   }
 }
 
@@ -852,13 +939,8 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    body {
-        padding-top: 120px; /* 大幅增加移动端顶部空间 */
-    }
-    
     .navbar {
         padding: var(--spacing-sm);
-        min-height: 110px; /* 设置最小高度 */
     }
     
     .nav-actions {
@@ -904,32 +986,20 @@ body {
 }
 
 @media (max-width: 576px) {
-    body {
-        padding-top: 140px; /* 在更小屏幕上进一步增加顶部空间 */
-    }
-    
-    .navbar {
-        min-height: 130px; /* 设置更大的最小高度 */
-    }
-    
     .sites-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding-top: 160px; /* 小屏幕上确保有足够空间 */
-    }
-    
     .navbar {
         padding: var(--spacing-sm);
-        min-height: 150px; /* 设置最大的最小高度 */
         flex-direction: column;
         align-items: center;
     }
     
     .logo {
+        font-size: 1.5rem;
         margin-bottom: var(--spacing-sm);
         text-align: center;
         width: 100%;
@@ -946,6 +1016,10 @@ body {
         padding: 0.25rem 0.75rem;
         font-size: 0.7rem;
         margin: 2px;
+    }
+    
+    .search-input-small {
+        font-size: 0.8rem;
     }
     
     .main-nav > ul {
