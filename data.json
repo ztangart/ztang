@@ -1,0 +1,116 @@
+{
+  "sites": [
+    {
+      "id": 1761291851700,
+      "title": "复旦印谱文献虚拟图书馆",
+      "url": "https://library.fudan.edu.cn/",
+      "description": "2019年，复旦大学图书馆基于林章松先生捐赠，建设了\"印藏——印谱文献虚拟图书馆\"，向互联网用户提供丰富的数字化印谱文献资源。",
+      "category": "学术资源",
+      "tags": ["印谱", "文献", "图书馆", "复旦"],
+      "level": 3,
+      "createdAt": "2023-10-24T14:25:55.701Z",
+      "updatedAt": "2023-10-24T14:25:55.701Z"
+    },
+    {
+      "id": 1761291938976,
+      "title": "大都会艺术博物馆",
+      "url": "https://www.metmuseum.org/",
+      "description": "The Metropolitan Museum of Art，美国最大的艺术博物馆。",
+      "category": "博物馆",
+      "tags": ["博物馆", "艺术", "美国", "收藏"],
+      "level": 3,
+      "createdAt": "2023-10-24T14:30:00.000Z",
+      "updatedAt": "2023-10-24T14:30:00.000Z"
+    },
+    {
+      "id": 1761291948977,
+      "title": "国际印刷博物馆",
+      "url": "https://www.printmuseum.org/",
+      "description": "The International Printing Museum，致力于印刷历史和技术的保护与展示。",
+      "category": "博物馆",
+      "tags": ["印刷", "博物馆", "历史", "技术"],
+      "level": 2,
+      "createdAt": "2023-10-24T14:35:00.000Z",
+      "updatedAt": "2023-10-24T14:35:00.000Z"
+    },
+    {
+      "id": 1761291958978,
+      "title": "亚洲艺术国家博物馆",
+      "url": "https://asia.si.edu/",
+      "description": "NATIONAL MUSEUM Of ASIANART，史密森尼学会下设组织，专注于亚洲艺术的收藏与研究。",
+      "category": "博物馆",
+      "tags": ["亚洲艺术", "博物馆", "史密森尼", "收藏"],
+      "level": 3,
+      "createdAt": "2023-10-24T14:40:00.000Z",
+      "updatedAt": "2023-10-24T14:40:00.000Z"
+    },
+    {
+      "id": 1761291968979,
+      "title": "漫步意大利",
+      "url": "https://www.italia.it/",
+      "description": "一个意大利旅行组织的网站，里面有很多\"旅游照\"，展示意大利丰富的文化和艺术遗产。",
+      "category": "艺术旅行",
+      "tags": ["意大利", "旅行", "文化", "艺术"],
+      "level": 1,
+      "createdAt": "2023-10-24T14:45:00.000Z",
+      "updatedAt": "2023-10-24T14:45:00.000Z"
+    },
+    {
+      "id": 1761291978980,
+      "title": "Arthive",
+      "url": "https://www.arthive.net/",
+      "description": "一个集中画家、收藏家和艺术品经销商的社区，旨在让艺术品发布、收藏、管理、买卖变得更加容易。",
+      "category": "艺术社区",
+      "tags": ["艺术社区", "收藏", "艺术品", "交易"],
+      "level": 2,
+      "createdAt": "2023-10-24T14:50:00.000Z",
+      "updatedAt": "2023-10-24T14:50:00.000Z"
+    },
+    {
+      "id": 1761291988981,
+      "title": "WahooArt",
+      "url": "https://www.wahooart.com/",
+      "description": "美术复制品画廊，同时拥有广泛的艺术家艺术品和传记数据库。",
+      "category": "艺术资源",
+      "tags": ["艺术品复制", "艺术家数据库", "艺术资源"],
+      "level": 2,
+      "createdAt": "2023-10-24T14:55:00.000Z",
+      "updatedAt": "2023-10-24T14:55:00.000Z"
+    },
+    {
+      "id": 1761291998982,
+      "title": "奇文雲海",
+      "url": "http://www.qwyh.com/",
+      "description": "有一些自主设计的免费字体。奇文雲海設計顧問（北京）成立於2004年，是一家專注視覺設計、品牌方案、出版策劃、空間設計的設計機構。",
+      "category": "设计机构",
+      "tags": ["字体设计", "视觉设计", "品牌设计", "出版策划"],
+      "level": 2,
+      "createdAt": "2023-10-24T15:00:00.000Z",
+      "updatedAt": "2023-10-24T15:00:00.000Z"
+    },
+    {
+      "id": 1761292008983,
+      "title": "Gallerix",
+      "url": "https://www.gallerix.asia/",
+      "description": "Gallerix网站自 2009 年起开始运营，目前是世界上最大的虚拟绘画博物馆之一，既有经典绘画，也有当代作家的作品。",
+      "category": "虚拟博物馆",
+      "tags": ["虚拟博物馆", "绘画", "艺术品", "经典艺术"],
+      "level": 3,
+      "createdAt": "2023-10-24T15:05:00.000Z",
+      "updatedAt": "2023-10-24T15:05:00.000Z"
+    },
+    {
+      "id": 1761292018984,
+      "title": "DANAE",
+      "url": "https://danae.art/",
+      "description": "当代数字艺术平台。DANAE成立于2021年，在这里区块链、数字艺术和策展需求相遇。该平台以其创新的艺术合作和标志性项目而脱颖而出。",
+      "category": "数字艺术",
+      "tags": ["数字艺术", "区块链", "策展", "当代艺术"],
+      "level": 2,
+      "createdAt": "2023-10-24T15:10:00.000Z",
+      "updatedAt": "2023-10-24T15:10:00.000Z"
+    }
+  ],
+  "version": "1.1",
+  "createdAt": "2024-01-01T00:00:00.000Z"
+}
