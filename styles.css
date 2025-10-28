@@ -85,6 +85,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+    gap: var(--spacing-md);
 }
 
 /* 汉堡菜单按钮样式 */
@@ -97,6 +98,7 @@ body {
     border-radius: var(--border-radius-sm);
     transition: background-color 0.3s ease;
     z-index: 110;
+    position: relative;
 }
 
 .menu-toggle:hover {
@@ -106,6 +108,7 @@ body {
 .menu-toggle svg {
     color: var(--text-primary);
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .menu-toggle.active svg {
@@ -321,6 +324,10 @@ body {
   /* 显示汉堡菜单按钮 */
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
   }
   
   /* 默认隐藏导航菜单 */
@@ -330,10 +337,21 @@ body {
     padding: var(--spacing-sm) 0;
   }
   
+  /* 移动端导航栏容器特殊布局 */
   .navbar .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 16px;
+    position: relative;
+  }
+  
+  /* Logo和汉堡菜单按钮在顶部同一行 */
+  .navbar .container > .logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    padding-right: 40px; /* 为汉堡菜单留出空间 */
   }
   
   /* 主导航和操作区域在移动端垂直排列 */
@@ -341,13 +359,15 @@ body {
   .nav-actions {
     width: 100%;
     overflow: hidden;
-    max-height: 500px;
-    transition: max-height 0.3s ease;
+    max-height: 800px; /* 增加高度限制，确保所有内容都能显示 */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
   }
   
   .navbar.collapsed .main-nav,
   .navbar.collapsed .nav-actions {
     max-height: 0;
+    opacity: 0;
     margin-top: -16px;
     margin-bottom: -16px;
   }
@@ -360,7 +380,7 @@ body {
   
   .nav-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
     gap: 12px;
     padding-bottom: 16px;
