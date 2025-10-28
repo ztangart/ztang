@@ -852,6 +852,10 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    body {
+        padding-top: 90px; /* 为移动端增加顶部空间 */
+    }
+    
     .nav-actions {
         gap: var(--spacing-sm);
     }
@@ -880,6 +884,10 @@ body {
 }
 
 @media (max-width: 576px) {
+    body {
+        padding-top: 100px; /* 在更小屏幕上进一步增加顶部空间 */
+    }
+    
     .sites-grid {
         grid-template-columns: 1fr;
     }
@@ -887,7 +895,7 @@ body {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 70px;
+        padding-top: 110px; /* 小屏幕上确保有足够空间 */
     }
     
     .navbar {
