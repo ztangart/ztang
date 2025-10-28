@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高德地图地点标记工具</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=您的高德地图API密钥"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/ui/1.1/main.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .map-container {
+            flex: 1;
+            min-width: 600px;
+            height: 700px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .sidebar {
+            width: 380px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1890ff;
+            box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+            max-height: 150px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-primary {
+            background-color: #1890ff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #40a9ff;
+        }
+        
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .btn-danger {
+            background-color: #ff4d4f;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #ff7875;
+        }
+        
+        .btn-block {
+            width: 100%;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .markers-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-top: 20px;
+            padding-right: 10px;
+        }
+        
+        .markers-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .markers-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        
+        .markers-list::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+        
+        .markers-list::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        .marker-item {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .marker-item:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .marker-item h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        
+        .marker-item p {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .marker-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .marker-actions .btn {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        
+        .search-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 380px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .search-results {
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .search-result-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+        
+        .search-result-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .search-result-item h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #333;
+        }
+        
+        .search-result-item p {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background-color: #52c41a;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .toast.error {
+            background-color: #ff4d4f;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .map-container,
+            .sidebar {
+                width: 100%;
+                min-width: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .map-container,
+            .sidebar {
+                height: 500px;
+            }
+            
+            .search-container {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>高德地图地点标记工具</h1>
+            <p>在地图上点击添加标记，或通过搜索定位地点并添加详细信息</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="map-container">
+                <!-- 地图容器 -->
+                <div id="map"></div>
+                
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="搜索地点...">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <h2>地点信息</h2>
+                
+                <div class="form-group">
+                    <label for="marker-title">地点名称</label>
+                    <input type="text" id="marker-title" placeholder="请输入地点名称">
+                </div>
+                
+                <div class="form-group">
+                    <label for="marker-address">详细地址</label>
+                    <input type="text" id="marker-address" placeholder="请输入详细地址">
+                </div>
+                
+                <div class="form-group">
+                    <label for="marker-description">备注信息</label>
+                    <textarea id="marker-description" placeholder="请输入备注信息"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="marker-category">分类标签</label>
+                    <select id="marker-category">
+                        <option value="">请选择分类</option>
+                        <option value="景点">景点</option>
+                        <option value="餐厅">餐厅</option>
+                        <option value="酒店">酒店</option>
+                        <option value="购物">购物</option>
+                        <option value="办公">办公</option>
+                        <option value="住宅">住宅</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                
+                <div class="btn-group">
+                    <button id="save-marker-btn" class="btn btn-primary btn-block">保存标记</button>
+                    <button id="clear-form-btn" class="btn btn-secondary">清空</button>
+                </div>
+                
+                <div class="markers-list" id="markers-list">
+                    <p style="text-align: center; color: #999; font-size: 14px;">暂无标记</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 提示消息 -->
+    <div id="toast" class="toast"></div>
+    
+    <script>
+        // 初始化地图
+        let map, markers = [], currentMarker = null;
+        const markerIcons = {
+            '景点': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-1.png',
+            '餐厅': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-2.png',
+            '酒店': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-3.png',
+            '购物': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-4.png',
+            '办公': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-5.png',
+            '住宅': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-6.png',
+            '其他': 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-7.png'
+        };
+        
+        function initMap() {
+            // 创建地图实例
+            map = new AMap.Map('map', {
+                zoom: 13,
+                center: [116.397428, 39.90923], // 北京
+                viewMode: '3D',
+                features: ['bg', 'road', 'building', 'point']
+            });
+            
+            // 添加地图控件
+            map.addControl(new AMap.ToolBar({
+                position: 'RB'
+            }));
+            
+            map.addControl(new AMap.Scale({
+                position: 'RB'
+            }));
+            
+            map.addControl(new AMap.MapType({
+                defaultType: 0,
+                position: 'RT'
+            }));
+            
+            // 启用地图点击事件
+            map.on('click', handleMapClick);
+            
+            // 尝试获取用户位置
+            map.plugin('AMap.Geolocation', function() {
+                const geolocation = new AMap.Geolocation({
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    buttonPosition: 'LB',
+                    buttonOffset: new AMap.Pixel(10, 20),
+                    zoomToAccuracy: true
+                });
+                
+                map.addControl(geolocation);
+                
+                geolocation.getCurrentPosition(function(status, result) {
+                    if (status === 'complete' && result.position) {
+                        map.setCenter(result.position);
+                        showToast('已定位到您的位置');
+                    }
+                });
+            });
+            
+            // 加载保存的标记
+            loadMarkers();
+        }
+        
+        // 处理地图点击事件
+        function handleMapClick(e) {
+            const lnglat = e.lnglat;
+            
+            // 移除临时标记
+            if (currentMarker) {
+                currentMarker.setMap(null);
+            }
+            
+            // 创建新的临时标记
+            currentMarker = new AMap.Marker({
+                position: lnglat,
+                map: map,
+                icon: 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-1.png',
+                draggable: true,
+                cursor: 'move'
+            });
+            
+            // 反向地理编码获取地址信息
+            AMap.plugin('AMap.Geocoder', function() {
+                const geocoder = new AMap.Geocoder();
+                geocoder.getAddress(lnglat, function(status, result) {
+                    if (status === 'complete' && result.regeocode) {
+                        document.getElementById('marker-address').value = result.regeocode.formattedAddress;
+                    }
+                });
+            });
+        }
+        
+        // 保存标记
+        document.getElementById('save-marker-btn').addEventListener('click', function() {
+            const title = document.getElementById('marker-title').value.trim();
+            const address = document.getElementById('marker-address').value.trim();
+            const description = document.getElementById('marker-description').value.trim();
+            const category = document.getElementById('marker-category').value;
+            
+            if (!currentMarker) {
+                showToast('请先在地图上选择位置', 'error');
+                return;
+            }
+            
+            if (!title) {
+                showToast('请输入地点名称', 'error');
+                return;
+            }
+            
+            const position = currentMarker.getPosition();
+            
+            const markerData = {
+                id: Date.now().toString(),
+                title: title,
+                address: address,
+                description: description,
+                category: category,
+                position: {
+                    lng: position.lng,
+                    lat: position.lat
+                },
+                createTime: new Date().toISOString()
+            };
+            
+            // 添加到标记数组
+            markers.push(markerData);
+            
+            // 更新地图标记
+            createMapMarker(markerData);
+            
+            // 保存到本地存储
+            saveMarkers();
+            
+            // 更新标记列表
+            renderMarkersList();
+            
+            // 清空表单
+            clearForm();
+            
+            showToast('标记保存成功');
+        });
+        
+        // 创建地图标记
+        function createMapMarker(markerData) {
+            const iconUrl = markerData.category && markerIcons[markerData.category] 
+                ? markerIcons[markerData.category] 
+                : markerIcons['其他'];
+            
+            const marker = new AMap.Marker({
+                position: [markerData.position.lng, markerData.position.lat],
+                map: map,
+                icon: iconUrl,
+                title: markerData.title,
+                extData: markerData
+            });
+            
+            // 添加点击事件
+            marker.on('click', function() {
+                showMarkerInfo(markerData);
+            });
+            
+            // 添加信息窗口
+            const infoWindow = new AMap.InfoWindow({
+                content: `<div style="padding: 10px;">
+                    <h3 style="margin-bottom: 8px; font-size: 16px;">${markerData.title}</h3>
+                    <p style="margin-bottom: 5px; font-size: 14px; color: #666;">${markerData.address}</p>
+                    ${markerData.description ? `<p style="font-size: 14px; color: #666;">${markerData.description}</p>` : ''}
+                </div>`,
+                offset: new AMap.Pixel(0, -30)
+            });
+            
+            marker.on('click', function() {
+                infoWindow.open(map, marker.getPosition());
+            });
+            
+            return marker;
+        }
+        
+        // 显示标记信息
+        function showMarkerInfo(markerData) {
+            document.getElementById('marker-title').value = markerData.title;
+            document.getElementById('marker-address').value = markerData.address;
+            document.getElementById('marker-description').value = markerData.description;
+            document.getElementById('marker-category').value = markerData.category || '';
+            
+            // 定位到标记位置
+            map.setCenter([markerData.position.lng, markerData.position.lat]);
+            map.setZoom(15);
+        }
+        
+        // 清空表单
+        document.getElementById('clear-form-btn').addEventListener('click', clearForm);
+        
+        function clearForm() {
+            document.getElementById('marker-title').value = '';
+            document.getElementById('marker-address').value = '';
+            document.getElementById('marker-description').value = '';
+            document.getElementById('marker-category').value = '';
+            
+            // 移除临时标记
+            if (currentMarker) {
+                currentMarker.setMap(null);
+                currentMarker = null;
+            }
+        }
+        
+        // 渲染标记列表
+        function renderMarkersList() {
+            const listContainer = document.getElementById('markers-list');
+            
+            if (markers.length === 0) {
+                listContainer.innerHTML = '<p style="text-align: center; color: #999; font-size: 14px;">暂无标记</p>';
+                return;
+            }
+            
+            listContainer.innerHTML = markers.map(marker => `
+                <div class="marker-item" data-id="${marker.id}">
+                    <h3>${marker.title}</h3>
+                    <p>${marker.address}</p>
+                    <div class="marker-actions">
+                        <button class="btn btn-secondary edit-marker" data-id="${marker.id}">编辑</button>
+                        <button class="btn btn-danger delete-marker" data-id="${marker.id}">删除</button>
+                        <button class="btn btn-primary locate-marker" data-id="${marker.id}">定位</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // 添加编辑按钮事件
+            document.querySelectorAll('.edit-marker').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const marker = markers.find(m => m.id === id);
+                    if (marker) {
+                        showMarkerInfo(marker);
+                        // 移除原标记
+                        markers = markers.filter(m => m.id !== id);
+                        saveMarkers();
+                    }
+                });
+            });
+            
+            // 添加删除按钮事件
+            document.querySelectorAll('.delete-marker').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    if (confirm('确定要删除这个标记吗？')) {
+                        markers = markers.filter(m => m.id !== id);
+                        saveMarkers();
+                        renderMarkersList();
+                        // 重新渲染地图标记
+                        map.clearMap();
+                        markers.forEach(createMapMarker);
+                        showToast('标记已删除');
+                    }
+                });
+            });
+            
+            // 添加定位按钮事件
+            document.querySelectorAll('.locate-marker').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const marker = markers.find(m => m.id === id);
+                    if (marker) {
+                        map.setCenter([marker.position.lng, marker.position.lat]);
+                        map.setZoom(15);
+                        showToast(`已定位到${marker.title}`);
+                    }
+                });
+            });
+        }
+        
+        // 保存标记到本地存储
+        function saveMarkers() {
+            localStorage.setItem('map-markers', JSON.stringify(markers));
+        }
+        
+        // 从本地存储加载标记
+        function loadMarkers() {
+            const savedMarkers = localStorage.getItem('map-markers');
+            if (savedMarkers) {
+                markers = JSON.parse(savedMarkers);
+                markers.forEach(createMapMarker);
+                renderMarkersList();
+            }
+        }
+        
+        // 搜索功能
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        
+        searchInput.addEventListener('input', function() {
+            const keyword = this.value.trim();
+            
+            if (!keyword) {
+                searchResults.style.display = 'none';
+                return;
+            }
+            
+            // 使用高德地图POI搜索
+            AMap.plugin('AMap.PlaceSearch', function() {
+                const placeSearch = new AMap.PlaceSearch({
+                    pageSize: 10,
+                    pageIndex: 1,
+                    city: '', // 空表示全国
+                    map: map
+                });
+                
+                placeSearch.search(keyword, function(status, result) {
+                    if (status === 'complete' && result.poiList && result.poiList.pois) {
+                        const pois = result.poiList.pois;
+                        
+                        searchResults.innerHTML = pois.map(poi => `
+                            <div class="search-result-item" data-lng="${poi.location.lng}" data-lat="${poi.location.lat}">
+                                <h4>${poi.name}</h4>
+                                <p>${poi.address}</p>
+                            </div>
+                        `).join('');
+                        
+                        searchResults.style.display = 'block';
+                        
+                        // 添加点击事件
+                        document.querySelectorAll('.search-result-item').forEach(item => {
+                            item.addEventListener('click', function() {
+                                const lng = parseFloat(this.getAttribute('data-lng'));
+                                const lat = parseFloat(this.getAttribute('data-lat'));
+                                const name = this.querySelector('h4').textContent;
+                                const address = this.querySelector('p').textContent;
+                                
+                                // 移除临时标记
+                                if (currentMarker) {
+                                    currentMarker.setMap(null);
+                                }
+                                
+                                // 创建新标记
+                                currentMarker = new AMap.Marker({
+                                    position: [lng, lat],
+                                    map: map,
+                                    icon: 'https://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-1.png',
+                                    draggable: true
+                                });
+                                
+                                // 定位到搜索结果
+                                map.setCenter([lng, lat]);
+                                map.setZoom(15);
+                                
+                                // 填充表单
+                                document.getElementById('marker-title').value = name;
+                                document.getElementById('marker-address').value = address;
+                                
+                                // 隐藏搜索结果
+                                searchResults.style.display = 'none';
+                                searchInput.value = '';
+                            });
+                        });
+                    } else {
+                        searchResults.innerHTML = '<div class="search-result-item">未找到相关地点</div>';
+                        searchResults.style.display = 'block';
+                    }
+                });
+            });
+        });
+        
+        // 点击页面其他地方隐藏搜索结果
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
+        
+        // 显示提示消息
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast ${type}`;
+            
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // 页面加载完成后初始化地图
+        window.addEventListener('load', function() {
+            // 替换为实际的API密钥
+            const script = document.querySelector('script[src*="amap.com/maps"]');
+            const apiKey = 'da1c084878bdd9a0003e9db6d7f7de88'; // 这里需要用户替换为实际的API密钥
+            script.src = `https://webapi.amap.com/maps?v=2.0&key=${apiKey}`;
+            
+            script.onload = function() {
+                initMap();
+            };
+        });
+    </script>
+</body>
+</html>
