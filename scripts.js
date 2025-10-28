@@ -145,6 +145,36 @@ async function init() {
     bindEventListeners();
 }
 
+// 初始化汉堡菜单功能
+function initHamburgerMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    
+    if (menuToggle && navbar) {
+        // 初始状态为收起
+        if (window.innerWidth <= 768) {
+            navbar.classList.add('collapsed');
+        }
+        
+        // 汉堡菜单点击事件
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('collapsed');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // 监听窗口大小变化，在大屏幕时自动展开菜单
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navbar.classList.remove('collapsed');
+                menuToggle.classList.remove('active');
+            } else if (!menuToggle.classList.contains('active')) {
+                // 仅在小屏幕且菜单按钮未激活时收起菜单
+                navbar.classList.add('collapsed');
+            }
+        });
+    }
+}
+
 // 从本地存储加载数据
 async function loadData(forceRefresh = false) {
     try {
@@ -719,6 +749,8 @@ function bindEventListeners() {
             renderSites();
         });
     })
+    
+
     // 按钮点击事件
     elements.addSiteBtn.addEventListener('click', openAddModal);
     elements.exportBtn.addEventListener('click', exportData);
@@ -949,4 +981,9 @@ function getLevelText(level) {
 }
 
 // 初始化应用
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+    
+    // 初始化汉堡菜单
+    initHamburgerMenu();
+});
