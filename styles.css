@@ -34,10 +34,14 @@ body.dark-mode {
     --secondary-color: #AAAAAA;
     --secondary-hover: #CCCCCC;
     --background-color: #121212;
+    --background-secondary: #1E1E1E;
     --card-background: #1E1E1E;
+    --input-background: #252525;
     --text-primary: #FFFFFF;
-    --text-secondary: #CCCCCC;
+    --text-secondary: #B0B0B0;
     --border-color: #333333;
+    --input-border: #404040;
+    --highlight-color: #2196F3;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.5), 0 6px 12px -6px rgba(0, 0, 0, 0.4);
@@ -953,6 +957,8 @@ body.dark-mode .theme-toggle-btn:hover {
     font-family: 'SimSun', '宋体', serif;
 }
 
+
+
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -1122,4 +1128,32 @@ body.dark-mode .theme-toggle-btn:hover {
         width: 100%;
         text-align: center;
     }
+}
+
+/* 夜间模式下输入框优化 */
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group select {
+    background-color: var(--input-background);
+    border-color: var(--input-border);
+    color: var(--text-primary);
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus,
+body.dark-mode .form-group select:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+/* 夜间模式下搜索框优化 */
+body.dark-mode .search-input-small {
+    background-color: var(--input-background);
+    border-color: var(--input-border);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23B0B0B0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+}
+
+body.dark-mode .search-input-small:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
 }

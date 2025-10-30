@@ -72,7 +72,7 @@ const categoryHierarchy = [
     {
         name: '文本',
         children: [
-            { name: '在线百科', children: [{ name: '综合百科' }, { name: '地理' }, { name: '艺术史' }] },
+            { name: '在线百科', children: [{ name: '综合百科' }, { name: '历史' }, { name: '艺术史' }] },
             { name: '中国古籍' },
             { name: '外国古籍' },
             { name: '专题古籍' },
@@ -88,7 +88,7 @@ const categoryHierarchy = [
                 name: '图书',
                 children: [
                     { name: '图书馆' },
-                    { name: '资讯' },
+                    { name: '图书信息' },
                     { name: '出版社' },
                     { name: '宗教' },
                     { name: '下载资源' }
@@ -112,8 +112,16 @@ const categoryHierarchy = [
             { name: '教育' },
             { name: 'AI' },
             { name: '办公文档' },
-            { name: '图表' },
             { name: '图片' },
+            {
+                name: '知识管理',
+                children: [
+                    { name: '笔记' },
+                    { name: '绘图分析' },
+                    { name: '文献管理' },
+                    { name: '论文相关' }
+                ]
+            },
     
             { name: '视频', children: [{ name: '软件' }, { name: '官媒' }, { name: '资源' }] },
             { name: '游戏' },
@@ -134,8 +142,7 @@ const categoryHierarchy = [
             { name: '艺术' },
             { name: '文化' },
             { name: '教育' },
-            { name: '副业' },
-            { name: '图书' }
+            { name: '副业' }
         ]
     },
     {
