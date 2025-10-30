@@ -5,7 +5,8 @@ const state = {
     sites: [],
     categories: [],
     currentEditId: null,
-    currentCategory: null, // 当前选中的分类
+    currentCategory: null, // 当前选中的分类名称
+    currentCategories: [], // 当前选中的分类集合（包括子分类）
     sortBy: null // 可以是 'name', 'level' 或 null（默认按时间）
 };
 
@@ -314,9 +315,9 @@ function renderSites() {
     let filteredSites = state.sites;
     
     // 按分类过滤
-    if (state.currentCategory) {
+    if (state.currentCategories && state.currentCategories.length > 0) {
         filteredSites = filteredSites.filter(site => 
-            site.category === state.currentCategory
+            state.currentCategories.includes(site.category)
         );
     }
     
@@ -882,8 +883,39 @@ function bindEventListeners() {
         });
     });
     
-    // 图像分类点击事件
-    document.querySelectorAll('.dropdown-item[data-category]').forEach(item => {
+    // 查找指定分类的所有子分类（递归）
+function findAllSubcategories(categoryName) {
+    const result = [categoryName]; // 包含自身
+    
+    // 递归查找所有子分类
+    function findChildren(categories) {
+        for (const cat of categories) {
+            if (cat.name === categoryName && cat.children) {
+                // 找到指定分类，收集其所有子分类
+                collectSubcategories(cat.children);
+                return;
+            }
+            if (cat.children) {
+                findChildren(cat.children);
+            }
+        }
+    }
+    
+    function collectSubcategories(categories) {
+        for (const cat of categories) {
+            result.push(cat.name);
+            if (cat.children) {
+                collectSubcategories(cat.children);
+            }
+        }
+    }
+    
+    findChildren(categoryHierarchy);
+    return result;
+}
+
+// 图像分类点击事件
+document.querySelectorAll('.dropdown-item[data-category]').forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -893,6 +925,7 @@ function bindEventListeners() {
             // 设置当前分类（再次点击取消选择）
             if (state.currentCategory === category) {
                 state.currentCategory = null;
+                state.currentCategories = [];
                 this.style.fontWeight = 'normal';
                 this.style.color = '';
             } else {
@@ -904,6 +937,8 @@ function bindEventListeners() {
                 
                 // 设置选中状态
                 state.currentCategory = category;
+                // 查找所有相关分类（包括子分类）
+                state.currentCategories = findAllSubcategories(category);
                 this.style.fontWeight = '600';
                 this.style.color = 'var(--highlight-color)';
             }
