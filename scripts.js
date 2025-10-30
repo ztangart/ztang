@@ -29,8 +29,8 @@ const elements = {
     siteCategory: document.getElementById('site-category'),
     siteTags: document.getElementById('site-tags'),
     siteLevel: document.getElementById('site-level'),
-    closeModal: document.getElementById('close-modal'),
-    cancelBtn: document.getElementById('cancel-btn'),
+    // closeModal 已移除
+    // cancelBtn 已移除
     saveBtn: document.getElementById('save-btn'),
     closeDeleteModal: document.getElementById('close-delete-modal'),
     cancelDeleteBtn: document.getElementById('cancel-delete-btn'),
@@ -42,10 +42,12 @@ const elements = {
     categorySelector: document.getElementById('category-selector'),
     confirmCategoryBtn: document.getElementById('confirm-category-btn'),
     cancelCategoryBtn: document.getElementById('cancel-category-btn'),
-    closeCategoryModal: document.getElementById('close-category-modal')
+    closeCategoryModal: document.getElementById('close-category-modal'),
+    // 主题切换按钮
+    themeToggle: document.getElementById('theme-toggle')
 };
 
-// 分类层次结构数据
+// 分类层次结构数据 - 与菜单栏分类保持一致
 const categoryHierarchy = [
     {
         name: '图像',
@@ -70,31 +72,26 @@ const categoryHierarchy = [
     {
         name: '文本',
         children: [
-            { name: '百科' },
-            {
-                name: '古籍文献',
-                children: [
-                    { name: '中国古籍' },
-                    { name: '外国古籍' },
-                    { name: '专题古籍' }
-                ]
-            },
+            { name: '在线百科', children: [{ name: '综合百科' }, { name: '地理' }, { name: '艺术史' }] },
+            { name: '中国古籍' },
+            { name: '外国古籍' },
+            { name: '专题古籍' },
             {
                 name: '期刊杂志',
                 children: [
-                    { name: '期刊' },
-                    { name: '杂志' }
+                    { name: '平台' },
+                    { name: '社' }
                 ]
             },
-            { name: '组织机构' },
+            { name: '研究机构' },
             {
                 name: '图书',
                 children: [
                     { name: '图书馆' },
                     { name: '资讯' },
-                    { name: '工具' },
                     { name: '出版社' },
-                    { name: '宗教' }
+                    { name: '宗教' },
+                    { name: '下载资源' }
                 ]
             }
         ]
@@ -102,20 +99,31 @@ const categoryHierarchy = [
     {
         name: '工具',
         children: [
-            { name: '字典' },
+            {
+                name: '字典翻译',
+                children: [
+                    { name: '中文' },
+                    { name: '日韩朝' },
+                    { name: '西文' },
+                    { name: '翻译' },
+                    { name: '书法与篆刻' }
+                ]
+            },
             { name: '教育' },
             { name: 'AI' },
-            { name: 'IT' },
-            { name: '办公' },
+            { name: '办公文档' },
             { name: '图表' },
             { name: '图片' },
-            { name: '视频' },
+    
+            { name: '视频', children: [{ name: '软件' }, { name: '官媒' }, { name: '资源' }] },
             { name: '游戏' },
             { name: '设计' },
             {
                 name: 'IT工具',
                 children: [
-                    { name: '编程' }
+                    { name: '编程' },
+                    { name: '应用工具' },
+                    { name: '数据工具' }
                 ]
             }
         ]
@@ -124,7 +132,20 @@ const categoryHierarchy = [
         name: '资讯',
         children: [
             { name: '艺术' },
-            { name: '文化' }
+            { name: '文化' },
+            { name: '教育' },
+            { name: '副业' },
+            { name: '图书' }
+        ]
+    },
+    {
+        name: '地图',
+        children: [
+            { name: '自制地图' },
+            { name: '历史地图' },
+            { name: '实时地图' },
+            { name: '气象地图' },
+            { name: '地图软件' }
         ]
     }
 ];
@@ -133,8 +154,47 @@ const categoryHierarchy = [
 let currentSelectedCategoryPath = [];
 let currentSelectedCategory = null;
 
+// 初始化主题
+function initTheme() {
+    // 从localStorage获取主题偏好
+    const savedTheme = localStorage.getItem('theme');
+    
+    // 如果有保存的主题，应用它
+    if (savedTheme) {
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    } else {
+        // 默认根据系统偏好设置
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) {
+            document.body.classList.add('dark-mode');
+        }
+    }
+}
+
+// 切换主题
+function toggleTheme() {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    
+    // 保存主题偏好到localStorage
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    
+    // 更新主题图标（可以在后续优化）
+    const themeIcon = elements.themeToggle.querySelector('svg');
+    if (isDarkMode) {
+        // 可以更换为太阳图标，但保持现有图标简单
+        elements.themeToggle.title = '切换到浅色模式';
+    } else {
+        elements.themeToggle.title = '切换到深色模式';
+    }
+}
+
 // 初始化应用
 async function init() {
+    // 初始化主题
+    initTheme();
+    
     // 加载数据
     await loadData();
     
@@ -364,7 +424,7 @@ function createSiteCard(site) {
 // 打开添加网站模态框
 function openAddModal() {
     state.currentEditId = null;
-    elements.modalTitle.textContent = '添加网站';
+    // 模态框标题已移除
     resetForm();
     // 自动设置分类为当前选中的分类
     if (state.currentCategory) {
@@ -488,7 +548,7 @@ function editSite(id) {
     if (!site) return;
     
     state.currentEditId = id;
-    elements.modalTitle.textContent = '编辑网站';
+    // 模态框标题已移除
     
     // 填充表单
     elements.siteTitle.value = site.title;
@@ -532,8 +592,8 @@ function resetForm() {
     elements.siteForm.reset();
 }
 
-// 保存网站
-function saveSite() {
+// 保存网站信息并自动关闭模态框
+async function saveSite() {
     // 获取表单数据
     const title = elements.siteTitle.value.trim();
     const url = normalizeUrl(elements.siteUrl.value.trim());
@@ -886,9 +946,7 @@ function bindEventListeners() {
           }
       });
     
-    // 模态框事件
-    elements.closeModal.addEventListener('click', closeModal);
-    elements.cancelBtn.addEventListener('click', closeModal);
+    // 关闭模态框相关事件已移除
     elements.saveBtn.addEventListener('click', saveSite);
     
     // 删除模态框事件
@@ -933,6 +991,9 @@ function bindEventListeners() {
             this.value = 'https://' + this.value;
         }
     });
+    
+    // 主题切换事件
+    elements.themeToggle.addEventListener('click', toggleTheme);
 }
 
 // 防抖函数 - 优化搜索性能
