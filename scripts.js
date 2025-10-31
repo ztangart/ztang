@@ -123,8 +123,16 @@ const categoryHierarchy = [
                     { name: '论文相关' }
                 ]
             },
-    
+
             { name: '视频', children: [{ name: '软件' }, { name: '官媒' }, { name: '资源' }] },
+            {
+                name: '音声',
+                children: [
+                    { name: '音乐' },
+                    { name: '音频工具' },
+                    { name: '播客' }
+                ]
+            },
             { name: '游戏' },
             { name: '设计' },
             {
