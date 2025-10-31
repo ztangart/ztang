@@ -351,6 +351,9 @@ function renderSites() {
     } else if (state.sortBy === 'level') {
         // 按重要程度排序（非常重要 > 重要 > 一般）
         filteredSites.sort((a, b) => b.level - a.level);
+    } else if (state.sortBy === 'created') {
+        // 按添加时间排序（最新的在前）
+        filteredSites.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     } else {
         // 默认按更新时间排序（最新的在前）
         filteredSites.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
