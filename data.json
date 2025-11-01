@@ -1,136 +1,26 @@
 {
   "sites": [
     {
-      "id": 1761925206040,
-      "title": "Artribune",
-      "url": "https://www.artribune.com/",
-      "description": "意大利文化、艺术机构。",
-      "category": "文化",
+      "id": 1761800496324,
+      "title": "安心研",
+      "url": "http://anxinky.ysepan.com/",
+      "description": "考研课程",
+      "category": "综合课程",
       "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:40:06.040Z",
-      "updatedAt": "2025-10-31T15:40:06.040Z"
+      "level": 1,
+      "createdAt": "2025-10-30T05:01:36.323Z",
+      "updatedAt": "2025-10-31T15:49:42.658Z"
     },
     {
-      "id": 1761924961700,
-      "title": "NO视频",
-      "url": "https://www.novipnoad.net/",
-      "description": "",
-      "category": "资源",
+      "id": 1761925776680,
+      "title": "蓝代社区",
+      "url": "https://www.landall.cn/forum.php",
+      "description": "艺术考研信息、课程、资源、交流社区。",
+      "category": "综合课程",
       "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:36:01.700Z",
-      "updatedAt": "2025-10-31T15:36:01.700Z"
-    },
-    {
-      "id": 1761924940932,
-      "title": "康奈尔大学",
-      "url": "https://www.cornell.edu/",
-      "description": "",
-      "category": "研究机构",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:35:40.932Z",
-      "updatedAt": "2025-10-31T15:35:40.932Z"
-    },
-    {
-      "id": 1761924920097,
-      "title": "arxiv",
-      "url": "https://arxiv.org/",
-      "description": "物理学、数学、计算机科学、定量生物学、定量金融、统计学、电气工程和系统科学以及经济学领域的近 240 万个开放获取的学术文章。",
-      "category": "平台",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:35:20.097Z",
-      "updatedAt": "2025-10-31T15:35:20.097Z"
-    },
-    {
-      "id": 1761924788616,
-      "title": "布克学术",
-      "url": "https://bukesci.com/",
-      "description": "收录了文献、论文、期刊等相关资源站。",
-      "category": "论文相关",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:33:08.616Z",
-      "updatedAt": "2025-10-31T15:33:16.679Z"
-    },
-    {
-      "id": 1761924627675,
-      "title": "AutoHotkey",
-      "url": "https://www.autohotkey.com/",
-      "description": "自动按键",
-      "category": "应用工具",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:30:27.675Z",
-      "updatedAt": "2025-10-31T15:30:27.675Z"
-    },
-    {
-      "id": 1761924259204,
-      "title": "中国国家大剧院1",
-      "url": "https://www.ncpa-classic.com/index.shtml",
-      "description": "",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:24:19.204Z",
-      "updatedAt": "2025-10-31T15:29:48.998Z"
-    },
-    {
-      "id": 1761924585758,
-      "title": "中国国家大剧院2",
-      "url": "https://www.chncpa.org/",
-      "description": "",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:29:45.758Z",
-      "updatedAt": "2025-10-31T15:29:45.758Z"
-    },
-    {
-      "id": 1761924377860,
-      "title": "音兔无损音乐",
-      "url": "https://www.ytws.net/",
-      "description": "",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:26:17.860Z",
-      "updatedAt": "2025-10-31T15:26:17.860Z"
-    },
-    {
-      "id": 1761924341095,
-      "title": "库克音乐",
-      "url": "http://www.kuke.com.https.zjlib.proxy.zyproxy.zjlib.cn/p_index.html#/",
-      "description": "",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:25:41.095Z",
-      "updatedAt": "2025-10-31T15:25:41.095Z"
-    },
-    {
-      "id": 1761924303258,
-      "title": "淘声",
-      "url": "https://www.tosound.com/",
-      "description": "探索全球1,000,000+ 声音资源",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:25:03.258Z",
-      "updatedAt": "2025-10-31T15:25:03.258Z"
-    },
-    {
-      "id": 1761924280188,
-      "title": "一百首古典音乐入门曲目",
-      "url": "https://ncpa-classic.cntv.cn/special/gdyysx/top100/index.shtml",
-      "description": "",
-      "category": "音乐",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-31T15:24:40.188Z",
-      "updatedAt": "2025-10-31T15:24:40.188Z"
+      "level": 1,
+      "createdAt": "2025-10-31T15:49:36.680Z",
+      "updatedAt": "2025-10-31T15:49:36.680Z"
     },
     {
       "id": 1761643138088,
@@ -901,17 +791,6 @@
       "level": 2,
       "createdAt": "2025-10-30T05:03:20.033Z",
       "updatedAt": "2025-10-30T05:03:20.033Z"
-    },
-    {
-      "id": 1761800496324,
-      "title": "安心研",
-      "url": "http://anxinky.ysepan.com/",
-      "description": "考研课程",
-      "category": "综合课程",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-30T05:01:36.323Z",
-      "updatedAt": "2025-10-30T05:01:36.323Z"
     },
     {
       "id": 1761800438768,
@@ -5364,17 +5243,32 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1761925315404,
-      "title": "CSDN",
-      "url": "https://www.csdn.net/",
-      "description": "专业开发者社区",
-      "category": "编程",
-      "tags": [],
+      "id": 1761996898186,
+      "title": "《教务杂志》和中国的新传教士组织（1867—1941）",
+      "url": "https://dn720006.ca.archive.org/0/items/sim_chinese-recorder-and-missionary-journal_1888-04_19_4/sim_chinese-recorder-and-missionary-journal_1888-04_19_4.pdf",
+      "description": "1867年，新教传教士为了让教士们了解所进行的活动，开始在福州的卫理公会出版社出版《传教士记录》(The Missionary Recorder),该杂志仅持续了一年，但是工作已经有了开端。1868年5月福州的卫理公会出版社正式出版了《教务杂志》(The Chinese Recorder and Missionary Journal),由美国卫理公会牧师保灵(S.L.Baldwin)创立。1869年6月美国传教士卢公明(Justus Doolittle)也加入了编辑工作，该刊一直到1872年5月底停刊。1874年《教务杂志》恢复为双月刊，由上海的美华书馆出版。在接下来的67年中，该杂志不断地出版发行，并于1932年1月改为由ThomasChu&Sons公司出版。1886年该杂志改为月刊。",
+      "category": "专题古籍",
+      "tags": [
+        "基督教，杂志"
+      ],
+      "level": 1,
+      "createdAt": "2025-11-01T11:34:58.185Z",
+      "updatedAt": "2025-11-01T11:35:42.090Z"
+    },
+    {
+      "id": 1761996964699,
+      "title": "教务杂志（The Chinese Recorder and missionary Journal）",
+      "url": "https://archive.org/details/s3039id1390147",
+      "description": "《教务杂志》是19世纪在动荡中国出版的英文刊物中持续时间最长者，自1868年出刊至1941年因太平洋战争爆发而停刊。此刊物创办的目的原是作为来华传教士交换信息及讨论传教工作的平台，以协助彼此对中国文化的了解与工作推行；然因其记录翔实，辅以许多手绘图片与照片、精密统计数字，不但是超过半世纪西方管窥、了解中国的重要窗口，更成为今日研究中国近代史不可或缺的第一手重要文本。",
+      "category": "专题古籍",
+      "tags": [
+        "基督教，杂志"
+      ],
       "level": 2,
-      "createdAt": "2025-10-31T15:41:55.404Z",
-      "updatedAt": "2025-10-31T15:42:05.050Z"
+      "createdAt": "2025-11-01T11:36:04.699Z",
+      "updatedAt": "2025-11-01T11:36:04.699Z"
     }
   ],
-  "exportDate": "2025-10-31T15:42:12.294Z",
+  "exportDate": "2025-11-01T11:36:31.995Z",
   "version": "1.0"
 }

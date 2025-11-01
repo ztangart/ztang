@@ -1084,14 +1084,14 @@ function normalizeUrl(url) {
     return normalized;
 }
 
-// 辅助函数：获取重要程度文本
+// 辅助函数：获取推荐程度文本
 function getLevelText(level) {
     const levels = {
-        1: '一般',
-        2: '重要',
-        3: '非常重要'
+        1: '备选',
+        2: '次选',
+        3: '首选'
     };
-    return levels[level] || '一般';
+    return levels[level] || '备选';
 }
 
 // 初始化应用
