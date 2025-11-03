@@ -1,6 +1,43 @@
 {
   "sites": [
     {
+      "id": 1762135223625,
+      "title": "中国留美学生月报",
+      "url": "https://primarysources.brillonline.com/browse/the-chinese-students-monthly-online",
+      "description": "The Chinese Student's Monthly Online。《中国留美学生月报》是第一份由中国学生在美国出版的杂志(1906一1931年)，是当时留美中国学生中最有影响力的刊物。20世纪初，中国留美学生中有许多重要的历史人物，如施肇基、顾维钧、胡适、赵元任、谢冰心等，都为该杂志撰写过文章。海外华人也因此成了一个新兴的学术研究领域。——港澳台及海外历史文献",
+      "category": "专题古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-03T02:00:23.624Z",
+      "updatedAt": "2025-11-03T02:00:23.624Z"
+    },
+    {
+      "id": 1761996964699,
+      "title": "教务杂志（The Chinese Recorder and missionary Journal）",
+      "url": "https://archive.org/details/s3039id1390147",
+      "description": "《教务杂志》是19世纪在动荡中国出版的英文刊物中持续时间最长者，自1868年出刊至1941年因太平洋战争爆发而停刊。此刊物创办的目的原是作为来华传教士交换信息及讨论传教工作的平台，以协助彼此对中国文化的了解与工作推行；然因其记录翔实，辅以许多手绘图片与照片、精密统计数字，不但是超过半世纪西方管窥、了解中国的重要窗口，更成为今日研究中国近代史不可或缺的第一手重要文本。",
+      "category": "专题古籍",
+      "tags": [
+        "基督教，杂志"
+      ],
+      "level": 2,
+      "createdAt": "2025-11-01T11:36:04.699Z",
+      "updatedAt": "2025-11-01T11:36:04.699Z"
+    },
+    {
+      "id": 1761996898186,
+      "title": "《教务杂志》和中国的新传教士组织（1867—1941）",
+      "url": "https://dn720006.ca.archive.org/0/items/sim_chinese-recorder-and-missionary-journal_1888-04_19_4/sim_chinese-recorder-and-missionary-journal_1888-04_19_4.pdf",
+      "description": "1867年，新教传教士为了让教士们了解所进行的活动，开始在福州的卫理公会出版社出版《传教士记录》(The Missionary Recorder),该杂志仅持续了一年，但是工作已经有了开端。1868年5月福州的卫理公会出版社正式出版了《教务杂志》(The Chinese Recorder and Missionary Journal),由美国卫理公会牧师保灵(S.L.Baldwin)创立。1869年6月美国传教士卢公明(Justus Doolittle)也加入了编辑工作，该刊一直到1872年5月底停刊。1874年《教务杂志》恢复为双月刊，由上海的美华书馆出版。在接下来的67年中，该杂志不断地出版发行，并于1932年1月改为由ThomasChu&Sons公司出版。1886年该杂志改为月刊。",
+      "category": "专题古籍",
+      "tags": [
+        "基督教，杂志"
+      ],
+      "level": 1,
+      "createdAt": "2025-11-01T11:34:58.185Z",
+      "updatedAt": "2025-11-01T11:35:42.090Z"
+    },
+    {
       "id": 1761800496324,
       "title": "安心研",
       "url": "http://anxinky.ysepan.com/",
@@ -5243,43 +5280,17 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1761996898186,
-      "title": "《教务杂志》和中国的新传教士组织（1867—1941）",
-      "url": "https://dn720006.ca.archive.org/0/items/sim_chinese-recorder-and-missionary-journal_1888-04_19_4/sim_chinese-recorder-and-missionary-journal_1888-04_19_4.pdf",
-      "description": "1867年，新教传教士为了让教士们了解所进行的活动，开始在福州的卫理公会出版社出版《传教士记录》(The Missionary Recorder),该杂志仅持续了一年，但是工作已经有了开端。1868年5月福州的卫理公会出版社正式出版了《教务杂志》(The Chinese Recorder and Missionary Journal),由美国卫理公会牧师保灵(S.L.Baldwin)创立。1869年6月美国传教士卢公明(Justus Doolittle)也加入了编辑工作，该刊一直到1872年5月底停刊。1874年《教务杂志》恢复为双月刊，由上海的美华书馆出版。在接下来的67年中，该杂志不断地出版发行，并于1932年1月改为由ThomasChu&Sons公司出版。1886年该杂志改为月刊。",
-      "category": "专题古籍",
-      "tags": [
-        "基督教，杂志"
-      ],
-      "level": 1,
-      "createdAt": "2025-11-01T11:34:58.185Z",
-      "updatedAt": "2025-11-01T11:35:42.090Z"
-    },
-    {
-      "id": 1761996964699,
-      "title": "教务杂志（The Chinese Recorder and missionary Journal）",
-      "url": "https://archive.org/details/s3039id1390147",
-      "description": "《教务杂志》是19世纪在动荡中国出版的英文刊物中持续时间最长者，自1868年出刊至1941年因太平洋战争爆发而停刊。此刊物创办的目的原是作为来华传教士交换信息及讨论传教工作的平台，以协助彼此对中国文化的了解与工作推行；然因其记录翔实，辅以许多手绘图片与照片、精密统计数字，不但是超过半世纪西方管窥、了解中国的重要窗口，更成为今日研究中国近代史不可或缺的第一手重要文本。",
-      "category": "专题古籍",
-      "tags": [
-        "基督教，杂志"
-      ],
-      "level": 2,
-      "createdAt": "2025-11-01T11:36:04.699Z",
-      "updatedAt": "2025-11-01T11:36:04.699Z"
-    },
-    {
-      "id": 1762135223625,
-      "title": "中国留美学生月报",
-      "url": "https://primarysources.brillonline.com/browse/the-chinese-students-monthly-online",
-      "description": "The Chinese Student's Monthly Online。《中国留美学生月报》是第一份由中国学生在美国出版的杂志(1906一1931年)，是当时留美中国学生中最有影响力的刊物。20世纪初，中国留美学生中有许多重要的历史人物，如施肇基、顾维钧、胡适、赵元任、谢冰心等，都为该杂志撰写过文章。海外华人也因此成了一个新兴的学术研究领域。——港澳台及海外历史文献",
-      "category": "专题古籍",
+      "id": 1762137612540,
+      "title": "课程查询",
+      "url": "https://ztangart.github.io/xfw/",
+      "description": "",
+      "category": "办公文档",
       "tags": [],
-      "level": 2,
-      "createdAt": "2025-11-03T02:00:23.624Z",
-      "updatedAt": "2025-11-03T02:00:23.624Z"
+      "level": 3,
+      "createdAt": "2025-11-03T02:40:12.540Z",
+      "updatedAt": "2025-11-03T02:40:12.540Z"
     }
   ],
-  "exportDate": "2025-11-03T02:00:26.437Z",
+  "exportDate": "2025-11-03T02:40:23.813Z",
   "version": "1.0"
 }
