@@ -219,6 +219,16 @@ async function init() {
     
     // 绑定事件监听器
     bindEventListeners();
+    
+    // 确保页面初始化时显示正确的更新时间
+    const savedData = localStorage.getItem('siteManagerData');
+    if (savedData) {
+        const parsedData = JSON.parse(savedData);
+        updateLastModifiedTime(parsedData.lastUpdated);
+    } else {
+        // 如果没有保存的数据，使用当前时间作为默认值
+        updateLastModifiedTime();
+    }
 }
 
 // 初始化汉堡菜单功能
@@ -288,6 +298,9 @@ async function loadData(forceRefresh = false) {
             
             // 提取所有唯一分类
             updateCategories();
+            
+            // 从localStorage加载数据时也更新最后修改时间显示
+            updateLastModifiedTime(parsedData.lastUpdated);
         }
     } catch (error) {
         console.error('加载数据失败:', error);
