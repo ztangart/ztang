@@ -258,12 +258,18 @@ async function loadData(forceRefresh = false) {
         if (forceRefresh || !localStorage.getItem('siteManagerData')) {
             // 从JSON文件加载
             try {
-                const response = await fetch('data.json');
+                // 添加时间戳避免缓存，确保获取最新文件
+                const timestamp = new Date().getTime();
+                const response = await fetch(`data.json?_=${timestamp}`);
                 if (response.ok) {
                     const fileData = await response.json();
                     state.sites = fileData.sites || [];
                     updateCategories();
                     saveData(); // 将文件数据保存到localStorage
+                    
+                    // 获取文件最后修改时间并更新显示
+                    updateLastModifiedTime(response.headers.get('Last-Modified'));
+                    
                     if (forceRefresh) {
                         showToast('数据已从文件重新加载', 'success');
                     }
@@ -292,17 +298,46 @@ async function loadData(forceRefresh = false) {
 // 保存数据到本地存储
 function saveData() {
     try {
+        const now = new Date();
         const dataToSave = {
             sites: state.sites,
-            lastUpdated: new Date().toISOString()
+            lastUpdated: now.toISOString()
         };
         localStorage.setItem('siteManagerData', JSON.stringify(dataToSave));
+        
+        // 更新界面上的最后更新时间
+        updateLastModifiedTime(now.toISOString());
     } catch (error) {
         console.error('保存数据失败:', error);
         showToast('保存数据失败', 'error');
     }
 }
 
+// 更新最后修改时间显示
+function updateLastModifiedTime(lastModified) {
+    try {
+        // 找到更新时间元素
+        const updateTimeElement = document.querySelector('.update-time');
+        if (!updateTimeElement) return;
+        
+        // 解析并格式化日期
+        let date;
+        if (lastModified) {
+            date = new Date(lastModified);
+        } else {
+            // 如果没有提供时间，使用当前时间
+            date = new Date();
+        }
+        
+        // 格式化为YYYY-MM-DD格式
+        const formattedDate = date.toISOString().split('T')[0];
+        
+        // 更新显示
+        updateTimeElement.textContent = `最后更新: ${formattedDate}`;
+    } catch (error) {
+        console.error('更新最后修改时间失败:', error);
+    }
+}
 // 更新分类列表（保留用于数据管理）
 function updateCategories() {
     const categorySet = new Set();
