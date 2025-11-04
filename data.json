@@ -1,6 +1,17 @@
 {
   "sites": [
     {
+      "id": 1762137612540,
+      "title": "课程查询",
+      "url": "https://ztangart.github.io/xfw/",
+      "description": "",
+      "category": "办公文档",
+      "tags": [],
+      "level": 3,
+      "createdAt": "2025-11-03T02:40:12.540Z",
+      "updatedAt": "2025-11-03T02:40:12.540Z"
+    },
+    {
       "id": 1762135223625,
       "title": "中国留美学生月报",
       "url": "https://primarysources.brillonline.com/browse/the-chinese-students-monthly-online",
@@ -5280,17 +5291,17 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1762137612540,
-      "title": "课程查询",
-      "url": "https://ztangart.github.io/xfw/",
-      "description": "",
-      "category": "办公文档",
+      "id": 1762263854925,
+      "title": "全球新闻档案馆研究中心",
+      "url": "https://www.eastview.com/resources/gpa/crl-alliance/",
+      "description": "30多年来，East View一直在解锁国际新闻内容，并使全球学者都能访问这些内容。East View全球新闻档案®（GPA）initiative通过提供各种主要是非西方报纸标题的深度档案来延续这一传统，这些报纸标题按照严格的标准进行数字化，并可进行搜索以提高可发现性。这些出版物中的许多是第一次作为综合档案提供，这一努力将共同为学术研究带来巨大的新价值。",
+      "category": "专题古籍",
       "tags": [],
-      "level": 3,
-      "createdAt": "2025-11-03T02:40:12.540Z",
-      "updatedAt": "2025-11-03T02:40:12.540Z"
+      "level": 2,
+      "createdAt": "2025-11-04T13:44:14.925Z",
+      "updatedAt": "2025-11-04T13:44:14.925Z"
     }
   ],
-  "exportDate": "2025-11-03T02:40:23.813Z",
+  "exportDate": "2025-11-04T13:44:16.657Z",
   "version": "1.0"
 }
