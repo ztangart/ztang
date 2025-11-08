@@ -1,6 +1,61 @@
 {
   "sites": [
     {
+      "id": 1762566667911,
+      "title": "中国全国博物馆信息",
+      "url": "http://nb.ncha.gov.cn/museum.html",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-08T01:51:07.911Z",
+      "updatedAt": "2025-11-08T01:51:25.546Z"
+    },
+    {
+      "id": 1761794759732,
+      "title": "睽睽旧照",
+      "url": "http://www.china81.com.cn/",
+      "description": "中国旧照片集合站",
+      "category": "中国",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-10-30T03:25:59.732Z",
+      "updatedAt": "2025-11-08T01:50:43.621Z"
+    },
+    {
+      "id": 1762566590386,
+      "title": "知识分子",
+      "url": "https://www.zhishifenzi.com/",
+      "description": "知识分子是由饶毅、鲁白、谢宇三位学者创办的移动新媒体平台，致力于关注科学、人文、思想。这是一个兼容并包，时刻为渴望知识、独立思考的人努力，共享人类知识、共析现代思想、共建智趣中国的平台。",
+      "category": "文化",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-08T01:49:50.386Z",
+      "updatedAt": "2025-11-08T01:49:50.386Z"
+    },
+    {
+      "id": 1762566560222,
+      "title": "中国科学院",
+      "url": "https://www.cas.cn/",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:49:20.222Z",
+      "updatedAt": "2025-11-08T01:49:20.222Z"
+    },
+    {
+      "id": 1761795729600,
+      "title": "中国国家文物局",
+      "url": "http://www.ncha.gov.cn/",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-10-30T03:42:09.600Z",
+      "updatedAt": "2025-11-08T01:48:02.989Z"
+    },
+    {
       "id": 1762566392770,
       "title": "有一云",
       "url": "https://www.uecloud.com/",
@@ -1369,17 +1424,6 @@
       "updatedAt": "2025-10-30T03:42:42.637Z"
     },
     {
-      "id": 1761795729600,
-      "title": "中国国家文物局",
-      "url": "http://www.ncha.gov.cn/",
-      "description": "",
-      "category": "文化",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-30T03:42:09.600Z",
-      "updatedAt": "2025-11-08T01:48:02.989Z"
-    },
-    {
       "id": 1761794076599,
       "title": "历史地图网",
       "url": "http://www.txlzp.com/",
@@ -1433,17 +1477,6 @@
       "level": 2,
       "createdAt": "2025-10-30T03:24:53.057Z",
       "updatedAt": "2025-10-30T03:38:08.237Z"
-    },
-    {
-      "id": 1761794759732,
-      "title": "睽睽旧照",
-      "url": "http://www.china81.com.cn/",
-      "description": "中国旧照片集合站",
-      "category": "中国",
-      "tags": [],
-      "level": 1,
-      "createdAt": "2025-10-30T03:25:59.732Z",
-      "updatedAt": "2025-11-08T01:50:43.621Z"
     },
     {
       "id": 1761794547745,
@@ -5401,39 +5434,39 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1762566560222,
-      "title": "中国科学院",
-      "url": "https://www.cas.cn/",
-      "description": "",
-      "category": "文化",
+      "id": 1762567029733,
+      "title": "香港中文大学中医古典文库",
+      "url": "https://repository.lib.cuhk.edu.hk/tc/collection/chimed",
+      "description": "香港中文大學 (中大) 圖書館一直致力於推動中醫古典文庫的建設與發展。截至2023年，中大圖書館共完成兩期項目,其中第一期項目包括了江潤祥教授慷慨贈予的「莊兆祥教授中醫學藏書」，這批珍貴的藏書對於研究中醫學具有極高的價值。在第二期項目中，中大圖書館進一步將館藏的中醫古籍數碼化。這些藏書包含47種共400册清代古籍及民國時期的醫書。這些古籍的數量和多樣性為研究者提供了更廣泛的資料來源，有助於深入了解中醫學的演變和發展。",
+      "category": "专题古籍",
       "tags": [],
       "level": 2,
-      "createdAt": "2025-11-08T01:49:20.222Z",
-      "updatedAt": "2025-11-08T01:49:20.222Z"
+      "createdAt": "2025-11-08T01:57:09.733Z",
+      "updatedAt": "2025-11-08T01:57:09.733Z"
     },
     {
-      "id": 1762566590386,
-      "title": "知识分子",
-      "url": "https://www.zhishifenzi.com/",
-      "description": "知识分子是由饶毅、鲁白、谢宇三位学者创办的移动新媒体平台，致力于关注科学、人文、思想。这是一个兼容并包，时刻为渴望知识、独立思考的人努力，共享人类知识、共析现代思想、共建智趣中国的平台。",
-      "category": "文化",
+      "id": 1762567060252,
+      "title": "国家哲学社会科学文献中心",
+      "url": "https://ncpssd.org/Literature/ancientbooklist?nav=5",
+      "description": "“国家哲学社会科学文献中心”立足全国哲学社会科学领域，由国家投入和支持，开展哲学社会科学文献信息资源建设和服务。中心由中宣部指导，社科院牵头，教育部和新闻出版广电总局等相关部委配合，其他社科机构参与，共同建设和管理，依托社科院图书馆开展具体工作。",
+      "category": "平台",
       "tags": [],
-      "level": 1,
-      "createdAt": "2025-11-08T01:49:50.386Z",
-      "updatedAt": "2025-11-08T01:49:50.386Z"
+      "level": 2,
+      "createdAt": "2025-11-08T01:57:40.252Z",
+      "updatedAt": "2025-11-08T01:57:40.252Z"
     },
     {
-      "id": 1762566667911,
-      "title": "中国全国博物馆信息",
-      "url": "http://nb.ncha.gov.cn/museum.html",
-      "description": "",
-      "category": "文化",
+      "id": 1762567092059,
+      "title": "中华石刻数据库",
+      "url": "https://inscription.ancientbooks.cn/docShike/",
+      "description": "《历代石刻拓片汇编》是通代性的石刻文献数据库。涵盖时期上起先秦，下至民国，全面收录、整合历代刻有文字的石刻资源；石刻类型丰富多样，内容题材包罗万象，涵盖碑碣、摩崖、墓志、墓砖、经幢、买地券、造像、画像砖等。本库文图兼收，支持录文与拓片参照阅读；对原文进行标点、分段；提供在线阅读、全文检索、复制引用、笔记批注等服务。",
+      "category": "中国",
       "tags": [],
-      "level": 1,
-      "createdAt": "2025-11-08T01:51:07.911Z",
-      "updatedAt": "2025-11-08T01:51:25.546Z"
+      "level": 2,
+      "createdAt": "2025-11-08T01:58:12.059Z",
+      "updatedAt": "2025-11-08T01:58:12.059Z"
     }
   ],
-  "exportDate": "2025-11-08T01:51:28.021Z",
+  "exportDate": "2025-11-08T01:58:13.747Z",
   "version": "1.0"
 }
