@@ -1,6 +1,105 @@
 {
   "sites": [
     {
+      "id": 1762566392770,
+      "title": "有一云",
+      "url": "https://www.uecloud.com/",
+      "description": "新媒体AI写作·公众号AI排版·GEO智能营销",
+      "category": "办公文档",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:46:32.770Z",
+      "updatedAt": "2025-11-08T01:46:32.770Z"
+    },
+    {
+      "id": 1762566318820,
+      "title": "孔夫子旧书网",
+      "url": "https://www.kongfz.com/",
+      "description": "淘旧书，也有坑。",
+      "category": "图书信息",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-08T01:45:18.820Z",
+      "updatedAt": "2025-11-08T01:45:18.820Z"
+    },
+    {
+      "id": 1762565851273,
+      "title": "EBSCO信息服务",
+      "url": "https://about.ebsco.com/",
+      "description": "需要订购，但有相对全面的免费的专业词条百科（比如：https://www.ebsco.com/research-starters）。是研究数据库、电子期刊和电子包订阅管理、图书馆藏开发和采购管理的提供商，也是图书馆技术、电子书和临床决策解决方案的主要提供商。",
+      "category": "平台",
+      "tags": [],
+      "level": 3,
+      "createdAt": "2025-11-08T01:37:31.273Z",
+      "updatedAt": "2025-11-08T01:44:24.443Z"
+    },
+    {
+      "id": 1762566219281,
+      "title": "印象笔记",
+      "url": "https://www.yinxiang.com/",
+      "description": "",
+      "category": "笔记",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:43:39.281Z",
+      "updatedAt": "2025-11-08T01:43:39.281Z"
+    },
+    {
+      "id": 1762566124833,
+      "title": "EBSCO期刊库",
+      "url": "https://about.ebsco.com/products/research-databases/readers-guide-periodical-literature",
+      "description": "《期刊文学读者指南》是期刊索引。它涵盖艺术、商业、教育和娱乐等主题。",
+      "category": "平台",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:42:04.833Z",
+      "updatedAt": "2025-11-08T01:42:04.833Z"
+    },
+    {
+      "id": 1762565705960,
+      "title": "汉珍数字图书馆",
+      "url": "https://www.tbmc.com.tw/zh-cn",
+      "description": "",
+      "category": "中国古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:35:05.960Z",
+      "updatedAt": "2025-11-08T01:35:05.960Z"
+    },
+    {
+      "id": 1762565634320,
+      "title": "万方方志数据库",
+      "url": "https://fz.wanfangdata.com.cn/",
+      "description": "需购买",
+      "category": "专题古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:33:54.320Z",
+      "updatedAt": "2025-11-08T01:33:54.320Z"
+    },
+    {
+      "id": 1762565571073,
+      "title": "北京市数字方志馆",
+      "url": "https://bjsfzg.bjdsdfz.cn/",
+      "description": "",
+      "category": "专题古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:32:51.073Z",
+      "updatedAt": "2025-11-08T01:32:51.073Z"
+    },
+    {
+      "id": 1762565450844,
+      "title": "弘化社",
+      "url": "https://www.honghuashe.com/",
+      "description": "位于苏州的公益出版社",
+      "category": "社",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:30:50.844Z",
+      "updatedAt": "2025-11-08T01:30:50.844Z"
+    },
+    {
       "id": 1762310045691,
       "title": "冷战：对抗与调解之声（Cold War）",
       "url": "https://www.gale.com/product-catalog/267950",
@@ -1274,11 +1373,11 @@
       "title": "中国国家文物局",
       "url": "http://www.ncha.gov.cn/",
       "description": "",
-      "category": "组织机构",
+      "category": "文化",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T03:42:09.600Z",
-      "updatedAt": "2025-10-30T03:42:09.600Z"
+      "updatedAt": "2025-11-08T01:48:02.989Z"
     },
     {
       "id": 1761794076599,
@@ -1342,9 +1441,9 @@
       "description": "中国旧照片集合站",
       "category": "中国",
       "tags": [],
-      "level": 2,
+      "level": 1,
       "createdAt": "2025-10-30T03:25:59.732Z",
-      "updatedAt": "2025-10-30T03:25:59.732Z"
+      "updatedAt": "2025-11-08T01:50:43.621Z"
     },
     {
       "id": 1761794547745,
@@ -5300,8 +5399,41 @@
       "level": 3,
       "createdAt": "2023-09-10T08:00:00.000Z",
       "updatedAt": "2023-09-10T08:00:00.000Z"
+    },
+    {
+      "id": 1762566560222,
+      "title": "中国科学院",
+      "url": "https://www.cas.cn/",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-08T01:49:20.222Z",
+      "updatedAt": "2025-11-08T01:49:20.222Z"
+    },
+    {
+      "id": 1762566590386,
+      "title": "知识分子",
+      "url": "https://www.zhishifenzi.com/",
+      "description": "知识分子是由饶毅、鲁白、谢宇三位学者创办的移动新媒体平台，致力于关注科学、人文、思想。这是一个兼容并包，时刻为渴望知识、独立思考的人努力，共享人类知识、共析现代思想、共建智趣中国的平台。",
+      "category": "文化",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-08T01:49:50.386Z",
+      "updatedAt": "2025-11-08T01:49:50.386Z"
+    },
+    {
+      "id": 1762566667911,
+      "title": "中国全国博物馆信息",
+      "url": "http://nb.ncha.gov.cn/museum.html",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-08T01:51:07.911Z",
+      "updatedAt": "2025-11-08T01:51:25.546Z"
     }
   ],
-  "exportDate": "2025-11-05T02:34:08.263Z",
+  "exportDate": "2025-11-08T01:51:28.021Z",
   "version": "1.0"
 }
