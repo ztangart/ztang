@@ -163,6 +163,12 @@ const categoryHierarchy = [
             { name: '气象地图' },
             { name: '地图软件' }
         ]
+    },
+    {
+        name: '创作',
+        children: [
+            { name: '壁纸' }
+        ]
     }
 ];
 
@@ -594,8 +600,9 @@ function generateCategorySelector() {
 
 // 确认选择分类
 function confirmCategorySelection() {
-    if (currentSelectedCategory) {
-        elements.siteCategory.value = currentSelectedCategory;
+    if (currentSelectedCategoryPath.length > 0) {
+        // 显示完整的分类路径，如：图像 > 欧洲 > 意大利
+        elements.siteCategory.value = currentSelectedCategoryPath.join(' > ');
         closeCategoryModal();
     } else {
         showToast('请选择一个有效的分类', 'error');
