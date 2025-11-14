@@ -1,6 +1,28 @@
 {
   "sites": [
     {
+      "id": 1763088086045,
+      "title": "epub阅读器",
+      "url": "https://www.aquilereader.in/",
+      "description": "",
+      "category": "文献管理",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:41:26.045Z",
+      "updatedAt": "2025-11-14T02:41:26.045Z"
+    },
+    {
+      "id": 1762741007645,
+      "title": "清史数据共享平台",
+      "url": "http://dhiqh.ruc.edu.cn/",
+      "description": "数字清史实验室（清史数据共享平台）由教育部人文社科研究基地清史研究所主持，成立于2018年1月14日。实验室致力于清史数据的开发与共享，致力于打造集时空于一体的数据平台。实验室坚持数据开发与科学研究结合，坚持自建数据与合作共享结合，坚持数据生产与人才培养结合，坚持核心数据的开发。",
+      "category": "专题古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-10T02:16:47.645Z",
+      "updatedAt": "2025-11-10T02:16:47.645Z"
+    },
+    {
       "id": 1762567092059,
       "title": "中华石刻数据库",
       "url": "https://inscription.ancientbooks.cn/docShike/",
@@ -3990,14 +4012,14 @@
     },
     {
       "id": 1761642072588,
-      "title": "国立国会図書館デジタルコレクション",
+      "title": "日本国立国会図書館デジタルコレクション",
       "url": "https://dl.ndl.go.jp/",
       "description": "国立国会图书馆数字收藏是可以检索、阅览国立国会图书馆收集、保存的数字资料的服务（收集、保存的网站、CD/DVD等成套软件除外），涉及图书、杂志、古典资料、博士论文、学术机构、公文等电子资源。可输入中文繁体字检索，可在线阅览及下载大量图书资源，不少论文可全文pdf下载。——港澳台及海外历史文献公众号",
       "category": "外国古籍",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T09:01:12.588Z",
-      "updatedAt": "2025-10-28T09:01:12.588Z"
+      "updatedAt": "2025-11-14T02:43:52.436Z"
     },
     {
       "id": 1761642047043,
@@ -5467,17 +5489,50 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1762741007645,
-      "title": "清史数据共享平台",
-      "url": "http://dhiqh.ruc.edu.cn/",
-      "description": "数字清史实验室（清史数据共享平台）由教育部人文社科研究基地清史研究所主持，成立于2018年1月14日。实验室致力于清史数据的开发与共享，致力于打造集时空于一体的数据平台。实验室坚持数据开发与科学研究结合，坚持自建数据与合作共享结合，坚持数据生产与人才培养结合，坚持核心数据的开发。",
-      "category": "专题古籍",
+      "id": 1763088222228,
+      "title": "日本国立国会图书馆数据库",
+      "url": "https://www.digital.archives.go.jp/DAS/meta/default?IS_KIND",
+      "description": "",
+      "category": "外国古籍",
       "tags": [],
       "level": 2,
-      "createdAt": "2025-11-10T02:16:47.645Z",
-      "updatedAt": "2025-11-10T02:16:47.645Z"
+      "createdAt": "2025-11-14T02:43:42.228Z",
+      "updatedAt": "2025-11-14T02:43:42.228Z"
+    },
+    {
+      "id": 1763088295219,
+      "title": "中华文化英文知识库",
+      "url": "https://culturepedia.chinadaily.com.cn/#/homePage",
+      "description": "",
+      "category": "中国古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:44:55.219Z",
+      "updatedAt": "2025-11-14T02:44:55.219Z"
+    },
+    {
+      "id": 1763088314644,
+      "title": "中科天机气象资源共享",
+      "url": "https://www.tjweather.com/",
+      "description": "",
+      "category": "气象地图",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:45:14.644Z",
+      "updatedAt": "2025-11-14T02:45:14.644Z"
+    },
+    {
+      "id": 1763088455209,
+      "title": "哈佛道德测试",
+      "url": "https://moralsensetest.com/",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:47:35.209Z",
+      "updatedAt": "2025-11-14T02:47:35.209Z"
     }
   ],
-  "exportDate": "2025-11-10T02:18:35.697Z",
+  "exportDate": "2025-11-14T02:48:03.380Z",
   "version": "1.0"
 }
