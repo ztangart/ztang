@@ -1,6 +1,72 @@
 {
   "sites": [
     {
+      "id": 1763359013528,
+      "title": "易制地图",
+      "url": "https://www.makeamap.cn/index.html",
+      "description": "易制地图是一款自由的地图绘制工具，可以在线创作小说地图、架空世界地图、跑团地图、游戏地图、桌游地图、剧本杀地图、区域地图。操作易，素材全，风格多，可方便的创作、输出、分享您的地图作品。",
+      "category": "地图 > 地图软件",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-17T05:56:53.528Z",
+      "updatedAt": "2025-11-17T05:56:53.528Z"
+    },
+    {
+      "id": 1763088455209,
+      "title": "哈佛道德测试",
+      "url": "https://moralsensetest.com/",
+      "description": "",
+      "category": "文化",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:47:35.209Z",
+      "updatedAt": "2025-11-14T02:47:35.209Z"
+    },
+    {
+      "id": 1763088314644,
+      "title": "中科天机气象资源共享",
+      "url": "https://www.tjweather.com/",
+      "description": "",
+      "category": "气象地图",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:45:14.644Z",
+      "updatedAt": "2025-11-14T02:45:14.644Z"
+    },
+    {
+      "id": 1763088295219,
+      "title": "中华文化英文知识库",
+      "url": "https://culturepedia.chinadaily.com.cn/#/homePage",
+      "description": "",
+      "category": "中国古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:44:55.219Z",
+      "updatedAt": "2025-11-14T02:44:55.219Z"
+    },
+    {
+      "id": 1761642072588,
+      "title": "日本国立国会図書館デジタルコレクション",
+      "url": "https://dl.ndl.go.jp/",
+      "description": "国立国会图书馆数字收藏是可以检索、阅览国立国会图书馆收集、保存的数字资料的服务（收集、保存的网站、CD/DVD等成套软件除外），涉及图书、杂志、古典资料、博士论文、学术机构、公文等电子资源。可输入中文繁体字检索，可在线阅览及下载大量图书资源，不少论文可全文pdf下载。——港澳台及海外历史文献公众号",
+      "category": "外国古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-10-28T09:01:12.588Z",
+      "updatedAt": "2025-11-14T02:43:52.436Z"
+    },
+    {
+      "id": 1763088222228,
+      "title": "日本国立国会图书馆数据库",
+      "url": "https://www.digital.archives.go.jp/DAS/meta/default?IS_KIND",
+      "description": "",
+      "category": "外国古籍",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-14T02:43:42.228Z",
+      "updatedAt": "2025-11-14T02:43:42.228Z"
+    },
+    {
       "id": 1763088086045,
       "title": "epub阅读器",
       "url": "https://www.aquilereader.in/",
@@ -4011,17 +4077,6 @@
       "updatedAt": "2025-10-28T09:01:44.373Z"
     },
     {
-      "id": 1761642072588,
-      "title": "日本国立国会図書館デジタルコレクション",
-      "url": "https://dl.ndl.go.jp/",
-      "description": "国立国会图书馆数字收藏是可以检索、阅览国立国会图书馆收集、保存的数字资料的服务（收集、保存的网站、CD/DVD等成套软件除外），涉及图书、杂志、古典资料、博士论文、学术机构、公文等电子资源。可输入中文繁体字检索，可在线阅览及下载大量图书资源，不少论文可全文pdf下载。——港澳台及海外历史文献公众号",
-      "category": "外国古籍",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-10-28T09:01:12.588Z",
-      "updatedAt": "2025-11-14T02:43:52.436Z"
-    },
-    {
       "id": 1761642047043,
       "title": "CBETA 線上閱讀",
       "url": "https://cbetaonline.cn/zh/",
@@ -5489,50 +5544,50 @@
       "updatedAt": "2023-09-10T08:00:00.000Z"
     },
     {
-      "id": 1763088222228,
-      "title": "日本国立国会图书馆数据库",
-      "url": "https://www.digital.archives.go.jp/DAS/meta/default?IS_KIND",
-      "description": "",
-      "category": "外国古籍",
+      "id": 1763359084960,
+      "title": "表答",
+      "url": "https://biaoda.me/home",
+      "description": "AI 网页爬虫 × 数据可视化",
+      "category": "数据工具",
       "tags": [],
       "level": 2,
-      "createdAt": "2025-11-14T02:43:42.228Z",
-      "updatedAt": "2025-11-14T02:43:42.228Z"
+      "createdAt": "2025-11-17T05:58:04.959Z",
+      "updatedAt": "2025-11-17T05:58:04.959Z"
     },
     {
-      "id": 1763088295219,
-      "title": "中华文化英文知识库",
-      "url": "https://culturepedia.chinadaily.com.cn/#/homePage",
-      "description": "",
-      "category": "中国古籍",
+      "id": 1763359298847,
+      "title": "Laion数据集浏览",
+      "url": "https://laion.inference.net/embeddings",
+      "description": "以学术文章为基础构建了一个文献宇宙",
+      "category": "数据工具",
       "tags": [],
-      "level": 2,
-      "createdAt": "2025-11-14T02:44:55.219Z",
-      "updatedAt": "2025-11-14T02:44:55.219Z"
+      "level": 1,
+      "createdAt": "2025-11-17T06:01:38.847Z",
+      "updatedAt": "2025-11-17T06:01:38.847Z"
     },
     {
-      "id": 1763088314644,
-      "title": "中科天机气象资源共享",
-      "url": "https://www.tjweather.com/",
-      "description": "",
-      "category": "气象地图",
+      "id": 1763359334582,
+      "title": "发音字典",
+      "url": "https://www.voicedic.com/",
+      "description": "查询汉字的各种发音",
+      "category": "中文",
       "tags": [],
       "level": 2,
-      "createdAt": "2025-11-14T02:45:14.644Z",
-      "updatedAt": "2025-11-14T02:45:14.644Z"
+      "createdAt": "2025-11-17T06:02:14.582Z",
+      "updatedAt": "2025-11-17T06:02:14.582Z"
     },
     {
-      "id": 1763088455209,
-      "title": "哈佛道德测试",
-      "url": "https://moralsensetest.com/",
-      "description": "",
-      "category": "文化",
+      "id": 1763359431399,
+      "title": "Glosbe字典",
+      "url": "https://zh.glosbe.com/",
+      "description": "支持世界上的所有语言。Glosbe 是一个平台，提供带有上下文翻译的免费词典（翻译的句子 - 所谓的翻译记忆库）。你会在这里找到：数十亿个翻译短语、短语插图、录音和发音、数十亿的翻译句子、长文本的自动翻译器。",
+      "category": "西文",
       "tags": [],
-      "level": 2,
-      "createdAt": "2025-11-14T02:47:35.209Z",
-      "updatedAt": "2025-11-14T02:47:35.209Z"
+      "level": 3,
+      "createdAt": "2025-11-17T06:03:51.399Z",
+      "updatedAt": "2025-11-17T06:03:51.399Z"
     }
   ],
-  "exportDate": "2025-11-14T02:48:03.380Z",
+  "exportDate": "2025-11-17T06:04:11.309Z",
   "version": "1.0"
 }
