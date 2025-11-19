@@ -5586,8 +5586,49 @@
       "level": 3,
       "createdAt": "2023-09-10T08:00:00.000Z",
       "updatedAt": "2023-09-10T08:00:00.000Z"
+    },
+    {
+      "title": "吾与点-智能人文平台",
+      "url": "https://www.wuyudian.net/",
+      "description": "为人文研究者和文化机构提供专业、先进、便捷的生产力工具。",
+      "category": "工具 > 知识管理 > 文献管理",
+      "categoryPath": "工具 > 知识管理 > 文献管理",
+      "level": 2,
+      "created_at": "2025-11-19T14:39:29.487Z",
+      "tags": [
+        "工具 > 知识管理 > 文献管理",
+        "办公文档"
+      ],
+      "id": "site_1763563169487_oywwrg9or"
+    },
+    {
+      "title": "MiniMax",
+      "url": "https://www.minimaxi.com/",
+      "description": "",
+      "category": "工具 > AI",
+      "categoryPath": "工具 > AI",
+      "level": 2,
+      "created_at": "2025-11-19T14:48:25.274Z",
+      "tags": [
+        "工具 > AI",
+        "音频工具"
+      ],
+      "id": "site_1763563705274_wbmpw2oa2"
+    },
+    {
+      "title": "画本妖鸡",
+      "url": "https://www.huabenyaoji.com/#/",
+      "description": "多人有声剧文本处理协作系统",
+      "category": "音频工具",
+      "categoryPath": "音频工具",
+      "level": 2,
+      "created_at": "2025-11-19T14:49:44.172Z",
+      "tags": [
+        "音频工具"
+      ],
+      "id": "site_1763563784172_nakbjj2j8"
     }
   ],
-  "exportDate": "2025-11-17T13:43:29.530Z",
+  "exportDate": "2025-11-19T14:50:01.999Z",
   "version": "1.0"
 }
