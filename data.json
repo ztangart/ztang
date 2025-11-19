@@ -1,6 +1,50 @@
 {
   "sites": [
     {
+      "id": 1763359431399,
+      "title": "Glosbe字典",
+      "url": "https://zh.glosbe.com/",
+      "description": "支持世界上的所有语言。Glosbe 是一个平台，提供带有上下文翻译的免费词典（翻译的句子 - 所谓的翻译记忆库）。你会在这里找到：数十亿个翻译短语、短语插图、录音和发音、数十亿的翻译句子、长文本的自动翻译器。",
+      "category": "西文",
+      "tags": [],
+      "level": 3,
+      "createdAt": "2025-11-17T06:03:51.399Z",
+      "updatedAt": "2025-11-17T06:03:51.399Z"
+    },
+    {
+      "id": 1763359334582,
+      "title": "发音字典",
+      "url": "https://www.voicedic.com/",
+      "description": "查询汉字的各种发音",
+      "category": "中文",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-17T06:02:14.582Z",
+      "updatedAt": "2025-11-17T06:02:14.582Z"
+    },
+    {
+      "id": 1763359298847,
+      "title": "Laion数据集浏览",
+      "url": "https://laion.inference.net/embeddings",
+      "description": "以学术文章为基础构建了一个文献宇宙",
+      "category": "数据工具",
+      "tags": [],
+      "level": 1,
+      "createdAt": "2025-11-17T06:01:38.847Z",
+      "updatedAt": "2025-11-17T06:01:38.847Z"
+    },
+    {
+      "id": 1763359084960,
+      "title": "表答",
+      "url": "https://biaoda.me/home",
+      "description": "AI 网页爬虫 × 数据可视化",
+      "category": "数据工具",
+      "tags": [],
+      "level": 2,
+      "createdAt": "2025-11-17T05:58:04.959Z",
+      "updatedAt": "2025-11-17T05:58:04.959Z"
+    },
+    {
       "id": 1763359013528,
       "title": "易制地图",
       "url": "https://www.makeamap.cn/index.html",
@@ -1241,11 +1285,11 @@
       "title": "佳士得拍卖",
       "url": "https://www.christies.com.cn/zh-CN/",
       "description": "",
-      "category": "商业组织",
+      "category": "图像 > 中国",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:23:24.194Z",
-      "updatedAt": "2025-10-30T04:23:24.194Z"
+      "updatedAt": "2025-11-17T13:41:34.218Z"
     },
     {
       "id": 1761798143354,
@@ -4730,11 +4774,11 @@
       "title": "WahooArt",
       "url": "https://es.wahooart.com/",
       "description": "美术复制品画廊，同时拥有广泛的艺术家艺术品和传记数据库。",
-      "category": "商业组织",
+      "category": "图像 > 各国",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T08:17:03.356Z",
-      "updatedAt": "2025-10-28T08:17:03.356Z"
+      "updatedAt": "2025-11-17T13:41:40.668Z"
     },
     {
       "id": 1761639382130,
@@ -4774,33 +4818,33 @@
       "title": "荣宝斋",
       "url": "https://www.rongbaozhai.cn/",
       "description": "",
-      "category": "商业组织",
+      "category": "图像 > 中国",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T08:14:27.657Z",
-      "updatedAt": "2025-10-28T08:14:27.657Z"
+      "updatedAt": "2025-11-17T13:41:46.570Z"
     },
     {
       "id": 1761639250468,
       "title": "十竹斋",
       "url": "https://www.bambooart.net/",
       "description": "",
-      "category": "商业组织",
+      "category": "图像 > 中国",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T08:14:10.468Z",
-      "updatedAt": "2025-10-28T08:14:10.468Z"
+      "updatedAt": "2025-11-17T13:41:54.055Z"
     },
     {
       "id": 1761639229022,
       "title": "ArtNet",
       "url": "https://www.artnet.com/",
       "description": "当代艺术画廊",
-      "category": "商业组织",
+      "category": "图像 > 各国",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T08:13:49.022Z",
-      "updatedAt": "2025-10-28T08:13:49.022Z"
+      "updatedAt": "2025-11-17T13:42:00.822Z"
     },
     {
       "id": 1761639201390,
@@ -5384,22 +5428,22 @@
       "title": "Arthive",
       "url": "https://www.arthive.net/",
       "description": "一个集中画家、收藏家和艺术品经销商的社区，旨在让艺术品发布、收藏、管理、买卖变得更加容易。",
-      "category": "商业组织",
+      "category": "图像 > 各国",
       "tags": [],
       "level": 1,
       "createdAt": "2023-10-24T14:50:00.000Z",
-      "updatedAt": "2025-10-28T07:33:05.751Z"
+      "updatedAt": "2025-11-17T13:42:07.030Z"
     },
     {
       "id": 1761291988981,
       "title": "WahooArt",
       "url": "https://www.wahooart.com/",
       "description": "美术复制品画廊，同时拥有广泛的艺术家艺术品和传记数据库。",
-      "category": "商业组织",
+      "category": "图像 > 各国",
       "tags": [],
       "level": 1,
       "createdAt": "2023-10-24T14:55:00.000Z",
-      "updatedAt": "2025-10-28T07:32:53.704Z"
+      "updatedAt": "2025-11-17T13:42:12.768Z"
     },
     {
       "id": 1761291948977,
@@ -5542,52 +5586,8 @@
       "level": 3,
       "createdAt": "2023-09-10T08:00:00.000Z",
       "updatedAt": "2023-09-10T08:00:00.000Z"
-    },
-    {
-      "id": 1763359084960,
-      "title": "表答",
-      "url": "https://biaoda.me/home",
-      "description": "AI 网页爬虫 × 数据可视化",
-      "category": "数据工具",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-11-17T05:58:04.959Z",
-      "updatedAt": "2025-11-17T05:58:04.959Z"
-    },
-    {
-      "id": 1763359298847,
-      "title": "Laion数据集浏览",
-      "url": "https://laion.inference.net/embeddings",
-      "description": "以学术文章为基础构建了一个文献宇宙",
-      "category": "数据工具",
-      "tags": [],
-      "level": 1,
-      "createdAt": "2025-11-17T06:01:38.847Z",
-      "updatedAt": "2025-11-17T06:01:38.847Z"
-    },
-    {
-      "id": 1763359334582,
-      "title": "发音字典",
-      "url": "https://www.voicedic.com/",
-      "description": "查询汉字的各种发音",
-      "category": "中文",
-      "tags": [],
-      "level": 2,
-      "createdAt": "2025-11-17T06:02:14.582Z",
-      "updatedAt": "2025-11-17T06:02:14.582Z"
-    },
-    {
-      "id": 1763359431399,
-      "title": "Glosbe字典",
-      "url": "https://zh.glosbe.com/",
-      "description": "支持世界上的所有语言。Glosbe 是一个平台，提供带有上下文翻译的免费词典（翻译的句子 - 所谓的翻译记忆库）。你会在这里找到：数十亿个翻译短语、短语插图、录音和发音、数十亿的翻译句子、长文本的自动翻译器。",
-      "category": "西文",
-      "tags": [],
-      "level": 3,
-      "createdAt": "2025-11-17T06:03:51.399Z",
-      "updatedAt": "2025-11-17T06:03:51.399Z"
     }
   ],
-  "exportDate": "2025-11-17T06:04:11.309Z",
+  "exportDate": "2025-11-17T13:43:29.530Z",
   "version": "1.0"
 }

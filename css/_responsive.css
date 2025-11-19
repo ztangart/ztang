@@ -1,0 +1,180 @@
+/* ==========================================================================*
+   响应式设计样式
+   包含不同屏幕尺寸的响应式断点样式
+\* ==========================================================================*/
+
+/* 导入变量 */
+@import './_variables.css';
+
+/* 移动设备断点 */
+@media (max-width: 576px) {
+  /* 容器响应式 */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* 模态框响应式 */
+  .modal__container {
+    width: 95%;
+    padding: var(--spacing-md);
+    max-height: 95vh;
+  }
+  
+  /* 表单响应式 */
+  .form__actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .form__textarea {
+    min-height: 100px;
+  }
+  
+  .form__group--level {
+    flex-direction: column;
+  }
+  
+  /* 按钮响应式 */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  /* 按钮组响应式 */
+  .button-group {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+  
+  /* 文本响应式 */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  h5, h6 {
+    font-size: 1rem;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+/* 平板设备断点 */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* 容器响应式 */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* 模态框响应式 */
+  .modal__container {
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  /* 表单响应式 */
+  .form__actions {
+    flex-direction: column;
+  }
+  
+  /* 按钮响应式 */
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* 按钮组响应式 */
+  .button-group {
+    flex-direction: column;
+  }
+}
+
+/* 中等屏幕断点 */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* 容器响应式 */
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* 表单响应式 */
+  .form__actions {
+    flex-direction: row;
+  }
+  
+  /* 按钮组响应式 */
+  .button-group {
+    flex-direction: row;
+  }
+}
+
+/* 大屏幕断点 */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* 容器响应式 */
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* 超大屏幕断点 */
+@media (min-width: 1201px) {
+  /* 容器响应式 */
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #ffffff;
+    --text-secondary: #ffffff;
+  }
+}
+
+/* 减少动画偏好支持 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .modal__container {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  
+  .btn--primary:hover:not(:disabled),
+  .btn--submit:hover:not(:disabled) {
+    transform: none !important;
+  }
+}
+
+/* 深色模式增强（针对已为深色主题设计的应用） */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 可以在这里调整深色模式下的颜色，虽然当前设计已是深色主题 */
+    --background-dark: #222222;
+    --background-darker: #1a1a1a;
+    --border-color: #555555;
+  }
+}

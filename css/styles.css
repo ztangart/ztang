@@ -1,0 +1,88 @@
+/* ==========================================================================*
+   主样式文件
+   统一导入所有模块化的CSS文件
+   项目: zt3.0
+   版本: 1.0.0
+\* ==========================================================================*/
+
+/* 导入模块化CSS文件 */
+@import './_variables.css';
+@import './_base.css';
+@import './_modal.css';
+@import './_forms.css';
+@import './_buttons.css';
+@import './_utilities.css';
+@import './_responsive.css';
+
+/* ==========================================================================*
+   导入说明：
+   1. 变量文件应最先导入，供其他文件使用
+   2. 基础样式其次导入
+   3. 组件样式按功能顺序导入
+   4. 工具类和响应式样式最后导入，以便覆盖前面的样式
+\* ==========================================================================*/
+
+/* 项目特定的全局样式覆盖可以在这里添加 */
+/* 注意：尽量避免在主文件中添加太多样式，保持模块化结构 */
+
+/* 确保模态框容器背景色一致（避免重复定义问题） */
+.modal-container {
+  background-color: var(--background-dark) !important;
+}
+
+/* 保持向下兼容 - 为了支持旧版HTML中使用的类名 */
+.form-group {
+  composes: form__group;
+}
+
+.form-group.level-group {
+  composes: form__group--level;
+}
+
+.form-label {
+  composes: form__label;
+}
+
+.form-input {
+  composes: form__input;
+}
+
+.form-select {
+  composes: form__select;
+}
+
+.form-textarea {
+  composes: form__textarea;
+}
+
+.form-actions {
+  composes: form__actions;
+}
+
+.form-actions.button-group {
+  composes: form__actions--button-group;
+}
+
+.btn {
+  composes: btn;
+}
+
+.btn.btn-primary,
+.btn.btn-submit {
+  composes: btn--primary;
+}
+
+.btn.btn-cancel {
+  composes: btn--cancel;
+}
+
+.modal-overlay {
+  composes: modal__overlay;
+}
+
+.modal-title {
+  composes: modal__title;
+}
+
+/* 注意：composes 语法在纯CSS中不支持，这只是为了表明类名映射关系 */
+/* 在实际使用中，需要在HTML中更新类名或保持两个版本的类名都有效 */

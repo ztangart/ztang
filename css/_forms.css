@@ -1,0 +1,240 @@
+/* ==========================================================================*
+   表单组件样式
+   包含表单容器、表单组、输入框、标签等样式
+   遵循 BEM 命名规范
+\* ==========================================================================*/
+
+/* 导入变量 */
+@import './_variables.css';
+
+/* 表单容器 */
+.form {
+  width: 100%;
+  
+  &__group {
+    margin-bottom: var(--spacing-md);
+    
+    &--level {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    &--horizontal {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    &--inline {
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: center;
+      margin-bottom: var(--spacing-md);
+    }
+  }
+  
+  &__label-container {
+    flex: 0 0 auto;
+    width: 100px;
+  }
+  
+  &__input-container {
+    flex: 1;
+  
+  &__label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 14px;
+  }
+  
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: var(--spacing-sm) 12px;
+    background-color: var(--background-darker);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: var(--transition);
+    font-family: inherit;
+  }
+  
+  &__textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+  
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+  
+  /* 聚焦状态 */
+  &__input:focus,
+  &__select:focus,
+  &__textarea:focus {
+    outline: none;
+    border-color: var(--bronze-light);
+    box-shadow: 0 0 0 2px rgba(212, 167, 106, 0.2);
+  }
+  
+  /* 占位符样式 */
+  &__input::placeholder,
+  &__textarea::placeholder {
+    color: var(--text-muted);
+  }
+  
+  /* 表单操作按钮容器 */
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    
+    &--button-group {
+      /* 继承 form__actions 样式 */
+    }
+  }
+  
+  /* 验证状态 */
+  &__input:invalid,
+  &__select:invalid,
+  &__textarea:invalid {
+    border-color: var(--error-color);
+  }
+  
+  &__input:invalid:focus,
+  &__select:invalid:focus,
+  &__textarea:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+  }
+}
+
+/* CSS 兼容版本 - 无嵌套 */
+.form {
+  width: 100%;
+}
+
+.form__group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form__group--level {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form__group--horizontal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form__group--inline {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.form__label-container {
+  flex: 0 0 auto;
+  width: 100px;
+}
+
+.form__input-container {
+  flex: 1;
+
+.form__label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.form__group--horizontal .form__label {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: right;
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: var(--spacing-sm) 12px;
+  background-color: var(--background-darker);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--bronze-light);
+  box-shadow: 0 0 0 2px rgba(212, 167, 106, 0.2);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.form__actions--button-group {
+  /* 继承 form__actions 样式 */
+}
+
+.form__input:invalid,
+.form__select:invalid,
+.form__textarea:invalid {
+  border-color: var(--error-color);
+}
+
+.form__input:invalid:focus,
+.form__select:invalid:focus,
+.form__textarea:invalid:focus {
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}

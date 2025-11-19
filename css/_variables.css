@@ -1,0 +1,37 @@
+/* ==========================================================================*
+   CSS 变量定义
+   包含所有全局颜色、间距、边框半径等变量
+\* ==========================================================================*/
+
+:root {
+  /* 颜色变量 */
+  --bronze-light: #d4a76a;
+  --bronze-medium: #b8860b;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #999999;
+  --background-dark: #333333;
+  --background-darker: #444444;
+  --background-light: #f5f5f5;
+  --border-color: #666666;
+  --error-color: #e74c3c;
+  
+  /* 间距变量 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* 边框半径 */
+  --border-radius-sm: 4px;
+  --border-radius: 8px;
+  
+  /* 阴影 */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+  /* 过渡 */
+  --transition: all 0.3s ease;
+}
