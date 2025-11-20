@@ -54,15 +54,21 @@
                     </div>
                     
                     <div class="sort-options">
-                        <label for="sort-select" class="sr-only">排序</label>
-                        <select 
-                            id="sort-select"
-                            aria-label="排序"
-                        >
-                            <option value="name">按名称排序</option>
-                            <option value="level">按重要程度排序</option>
-                            <option value="created" selected>按添加时间排序</option>
-                        </select>
+                        <label for="sort-dropdown" class="sr-only">排序</label>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <!-- 自定义下拉菜单 -->
+                            <div id="sort-dropdown" class="custom-dropdown">
+                                <button type="button" id="sort-button" class="sort-button">
+                                    排序
+                                </button>
+                                <div id="sort-menu" class="sort-menu">
+                                    <div class="sort-option" data-value="name">按名称排序</div>
+                                    <div class="sort-option" data-value="level">按重要程度排序</div>
+                                    <div class="sort-option" data-value="created" data-selected="true">按添加时间排序</div>
+                                </div>
+                            </div>
+                            <span id="site-count" class="site-count">已收录0个</span>
+                        </div>
                     </div>
                 </div>
             </header>

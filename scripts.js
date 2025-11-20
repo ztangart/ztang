@@ -53,7 +53,7 @@ const categoryHierarchy = [
                     { name: '图书信息' },
                     { name: '出版社' },
                     { name: '宗教' },
-                    { name: '下载资源' }
+                    { name: '图书资源' }
                 ]
             }
         ]
@@ -84,13 +84,11 @@ const categoryHierarchy = [
                     { name: '论文相关' }
                 ]
             },
-            { name: '视频', children: [{ name: '软件' }, { name: '官媒' }, { name: '资源' }] },
-            {
-                name: '音声',
+            { name: '视频', children: [{ name: '视频工具' }, { name: '视频资源' }, { name: '视频媒体' }] },
+            { name: '音声',
                 children: [
-                    { name: '音乐' },
-                    { name: '音频工具' },
-                    { name: '播客' }
+                    { name: '音声工具' },
+                    { name: '音声资源' }
                 ]
             },
             { name: '游戏' },
@@ -144,6 +142,7 @@ const DOM = {
     sidebarOverlay: document.getElementById('sidebar-overlay'),
     toggleSidebarBtn: document.getElementById('toggle-sidebar-btn'),
     sortSelect: document.getElementById('sort-select'),
+    siteCount: document.getElementById('site-count'),
     mainSearchInput: document.getElementById('main-search'),
     toastElement: document.getElementById('toast'),
     toastMessage: document.getElementById('toast-message')
@@ -171,10 +170,17 @@ async function loadData() {
         const response = await fetch('data.json');
         const data = await response.json();
         AppState.allSites = data.sites || [];
-        AppState.filteredSites = [...AppState.allSites];
+        
+        // 应用默认筛选和排序（按时间从新到旧）
+        applyFiltersAndSort();
         
         // 渲染网站列表
         renderSites(AppState.filteredSites);
+        
+        // 更新网站数量显示
+        if (DOM.siteCount) {
+            DOM.siteCount.textContent = `已收录${AppState.filteredSites.length}个`;
+        }
         
         // 显示加载成功提示
         showToast('数据加载成功');
@@ -228,6 +234,14 @@ function renderSites(sites) {
     
     // 一次性将所有卡片添加到DOM中（减少重绘和重排）
     DOM.sitesGrid.appendChild(fragment);
+    
+    // 如果当前处于编辑模式，确保所有卡片的操作按钮都显示
+    if (AppState.isEditMode) {
+        const cardActions = document.querySelectorAll('.card-actions');
+        cardActions.forEach(actions => {
+            actions.style.display = 'flex';
+        });
+    }
 }
 
 // 批量DOM操作优化 - 使用requestAnimationFrame确保平滑渲染
@@ -421,7 +435,7 @@ function initCategories() {
     const bookSubmenu = document.createElement('ul');
     bookSubmenu.className = 'category-submenu';
     
-    const bookSubItems = ['图书馆', '图书信息', '出版社', '宗教', '下载资源'];
+    const bookSubItems = ['图书馆', '图书信息', '出版社', '宗教', '图书资源'];
     bookSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -656,13 +670,16 @@ function initCategories() {
     const audioInToolSubCategories = document.createElement('ul');
     audioInToolSubCategories.className = 'category-submenu';
     
-    const audioSubItemsInTool = ['音乐', '音频工具', '播客'];
-    audioSubItemsInTool.forEach(subItem => {
+    // 修改音声子菜单：删除音乐，将音频工具改为音声工具，将播客改为音声资源
+    const audioSubItemsInTool = ['音声工具', '音声资源'];
+    const originalCategories = ['音频工具', '播客'];
+    audioSubItemsInTool.forEach((subItem, index) => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
         subLink.href = '#';
         subLink.className = 'category-link category-subitem';
-        subLink.dataset.category = subItem;
+        // 保留原始分类数据用于筛选，同时更新显示文本
+        subLink.dataset.category = originalCategories[index];
         subLink.textContent = subItem;
         subLi.appendChild(subLink);
         audioInToolSubCategories.appendChild(subLi);
@@ -688,13 +705,16 @@ function initCategories() {
     const videoInToolSubCategories = document.createElement('ul');
     videoInToolSubCategories.className = 'category-submenu';
     
-    const videoSubItemsInTool = ['软件', '官媒', '资源'];
-    videoSubItemsInTool.forEach(subItem => {
+    // 修改视频子菜单：将软件改为视频工具，官媒改为视频媒体，资源改为视频资源
+    const videoSubItemsInTool = ['视频工具', '视频媒体', '视频资源'];
+    const originalVideoCategories = ['软件', '官媒', '视频资源'];
+    videoSubItemsInTool.forEach((subItem, index) => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
         subLink.href = '#';
         subLink.className = 'category-link category-subitem';
-        subLink.dataset.category = subItem;
+        // 保留原始分类数据用于筛选，同时更新显示文本
+        subLink.dataset.category = originalVideoCategories[index];
         subLink.textContent = subItem;
         subLi.appendChild(subLink);
         videoInToolSubCategories.appendChild(subLi);
@@ -717,13 +737,9 @@ function initCategories() {
     const designLi = document.createElement('li');
     const designHeader = document.createElement('a');
     designHeader.href = '#';
-    designHeader.className = 'category-link category-header has-submenu';
+    designHeader.className = 'category-link category-header';
     designHeader.dataset.category = '设计';
     designHeader.textContent = '设计';
-    const designArrow = document.createElement('span');
-    designArrow.className = 'submenu-arrow';
-    designArrow.textContent = '›';
-    designHeader.appendChild(designArrow);
     designLi.appendChild(designHeader);
     toolSubCategories.appendChild(designLi);
     
@@ -731,13 +747,9 @@ function initCategories() {
     const aiLi = document.createElement('li');
     const aiHeader = document.createElement('a');
     aiHeader.href = '#';
-    aiHeader.className = 'category-link category-header has-submenu';
+    aiHeader.className = 'category-link category-header';
     aiHeader.dataset.category = 'AI';
     aiHeader.textContent = 'AI';
-    const aiArrow = document.createElement('span');
-    aiArrow.className = 'submenu-arrow';
-    aiArrow.textContent = '›';
-    aiHeader.appendChild(aiArrow);
     aiLi.appendChild(aiHeader);
     toolSubCategories.appendChild(aiLi);
     
@@ -888,7 +900,7 @@ function initCategories() {
     dataManagementSubCategories.className = 'category-submenu';
     
     // 数据管理子分类
-    const dataManagementSubItems = ['刷新', '导出', '导入', '添加', '编辑'];
+    const dataManagementSubItems = ['添加', '编辑', '刷新', '导出', '导入'];
     dataManagementSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -950,14 +962,14 @@ function bindEventListeners() {
         DOM.mainSearchInput.addEventListener('input', handleSearch);
     }
     
-    // 排序事件
-    if (DOM.sortSelect) {
-        DOM.sortSelect.addEventListener('change', (event) => {
-            AppState.currentSort = event.target.value;
-            currentSort = AppState.currentSort;
-            applyFiltersAndSort();
-        });
-    }
+    // 排序下拉菜单
+    document.getElementById('sort-button').addEventListener('click', toggleSortMenu);
+    document.querySelectorAll('.sort-option').forEach(option => {
+        option.addEventListener('click', handleSortOptionClick);
+    });
+    
+    // 点击页面其他地方关闭下拉菜单
+    document.addEventListener('click', closeSortMenuOnClickOutside);
     
     // 由于没有明确的清除筛选按钮，我们可以在DOM中添加一个按钮后再绑定事件
     // 或者通过其他方式调用clearFilters函数
@@ -1106,7 +1118,7 @@ function showAddDataModal() {
     // 网站URL - 水平布局
     const urlGroup = createFormGroup('网站URL', 'site-url', 'url', true, true);
     const urlInput = urlGroup.querySelector('#site-url');
-    urlInput.value = 'https://';
+    // 移除默认的https://前缀
     
     // 对网站URL模块执行同样的操作
     const urlLabelContainer = urlGroup.querySelector('.form-label-container');
@@ -1211,7 +1223,7 @@ function showAddDataModal() {
     const levelOptions = [
         { value: 'primary', text: '首选' },
         { value: 'secondary', text: '次选' },
-        { value: 'tertiary', text: '其他' }
+        { value: 'tertiary', text: '备选' }
     ];
     
     levelOptions.forEach(option => {
@@ -1864,8 +1876,76 @@ function editSite(site) {
     categoryInput.readOnly = true;
     categoryInput.required = true;
     categoryInput.className = 'form-input';
-    // 优先使用categoryPath显示完整路径，如果没有则使用category
+    // 确保显示完整分类路径，格式为"主分类-子分类"
     categoryInput.value = site.categoryPath || site.category || '';
+    
+    // 如果没有categoryPath但有category，尝试从分类层级中构建完整路径
+    if (!site.categoryPath && site.category) {
+        // 遍历分类层级查找匹配的完整路径
+        for (const mainCategory of categoryHierarchy) {
+            if (mainCategory.name === site.category) {
+                // 如果是主分类，直接使用
+                categoryInput.value = mainCategory.name;
+                break;
+            }
+            
+            // 检查一级子分类
+            for (const subCategory of mainCategory.children) {
+                if (subCategory.name === site.category) {
+                    // 构建"主分类-子分类"格式的完整路径
+                    categoryInput.value = `${mainCategory.name}-${subCategory.name}`;
+                    break;
+                }
+                
+                // 检查二级子分类（如果有）
+                if (subCategory.children) {
+                    for (const grandChildCategory of subCategory.children) {
+                        if (grandChildCategory.name === site.category) {
+                            // 构建"主分类-子分类-二级子分类"格式的完整路径
+                            categoryInput.value = `${mainCategory.name}-${subCategory.name}-${grandChildCategory.name}`;
+                            break;
+                        }
+                    }
+                    if (categoryInput.value.includes('-')) break;
+                }
+            }
+            if (categoryInput.value.includes('-')) break;
+        }
+    }
+    
+    // 如果没有categoryPath但有category，尝试从分类层级中构建完整路径
+    if (!site.categoryPath && site.category) {
+        // 遍历分类层级查找匹配的完整路径
+        for (const mainCategory of categoryHierarchy) {
+            if (mainCategory.name === site.category) {
+                // 如果是主分类，直接使用
+                categoryInput.value = mainCategory.name;
+                break;
+            }
+            
+            // 检查一级子分类
+            for (const subCategory of mainCategory.children) {
+                if (subCategory.name === site.category) {
+                    // 构建"主分类-子分类"格式的完整路径
+                    categoryInput.value = `${mainCategory.name}-${subCategory.name}`;
+                    break;
+                }
+                
+                // 检查二级子分类（如果有）
+                if (subCategory.children) {
+                    for (const grandChildCategory of subCategory.children) {
+                        if (grandChildCategory.name === site.category) {
+                            // 构建"主分类-子分类-二级子分类"格式的完整路径
+                            categoryInput.value = `${mainCategory.name}-${subCategory.name}-${grandChildCategory.name}`;
+                            break;
+                        }
+                    }
+                    if (categoryInput.value.includes('-')) break;
+                }
+            }
+            if (categoryInput.value.includes('-')) break;
+        }
+    }
     categoryInput.placeholder = '点击选择分类';
     categoryInput.style.minWidth = '250px'; // 增加输入框宽度
     
@@ -1915,7 +1995,7 @@ function editSite(site) {
     const levelOptions = [
         { value: 'primary', text: '首选' },
         { value: 'secondary', text: '次选' },
-        { value: 'tertiary', text: '其他' }
+        { value: 'tertiary', text: '备选' }
     ];
     
     // 将数字级别转换为文本级别
@@ -1963,9 +2043,30 @@ function editSite(site) {
     formRowContainer.style.justifyContent = 'space-between';
     formRowContainer.style.width = '100%'; // 宽度自适应父容器
     
-    // 添加推荐程度和按钮到行容器
+    // 创建按钮容器
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.style.display = 'flex';
+    buttonsContainer.style.gap = '8px';
+    
+    // 创建取消按钮
+    const cancelButton = document.createElement('button');
+    cancelButton.id = 'cancel-edit';
+    cancelButton.type = 'button';
+    cancelButton.textContent = '取消';
+    cancelButton.className = 'btn btn-secondary';
+    cancelButton.style.height = 'auto'; // 自适应高度
+    cancelButton.style.padding = '4px 12px'; // 调整内边距使底部高度与label一致
+    cancelButton.style.lineHeight = '1.5'; // 调整行高
+    cancelButton.style.display = 'inline-flex';
+    cancelButton.style.alignItems = 'center';
+    
+    // 添加按钮到按钮容器
+    buttonsContainer.appendChild(cancelButton);
+    buttonsContainer.appendChild(saveButton);
+    
+    // 添加推荐程度和按钮容器到行容器
     formRowContainer.appendChild(levelGroup);
-    formRowContainer.appendChild(saveButton);
+    formRowContainer.appendChild(buttonsContainer);
     
     form.appendChild(formRowContainer);
     
@@ -2096,14 +2197,20 @@ function clearFilters() {
         DOM.mainSearchInput.value = '';
     }
     
-    // 重置排序
-    if (DOM.sortSelect) {
-        DOM.sortSelect.value = 'created';
-        AppState.currentSort = 'created';
+    // 重置排序选项
+    document.querySelectorAll('.sort-option').forEach(option => {
+        option.removeAttribute('data-selected');
+    });
+    const defaultSortOption = document.querySelector('.sort-option[data-value="created"]');
+    if (defaultSortOption) {
+        defaultSortOption.setAttribute('data-selected', 'true');
     }
     
+    // 重置排序状态
+    AppState.currentSort = 'created';
+    
     // 重置分类
-    AppState.currentCategory = 'text';
+    AppState.currentCategory = 'all';
     
     // 移除所有活动状态
     const activeLinks = document.querySelectorAll('.category-link.active');
@@ -2111,11 +2218,7 @@ function clearFilters() {
         link.classList.remove('active');
     });
     
-    // 激活文本分类
-    const textCategory = document.querySelector('.category-link[data-category="text"]');
-    if (textCategory) {
-        textCategory.classList.add('active');
-    }
+    // 不激活任何特定分类，显示所有网站
     
     // 清除搜索词
     AppState.currentSearchTerm = '';
@@ -2125,6 +2228,47 @@ function clearFilters() {
     
     // 显示提示
     showToast('筛选条件已清除');
+}
+
+function toggleSortMenu(event) {
+    event.stopPropagation();
+    const sortMenu = document.getElementById('sort-menu');
+    
+    sortMenu.classList.toggle('show');
+}
+
+function closeSortMenu() {
+    const sortMenu = document.getElementById('sort-menu');
+    
+    sortMenu.classList.remove('show');
+}
+
+function closeSortMenuOnClickOutside(event) {
+    const sortDropdown = document.getElementById('sort-dropdown');
+    if (sortDropdown && !sortDropdown.contains(event.target)) {
+        closeSortMenu();
+    }
+}
+
+function handleSortOptionClick(event) {
+    const value = event.target.getAttribute('data-value');
+    
+    // 移除所有选项的选中状态
+    document.querySelectorAll('.sort-option').forEach(option => {
+        option.removeAttribute('data-selected');
+    });
+    
+    // 设置当前选项为选中
+    event.target.setAttribute('data-selected', 'true');
+    
+    // 保存当前排序设置到状态
+    AppState.currentSort = value;
+    
+    // 应用筛选和排序
+    applyFiltersAndSort();
+    
+    // 关闭下拉菜单
+    closeSortMenu();
 }
 
 // 应用筛选和排序
@@ -2148,8 +2292,8 @@ function applyFiltersAndSort() {
                               '字典翻译', '中文', '日韩朝', '西文', '翻译', '书法与篆刻',
                               '课程', '综合课程', '语言课程', '写作课程', '艺术课程',
                               '知识管理', '笔记', '绘图分析', '文献管理', '论文相关',
-                              '视频', '软件', '官媒', '资源',
-                              '音声', '音乐', '音频工具', '播客',
+                              '视频', '软件', '官媒', '视频资源',
+                              '音声', '音声工具', '音声资源',
                               'IT工具', '编程', '应用工具', '数据工具'];
         
         if (newCategories.includes(currentCategory)) {
@@ -2197,6 +2341,11 @@ function applyFiltersAndSort() {
     
     // 渲染网站列表
     renderSites(results);
+    
+    // 更新网站数量显示
+    if (DOM.siteCount) {
+        DOM.siteCount.textContent = `已收录${results.length}个`;
+    }
 }
 
 // 排序网站
