@@ -204,8 +204,8 @@ function renderSites(sites) {
         const aboutContent = document.createElement('div');
         aboutContent.className = 'empty-state';
         aboutContent.innerHTML = `
-            <br>数据收集于网络，网站内容仅代表发布者个人行为，与本站立场无关；<br>
-            <br>如收集内容侵犯了您的权利，请联系我们，一经确认我们立即删除。<br>
+            <br>数据收集于网络，网站内容仅代表发布者个人行为，与本站立场无关<br>
+            <br>如收集内容侵犯了您的权利，请联系我们，一经确认我们立即删除<br>
             <br>微信：Mnemosyne-CAA 公众号：兆堂艺术人文</p>
             <p>欢迎您分享内容或参与制作<br>
         `;
@@ -310,7 +310,174 @@ function createSiteCard(site) {
         });
     }
     
+    // 为卡片添加点击事件，打开详情弹窗
+    card.addEventListener('click', (e) => {
+        // 如果点击的是编辑按钮、删除按钮或链接，不触发详情弹窗
+        if (e.target.closest('.edit-btn') || e.target.closest('.delete-btn') || e.target.closest('a')) {
+            return;
+        }
+        e.preventDefault();
+        showSiteDetailModal(site);
+    });
+    
+    // 阻止链接点击事件冒泡
+    const siteLink = card.querySelector('.site-title a');
+    if (siteLink) {
+        siteLink.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+    
     return card;
+}
+
+// 显示网站详情弹窗
+function showSiteDetailModal(site) {
+    // 检查是否已存在弹窗，如果存在则移除
+    const existingModal = document.getElementById('site-detail-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // 创建模态框背景
+    const modalOverlay = document.createElement('div');
+    modalOverlay.id = 'site-detail-modal-overlay';
+    modalOverlay.className = 'modal-overlay';
+    
+    // 创建模态框容器
+    const modalContainer = document.createElement('div');
+    modalContainer.id = 'site-detail-modal';
+    modalContainer.className = 'modal-container';
+    modalContainer.style.maxWidth = '600px';
+    
+    // 创建标题
+    const title = document.createElement('h2');
+    title.textContent = '网站详情';
+    title.className = 'modal-title';
+    
+    // 创建内容区域
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+    content.style.marginBottom = '20px';
+    
+    // 安全转义HTML内容
+    const escapeHtml = (text) => {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    };
+    
+    // 构建详情内容
+    content.innerHTML = `
+        <div class="detail-item">
+            <label>网站名称：</label>
+            <h3>${escapeHtml(site.title)}</h3>
+        </div>
+        <div class="detail-item">
+            <label>网址：</label>
+            <a href="${escapeHtml(site.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.url)}</a>
+        </div>
+        <div class="detail-item">
+            <label>描述：</label>
+            <p>${escapeHtml(site.description || '无描述')}</p>
+        </div>
+        <div class="detail-item">
+            <label>分类：</label>
+            <p>${escapeHtml(getFullCategoryPath(site.category) || '未分类')}</p>
+        </div>
+        <div class="detail-item">
+            <label>重要程度：</label>
+            <p>${getLevelText(site.level)}</p>
+        </div>
+        ${site.created ? `<div class="detail-item"><label>添加时间：</label><p>${formatDate(site.created)}</p></div>` : ''}
+    `;
+    
+    // 获取重要程度文本
+    function getLevelText(level) {
+        switch(level) {
+            case 1: return '一般';
+            case 2: return '重要';
+            case 3: return '非常重要';
+            default: return '未设置';
+        }
+    }
+    
+    // 获取完整分类路径
+    function getFullCategoryPath(categoryName) {
+        if (!categoryName) return null;
+        
+        // 递归查找分类路径
+        function findCategoryPath(hierarchy, targetName, path = []) {
+            for (const category of hierarchy) {
+                const currentPath = [...path, category.name];
+                
+                if (category.name === targetName) {
+                    return currentPath.join(' / ');
+                }
+                
+                if (category.children) {
+                    const found = findCategoryPath(category.children, targetName, currentPath);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+        
+        return findCategoryPath(categoryHierarchy, categoryName) || categoryName;
+    }
+    
+    // 创建按钮容器
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'modal-actions';
+    buttonContainer.style.justifyContent = 'flex-end';
+    buttonContainer.style.gap = '10px';
+    buttonContainer.style.marginTop = '20px';
+    
+    // 创建关闭按钮
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '关闭';
+    closeBtn.className = 'btn btn-secondary';
+    closeBtn.addEventListener('click', closeModal);
+    
+    // 创建访问按钮
+    const visitBtn = document.createElement('button');
+    visitBtn.textContent = '访问网站';
+    visitBtn.className = 'btn btn-primary';
+    visitBtn.addEventListener('click', () => {
+        window.open(site.url, '_blank', 'noopener,noreferrer');
+    });
+    
+    // 组装按钮容器
+    buttonContainer.appendChild(visitBtn);
+    buttonContainer.appendChild(closeBtn);
+    
+    // 组装模态框
+    modalContainer.appendChild(title);
+    modalContainer.appendChild(content);
+    modalContainer.appendChild(buttonContainer);
+    modalOverlay.appendChild(modalContainer);
+    
+    // 添加到文档
+    document.body.appendChild(modalOverlay);
+    
+    // 关闭模态框函数
+    function closeModal() {
+        modalOverlay.remove();
+    }
+    
+    // 阻止事件冒泡
+    modalContainer.addEventListener('click', (e) => e.stopPropagation());
+    
+    // 点击模态框外部关闭
+    modalOverlay.addEventListener('click', closeModal);
+    
+    // 按Escape键关闭
+    document.addEventListener('keydown', function handleEsc(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', handleEsc);
+        }
+    });
 }
 
 
@@ -670,16 +837,15 @@ function initCategories() {
     const audioInToolSubCategories = document.createElement('ul');
     audioInToolSubCategories.className = 'category-submenu';
     
-    // 修改音声子菜单：删除音乐，将音频工具改为音声工具，将播客改为音声资源
+    // 修改音声子菜单：使用与categoryHierarchy一致的分类名称
     const audioSubItemsInTool = ['音声工具', '音声资源'];
-    const originalCategories = ['音频工具', '播客'];
-    audioSubItemsInTool.forEach((subItem, index) => {
+    audioSubItemsInTool.forEach((subItem) => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
         subLink.href = '#';
         subLink.className = 'category-link category-subitem';
-        // 保留原始分类数据用于筛选，同时更新显示文本
-        subLink.dataset.category = originalCategories[index];
+        // 使用与categoryHierarchy一致的分类名称
+        subLink.dataset.category = subItem;
         subLink.textContent = subItem;
         subLi.appendChild(subLink);
         audioInToolSubCategories.appendChild(subLi);
@@ -705,16 +871,15 @@ function initCategories() {
     const videoInToolSubCategories = document.createElement('ul');
     videoInToolSubCategories.className = 'category-submenu';
     
-    // 修改视频子菜单：将软件改为视频工具，官媒改为视频媒体，资源改为视频资源
+    // 修改视频子菜单：使用与categoryHierarchy一致的分类名称
     const videoSubItemsInTool = ['视频工具', '视频媒体', '视频资源'];
-    const originalVideoCategories = ['软件', '官媒', '视频资源'];
-    videoSubItemsInTool.forEach((subItem, index) => {
+    videoSubItemsInTool.forEach((subItem) => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
         subLink.href = '#';
         subLink.className = 'category-link category-subitem';
-        // 保留原始分类数据用于筛选，同时更新显示文本
-        subLink.dataset.category = originalVideoCategories[index];
+        // 使用与categoryHierarchy一致的分类名称
+        subLink.dataset.category = subItem;
         subLink.textContent = subItem;
         subLi.appendChild(subLink);
         videoInToolSubCategories.appendChild(subLi);
@@ -900,7 +1065,7 @@ function initCategories() {
     dataManagementSubCategories.className = 'category-submenu';
     
     // 数据管理子分类
-    const dataManagementSubItems = ['添加', '编辑', '刷新', '导出', '导入'];
+    const dataManagementSubItems = ['添加', '编辑', '导出', '导入'];
     dataManagementSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -1094,6 +1259,28 @@ function showAddDataModal() {
     form.id = 'add-site-form';
     form.style.width = '100%'; // 表单宽度自适应父容器
     
+    // 添加错误提示区域
+    const errorContainer = document.createElement('div');
+    errorContainer.id = 'modal-error-message';
+    errorContainer.className = 'modal-error-message';
+    errorContainer.style.display = 'none';
+    errorContainer.style.color = '#8B4513'; // 深棕色文字
+    errorContainer.style.marginBottom = '15px';
+    errorContainer.style.padding = '10px';
+    errorContainer.style.border = '1px solid #CD853F'; // 秘鲁色边框
+    errorContainer.style.borderRadius = '4px';
+    errorContainer.style.backgroundColor = '#F5DEB3'; // 浅古铜色背景
+    form.appendChild(errorContainer);
+    
+    // 清除URL输入时的错误提示
+    const clearErrorOnInput = () => {
+        const errorContainer = document.getElementById('modal-error-message');
+        if (errorContainer) {
+            errorContainer.style.display = 'none';
+            errorContainer.textContent = '';
+        }
+    }
+    
     // 网站标题 - 水平布局
     const titleGroup = createFormGroup('网站标题', 'site-title', 'text', true, true);
     // 删除标题标签前的空白并靠左，删除右侧多余宽度
@@ -1119,6 +1306,15 @@ function showAddDataModal() {
     const urlGroup = createFormGroup('网站URL', 'site-url', 'url', true, true);
     const urlInput = urlGroup.querySelector('#site-url');
     // 移除默认的https://前缀
+    urlInput.addEventListener('input', clearErrorOnInput);
+    
+    // 为其他输入框添加错误清除功能
+    const titleInput = document.getElementById('site-title');
+    if (titleInput) titleInput.addEventListener('input', clearErrorOnInput);
+    
+    // 避免变量重复声明，直接使用元素引用
+    const categoryInputElement = document.getElementById('site-category');
+    if (categoryInputElement) categoryInputElement.addEventListener('input', clearErrorOnInput);
     
     // 对网站URL模块执行同样的操作
     const urlLabelContainer = urlGroup.querySelector('.form-label-container');
@@ -1178,9 +1374,42 @@ function showAddDataModal() {
     categoryInput.placeholder = '点击选择分类';
     categoryInput.style.minWidth = '250px'; // 增加输入框宽度
     
-    // 如果当前有选中的分类，设置为默认值
+    // 如果当前有选中的分类，设置为默认值（显示完整路径）
     if (AppState.currentCategory && AppState.currentCategory !== 'all') {
-        categoryInput.value = AppState.currentCategory;
+        // 查找完整的分类路径
+        let fullCategoryPath = findFullCategoryPath(AppState.currentCategory);
+        categoryInput.value = fullCategoryPath || AppState.currentCategory;
+    }
+    
+    // 辅助函数：根据分类名称查找完整路径
+    function findFullCategoryPath(categoryName) {
+        // 递归查找分类的完整路径
+        function searchCategory(category, path = []) {
+            // 如果是当前要查找的分类
+            if (category.name === categoryName) {
+                return [...path, category.name];
+            }
+            
+            // 检查子分类
+            if (category.children) {
+                for (const child of category.children) {
+                    const result = searchCategory(child, [...path, category.name]);
+                    if (result) {
+                        return result;
+                    }
+                }
+            }
+            return null;
+        }
+        
+        // 遍历所有主分类
+        for (const mainCategory of categoryHierarchy) {
+            const path = searchCategory(mainCategory);
+            if (path) {
+                return path.join(' > ');
+            }
+        }
+        return null;
     }
     
     // 创建分类选择按钮
@@ -1221,9 +1450,9 @@ function showAddDataModal() {
     levelSelect.style.width = 'auto'; // 宽度与推荐程度文本相同
     
     const levelOptions = [
-        { value: 'primary', text: '首选' },
+        { value: 'tertiary', text: '首选' },
         { value: 'secondary', text: '次选' },
-        { value: 'tertiary', text: '备选' }
+        { value: 'primary', text: '备选' }
     ];
     
     levelOptions.forEach(option => {
@@ -1313,7 +1542,9 @@ function showAddDataModal() {
             
             // 验证分类是否已选择
             if (!category) {
-                showToast('请选择分类', 'error');
+                const errorContainer = document.getElementById('modal-error-message');
+                errorContainer.textContent = '请选择分类';
+                errorContainer.style.display = 'block';
                 return;
             }
             
@@ -1321,13 +1552,26 @@ function showAddDataModal() {
             try {
                 new URL(url);
             } catch (err) {
-                showToast('请输入有效的URL地址', 'error');
+                const errorContainer = document.getElementById('modal-error-message');
+                errorContainer.textContent = '请输入有效的URL地址';
+                errorContainer.style.display = 'block';
+                return;
+            }
+            
+            // 检查URL是否已存在
+            const urlExists = AppState.allSites.some(site => site.url === url);
+            if (urlExists) {
+                const errorContainer = document.getElementById('modal-error-message');
+                errorContainer.textContent = '该URL已存在，请添加其他网站';
+                errorContainer.style.display = 'block';
                 return;
             }
             
             // 验证标题
             if (!title) {
-                showToast('网站标题不能为空', 'error');
+                const errorContainer = document.getElementById('modal-error-message');
+                errorContainer.textContent = '网站标题不能为空';
+                errorContainer.style.display = 'block';
                 return;
             }
             
@@ -1352,8 +1596,8 @@ function showAddDataModal() {
                 title: title, // 使用title而非name，与现有数据保持一致
                 url: url,
                 description: description,
-                category: category,
-                categoryPath: category, // 分类路径
+                category: category.includes(' > ') ? category.split(' > ').pop() : category, // 只使用最后一级作为category
+                categoryPath: category, // 分类路径（完整路径）
                 level: level, // 使用数字类型
                 created_at: new Date().toISOString(), // 使用created_at而非created，与applyFiltersAndSort函数保持一致
                 tags: tags, // 添加tags以支持多分类匹配
@@ -1670,10 +1914,7 @@ function handleCategoryClick(event) {
     
     // 处理数据管理子菜单特殊功能
     switch (category) {
-        case '刷新':
-        case '刷新数据': // 保持向后兼容
-            refreshData();
-            return;
+
         case '导出':
         case '导出数据': // 保持向后兼容
             exportData();
@@ -1993,9 +2234,9 @@ function editSite(site) {
     levelSelect.style.width = 'auto';
     
     const levelOptions = [
-        { value: 'primary', text: '首选' },
+        { value: 'tertiary', text: '首选' },
         { value: 'secondary', text: '次选' },
-        { value: 'tertiary', text: '备选' }
+        { value: 'primary', text: '备选' }
     ];
     
     // 将数字级别转换为文本级别

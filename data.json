@@ -4,12 +4,16 @@
       "id": 1763359431399,
       "title": "Glosbe字典",
       "url": "https://zh.glosbe.com/",
-      "description": "支持世界上的所有语言。Glosbe 是一个平台，提供带有上下文翻译的免费词典（翻译的句子 - 所谓的翻译记忆库）。你会在这里找到：数十亿个翻译短语、短语插图、录音和发音、数十亿的翻译句子、长文本的自动翻译器。",
-      "category": "西文",
-      "tags": [],
+      "description": "提供支持世界上的所有语言，带有上下文翻译的免费词典、翻译短语、短语插图、录音和发音、翻译句子、长文本的自动翻译器。",
+      "category": "工具-字典翻译-西文",
+      "tags": [
+        "工具-字典翻译-西文"
+      ],
       "level": 3,
       "createdAt": "2025-11-17T06:03:51.399Z",
-      "updatedAt": "2025-11-17T06:03:51.399Z"
+      "updatedAt": "2025-11-17T06:03:51.399Z",
+      "categoryPath": "工具-字典翻译-西文",
+      "updated_at": "2025-11-20T06:09:10.322Z"
     },
     {
       "id": 1763359334582,
@@ -48,12 +52,16 @@
       "id": 1763359013528,
       "title": "易制地图",
       "url": "https://www.makeamap.cn/index.html",
-      "description": "易制地图是一款自由的地图绘制工具，可以在线创作小说地图、架空世界地图、跑团地图、游戏地图、桌游地图、剧本杀地图、区域地图。操作易，素材全，风格多，可方便的创作、输出、分享您的地图作品。",
-      "category": "地图 > 地图软件",
-      "tags": [],
+      "description": "自由的地图绘制工具，可以在线创作小说地图、架空世界地图、跑团地图、游戏地图、桌游地图、剧本杀地图、区域地图。操作易，素材全，风格多，可方便的创作、输出、分享您的地图作品。",
+      "category": "地图软件",
+      "tags": [
+        "地图 > 地图软件"
+      ],
       "level": 2,
       "createdAt": "2025-11-17T05:56:53.528Z",
-      "updatedAt": "2025-11-17T05:56:53.528Z"
+      "updatedAt": "2025-11-17T05:56:53.528Z",
+      "categoryPath": "地图 > 地图软件",
+      "updated_at": "2025-11-20T06:12:10.968Z"
     },
     {
       "id": 1763088455209,
@@ -123,47 +131,63 @@
     },
     {
       "id": 1762741007645,
-      "title": "清史数据共享平台",
+      "title": "数字清史-清史数据共享平台",
       "url": "http://dhiqh.ruc.edu.cn/",
-      "description": "数字清史实验室（清史数据共享平台）由教育部人文社科研究基地清史研究所主持，成立于2018年1月14日。实验室致力于清史数据的开发与共享，致力于打造集时空于一体的数据平台。实验室坚持数据开发与科学研究结合，坚持自建数据与合作共享结合，坚持数据生产与人才培养结合，坚持核心数据的开发。",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 2,
       "createdAt": "2025-11-10T02:16:47.645Z",
-      "updatedAt": "2025-11-10T02:16:47.645Z"
+      "updatedAt": "2025-11-10T02:16:47.645Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:14:36.708Z"
     },
     {
       "id": 1762567092059,
-      "title": "中华石刻数据库",
+      "title": "中华石刻数据库《历代石刻拓片汇编》",
       "url": "https://inscription.ancientbooks.cn/docShike/",
-      "description": "《历代石刻拓片汇编》是通代性的石刻文献数据库。涵盖时期上起先秦，下至民国，全面收录、整合历代刻有文字的石刻资源；石刻类型丰富多样，内容题材包罗万象，涵盖碑碣、摩崖、墓志、墓砖、经幢、买地券、造像、画像砖等。本库文图兼收，支持录文与拓片参照阅读；对原文进行标点、分段；提供在线阅读、全文检索、复制引用、笔记批注等服务。",
-      "category": "中国",
-      "tags": [],
+      "description": "通代性的石刻文献数据库。涵盖时期上起先秦，下至民国，全面收录、整合历代刻有文字的石刻资源；内容题材包罗万象，涵盖碑碣、摩崖、墓志、墓砖、经幢、买地券、造像、画像砖等。本库文图兼收，支持录文与拓片参照阅读；对原文进行标点、分段；提供在线阅读、全文检索、复制引用、笔记批注等服务。",
+      "category": "图像-中国",
+      "tags": [
+        "图像-中国"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:58:12.059Z",
-      "updatedAt": "2025-11-08T01:58:12.059Z"
+      "updatedAt": "2025-11-08T01:58:12.059Z",
+      "categoryPath": "图像-中国",
+      "updated_at": "2025-11-20T06:15:57.985Z"
     },
     {
       "id": 1762567060252,
       "title": "国家哲学社会科学文献中心",
       "url": "https://ncpssd.org/Literature/ancientbooklist?nav=5",
-      "description": "“国家哲学社会科学文献中心”立足全国哲学社会科学领域，由国家投入和支持，开展哲学社会科学文献信息资源建设和服务。中心由中宣部指导，社科院牵头，教育部和新闻出版广电总局等相关部委配合，其他社科机构参与，共同建设和管理，依托社科院图书馆开展具体工作。",
-      "category": "平台",
-      "tags": [],
+      "description": "哲学社会科学文献信息资源建设和服务。",
+      "category": "文本-期刊杂志-平台",
+      "tags": [
+        "文本-期刊杂志-平台"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:57:40.252Z",
-      "updatedAt": "2025-11-08T01:57:40.252Z"
+      "updatedAt": "2025-11-08T01:57:40.252Z",
+      "categoryPath": "文本-期刊杂志-平台",
+      "updated_at": "2025-11-20T06:16:18.537Z"
     },
     {
       "id": 1762567029733,
       "title": "香港中文大学中医古典文库",
       "url": "https://repository.lib.cuhk.edu.hk/tc/collection/chimed",
-      "description": "香港中文大學 (中大) 圖書館一直致力於推動中醫古典文庫的建設與發展。截至2023年，中大圖書館共完成兩期項目,其中第一期項目包括了江潤祥教授慷慨贈予的「莊兆祥教授中醫學藏書」，這批珍貴的藏書對於研究中醫學具有極高的價值。在第二期項目中，中大圖書館進一步將館藏的中醫古籍數碼化。這些藏書包含47種共400册清代古籍及民國時期的醫書。這些古籍的數量和多樣性為研究者提供了更廣泛的資料來源，有助於深入了解中醫學的演變和發展。",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:57:09.733Z",
-      "updatedAt": "2025-11-08T01:57:09.733Z"
+      "updatedAt": "2025-11-08T01:57:09.733Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:16:40.683Z"
     },
     {
       "id": 1762566667911,
@@ -191,12 +215,16 @@
       "id": 1762566590386,
       "title": "知识分子",
       "url": "https://www.zhishifenzi.com/",
-      "description": "知识分子是由饶毅、鲁白、谢宇三位学者创办的移动新媒体平台，致力于关注科学、人文、思想。这是一个兼容并包，时刻为渴望知识、独立思考的人努力，共享人类知识、共析现代思想、共建智趣中国的平台。",
-      "category": "文化",
-      "tags": [],
+      "description": "致力于关注科学、人文、思想的移动新媒体平台，由饶毅、鲁白、谢宇三位学者创办。",
+      "category": "资讯-文化",
+      "tags": [
+        "资讯-文化"
+      ],
       "level": 1,
       "createdAt": "2025-11-08T01:49:50.386Z",
-      "updatedAt": "2025-11-08T01:49:50.386Z"
+      "updatedAt": "2025-11-08T01:49:50.386Z",
+      "categoryPath": "资讯-文化",
+      "updated_at": "2025-11-20T06:17:18.595Z"
     },
     {
       "id": 1762566560222,
@@ -224,34 +252,46 @@
       "id": 1762566392770,
       "title": "有一云",
       "url": "https://www.uecloud.com/",
-      "description": "新媒体AI写作·公众号AI排版·GEO智能营销",
-      "category": "办公文档",
-      "tags": [],
+      "description": "新媒体AI写作、公众号AI排版、GEO智能营销",
+      "category": "工具-办公文档",
+      "tags": [
+        "工具-办公文档"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:46:32.770Z",
-      "updatedAt": "2025-11-08T01:46:32.770Z"
+      "updatedAt": "2025-11-08T01:46:32.770Z",
+      "categoryPath": "工具-办公文档",
+      "updated_at": "2025-11-20T06:17:32.938Z"
     },
     {
       "id": 1762566318820,
       "title": "孔夫子旧书网",
       "url": "https://www.kongfz.com/",
-      "description": "淘旧书，也有坑。",
-      "category": "图书信息",
-      "tags": [],
+      "description": "淘旧书",
+      "category": "文本-图书-图书信息",
+      "tags": [
+        "文本-图书-图书信息"
+      ],
       "level": 1,
       "createdAt": "2025-11-08T01:45:18.820Z",
-      "updatedAt": "2025-11-08T01:45:18.820Z"
+      "updatedAt": "2025-11-08T01:45:18.820Z",
+      "categoryPath": "文本-图书-图书信息",
+      "updated_at": "2025-11-20T06:17:42.175Z"
     },
     {
       "id": 1762565851273,
       "title": "EBSCO信息服务",
       "url": "https://about.ebsco.com/",
-      "description": "需要订购，但有相对全面的免费的专业词条百科（比如：https://www.ebsco.com/research-starters）。是研究数据库、电子期刊和电子包订阅管理、图书馆藏开发和采购管理的提供商，也是图书馆技术、电子书和临床决策解决方案的主要提供商。",
-      "category": "平台",
-      "tags": [],
+      "description": "需订购，但有相对全面的免费的专业词条百科（比如：https://www.ebsco.com/research-starters）",
+      "category": "文本-期刊杂志-平台",
+      "tags": [
+        "文本-期刊杂志-平台"
+      ],
       "level": 3,
       "createdAt": "2025-11-08T01:37:31.273Z",
-      "updatedAt": "2025-11-08T01:44:24.443Z"
+      "updatedAt": "2025-11-08T01:44:24.443Z",
+      "categoryPath": "文本-期刊杂志-平台",
+      "updated_at": "2025-11-20T06:18:41.290Z"
     },
     {
       "id": 1762566219281,
@@ -268,12 +308,16 @@
       "id": 1762566124833,
       "title": "EBSCO期刊库",
       "url": "https://about.ebsco.com/products/research-databases/readers-guide-periodical-literature",
-      "description": "《期刊文学读者指南》是期刊索引。它涵盖艺术、商业、教育和娱乐等主题。",
-      "category": "平台",
-      "tags": [],
+      "description": "它涵盖艺术、商业、教育和娱乐等主题。",
+      "category": "文本-期刊杂志-平台",
+      "tags": [
+        "文本-期刊杂志-平台"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:42:04.833Z",
-      "updatedAt": "2025-11-08T01:42:04.833Z"
+      "updatedAt": "2025-11-08T01:42:04.833Z",
+      "categoryPath": "文本-期刊杂志-平台",
+      "updated_at": "2025-11-20T06:18:11.089Z"
     },
     {
       "id": 1762565705960,
@@ -290,12 +334,16 @@
       "id": 1762565634320,
       "title": "万方方志数据库",
       "url": "https://fz.wanfangdata.com.cn/",
-      "description": "需购买",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "需订购",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 2,
       "createdAt": "2025-11-08T01:33:54.320Z",
-      "updatedAt": "2025-11-08T01:33:54.320Z"
+      "updatedAt": "2025-11-08T01:33:54.320Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:18:50.289Z"
     },
     {
       "id": 1762565571073,
@@ -323,12 +371,16 @@
       "id": 1762310045691,
       "title": "冷战：对抗与调解之声（Cold War）",
       "url": "https://www.gale.com/product-catalog/267950",
-      "description": "20世纪中期美国和苏联进入长达近50年的冷战时期，这个全球僵局出现在两国在二战中作为同盟国共同对抗希特勒之后。是什么政治事件导致了冷战？是什么科技进步推动了军事竞争力？冷战期间创建了什么新的制度，新的制度又是如何修改已有制度的？它是如何影响美国和苏联对外政策的？对美国和苏联公民来说，冷战的结束曾经及现今有何意义?在该专辑提供的决策幕后人员和决策者口述历史的档案中,可以找到这些及更多问题的答案。总计1295页，时间范围：20世纪50—90年代。",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "提供冷战决策幕后人员和决策者口述历史的档案，总计1295页，时间范围：20世纪50—90年代。",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 2,
       "createdAt": "2025-11-05T02:34:05.691Z",
-      "updatedAt": "2025-11-05T02:34:05.691Z"
+      "updatedAt": "2025-11-05T02:34:05.691Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:19:34.354Z"
     },
     {
       "id": 1762137612540,
@@ -343,27 +395,33 @@
     },
     {
       "id": 1762135223625,
-      "title": "中国留美学生月报",
+      "title": "中国留美学生月报 The Chinese Student's Monthly Online",
       "url": "https://primarysources.brillonline.com/browse/the-chinese-students-monthly-online",
-      "description": "The Chinese Student's Monthly Online。《中国留美学生月报》是第一份由中国学生在美国出版的杂志(1906一1931年)，是当时留美中国学生中最有影响力的刊物。20世纪初，中国留美学生中有许多重要的历史人物，如施肇基、顾维钧、胡适、赵元任、谢冰心等，都为该杂志撰写过文章。海外华人也因此成了一个新兴的学术研究领域。——港澳台及海外历史文献",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "第一份由中国学生在美国出版的杂志(1906一1931年)，是当时留美中国学生中最有影响力的刊物。20世纪初，中国留美学生中有许多重要的历史人物，如施肇基、顾维钧、胡适、赵元任、谢冰心等，都为该杂志撰写过文章，海外华人也因此成了一个新兴的学术研究领域。",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 2,
       "createdAt": "2025-11-03T02:00:23.624Z",
-      "updatedAt": "2025-11-03T02:00:23.624Z"
+      "updatedAt": "2025-11-03T02:00:23.624Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:23:12.708Z"
     },
     {
       "id": 1761996964699,
-      "title": "教务杂志（The Chinese Recorder and missionary Journal）",
+      "title": "教务杂志 The Chinese Recorder and missionary Journal",
       "url": "https://archive.org/details/s3039id1390147",
-      "description": "《教务杂志》是19世纪在动荡中国出版的英文刊物中持续时间最长者，自1868年出刊至1941年因太平洋战争爆发而停刊。此刊物创办的目的原是作为来华传教士交换信息及讨论传教工作的平台，以协助彼此对中国文化的了解与工作推行；然因其记录翔实，辅以许多手绘图片与照片、精密统计数字，不但是超过半世纪西方管窥、了解中国的重要窗口，更成为今日研究中国近代史不可或缺的第一手重要文本。",
-      "category": "专题古籍",
+      "description": "自1868年出刊至1941年因太平洋战争爆发而停刊。此刊物创办的目的原是作为来华传教士交换信息及讨论传教工作的平台，以协助彼此对中国文化的了解与工作推行；然因其记录翔实，辅以许多手绘图片与照片、精密统计数字，不但是超过半世纪西方管窥、了解中国的重要窗口，更成为今日研究中国近代史不可或缺的第一手重要文本。",
+      "category": "文本-专题古籍",
       "tags": [
-        "基督教，杂志"
+        "文本-专题古籍"
       ],
       "level": 2,
       "createdAt": "2025-11-01T11:36:04.699Z",
-      "updatedAt": "2025-11-01T11:36:04.699Z"
+      "updatedAt": "2025-11-01T11:36:04.699Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:24:12.881Z"
     },
     {
       "id": 1761996898186,
@@ -435,14 +493,18 @@
     },
     {
       "id": 1761914174398,
-      "title": "二战军方报刊",
+      "title": "二战军方报刊 Service Newpapers of World War Two",
       "url": "https://www.servicenewspapers.amdigital.co.uk/",
-      "description": "Service Newpapers of World War Two。本报刊典藏收录内容来源广泛，包含来自美国、加拿大、新西兰、印度、欧洲、非洲、中东等国和地区的重要出版物。这些出版物在二战期间提供了战争前线的参战人员与后方祖国的关注者们互相了解彼此间最为真实近况的媒介途径，很多出版物来自军方或专门供于军方阅览，内容涉及部队生活、士气与宣传、战场战况、舆论与社会评论、战争罪行揭露、遣散与战后生活、战俘处置、医疗与救治，女性在战争中的角色与形象、战争年代平民经历、当地新闻与民众反响等。——港澳台及海外历史文献公众号",
-      "category": "专题古籍",
-      "tags": [],
+      "description": "本报刊典藏收录内容来源广泛，包含来自美国、加拿大、新西兰、印度、欧洲、非洲、中东等国和地区的出版物。这些出版物在二战期间提供了战争前线的参战人员与后方祖国的关注者们互相了解彼此间最为真实近况的媒介途径，很多出版物来自军方或专门供于军方阅览，内容涉及部队生活、士气与宣传、战场战况、舆论与社会评论、战争罪行揭露、遣散与战后生活、战俘处置、医疗与救治，女性在战争中的角色与形象、战争年代平民经历、当地新闻与民众反响等。",
+      "category": "文本-专题古籍",
+      "tags": [
+        "文本-专题古籍"
+      ],
       "level": 1,
       "createdAt": "2025-10-31T12:36:14.397Z",
-      "updatedAt": "2025-10-31T12:36:14.397Z"
+      "updatedAt": "2025-10-31T12:36:14.397Z",
+      "categoryPath": "文本-专题古籍",
+      "updated_at": "2025-11-20T06:28:14.877Z"
     },
     {
       "id": 1761810624087,
@@ -536,23 +598,31 @@
       "id": 1761806835105,
       "title": "艺术史论家",
       "url": "https://www.cafa.com.cn/cn/figures/historians",
-      "description": "央美资讯网",
-      "category": "艺术史",
-      "tags": [],
+      "description": "中央美术学院资讯网",
+      "category": "文本-在线百科-艺术史",
+      "tags": [
+        "文本-在线百科-艺术史"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T06:47:15.104Z",
-      "updatedAt": "2025-10-30T06:47:15.104Z"
+      "updatedAt": "2025-10-30T06:47:15.104Z",
+      "categoryPath": "文本-在线百科-艺术史",
+      "updated_at": "2025-11-20T06:28:33.970Z"
     },
     {
       "id": 1761806809373,
       "title": "高居翰",
       "url": "https://jamescahill.info/",
-      "description": "",
-      "category": "艺术史",
-      "tags": [],
+      "description": "高居翰个人知识网站",
+      "category": "文本-在线百科-艺术史",
+      "tags": [
+        "文本-在线百科-艺术史"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T06:46:49.372Z",
-      "updatedAt": "2025-10-30T06:46:49.372Z"
+      "updatedAt": "2025-10-30T06:46:49.372Z",
+      "categoryPath": "文本-在线百科-艺术史",
+      "updated_at": "2025-11-20T06:28:49.804Z"
     },
     {
       "id": 1761706512767,
@@ -1197,7 +1267,7 @@
       "title": "Z-library电子图书馆",
       "url": "https://zh.z1949.ru/",
       "description": "应该是镜像站，比较稳定。（备用1：https://www.maxiaobang.com/12800.html备用2：https://www.tboxn.com/560.html）",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T09:31:59.513Z",
@@ -1208,18 +1278,22 @@
       "title": "图书馆学术交流与文献互助联盟",
       "url": "http://onelib.cn/",
       "description": "使用繁琐",
-      "category": "图书资源",
-      "tags": [],
+      "category": "文本-图书-下载资源",
+      "tags": [
+        "文本-图书-下载资源"
+      ],
       "level": 1,
       "createdAt": "2025-10-30T04:56:31.766Z",
-      "updatedAt": "2025-10-30T04:56:31.766Z"
+      "updatedAt": "2025-10-30T04:56:31.766Z",
+      "categoryPath": "文本-图书-下载资源",
+      "updated_at": "2025-11-20T00:39:58.333Z"
     },
     {
       "id": 1761800156876,
       "title": "全国图书馆参考咨询联盟",
       "url": "http://www.ucdrs.superlib.net/",
       "description": "需注册登录",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 1,
       "createdAt": "2025-10-30T04:55:56.876Z",
@@ -1230,7 +1304,7 @@
       "title": "图书搜索联盟",
       "url": "https://search.datacdn.cn/sbooklist",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:55:08.006Z",
@@ -1241,7 +1315,7 @@
       "title": "电子书资源推荐",
       "url": "https://zhuanlan.zhihu.com/p/8607265996",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 1,
       "createdAt": "2025-10-30T04:54:51.364Z",
@@ -1252,7 +1326,7 @@
       "title": "部分冷门英文PDF",
       "url": "https://zlib.pub/",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 1,
       "createdAt": "2025-10-30T04:54:36.746Z",
@@ -1262,12 +1336,16 @@
       "id": 1761800048989,
       "title": "书葵网",
       "url": "https://www.shukui.net/",
-      "description": "资源较全，收费过高，仅作备用。",
-      "category": "图书资源",
-      "tags": [],
+      "description": "收费过高",
+      "category": "下载资源",
+      "tags": [
+        "下载资源"
+      ],
       "level": 1,
       "createdAt": "2025-10-30T04:54:08.988Z",
-      "updatedAt": "2025-10-30T04:54:08.988Z"
+      "updatedAt": "2025-10-30T04:54:08.988Z",
+      "categoryPath": "下载资源",
+      "updated_at": "2025-11-20T06:29:24.379Z"
     },
     {
       "id": 1761740256405,
@@ -1362,7 +1440,7 @@
       "title": "人人视频",
       "url": "https://m.yichengwlkj.com/",
       "description": "",
-      "category": "视频资源",
+      "category": "资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:03:51.442Z",
@@ -1373,7 +1451,7 @@
       "title": "亿万同人字幕组",
       "url": "https://ywtrzmz.net/",
       "description": "",
-      "category": "视频资源",
+      "category": "资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:04:48.869Z",
@@ -1384,7 +1462,7 @@
       "title": "量子资源网",
       "url": "https://lzizy.com/",
       "description": "资源全，有内置广告。备用： Lzizy1.com 至 Lzizy8.com M3U8视频解析：https://lziplayer.com/?url=",
-      "category": "视频资源",
+      "category": "资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:04:36.075Z",
@@ -1395,7 +1473,7 @@
       "title": "网飞啦在线",
       "url": "https://www.wangfei.la/",
       "description": "",
-      "category": "视频资源",
+      "category": "资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-30T04:05:16.372Z",
@@ -1406,7 +1484,7 @@
       "title": "云影",
       "url": "https://www.yuny.tv/",
       "description": "有视频内角落固定广告",
-      "category": "视频资源",
+      "category": "资源",
       "tags": [],
       "level": 1,
       "createdAt": "2025-10-30T04:06:46.401Z",
@@ -1568,25 +1646,33 @@
     },
     {
       "id": 1761795870149,
-      "title": "地理資訊科學研究專題中心",
+      "title": "地理资讯科学研究专题中心",
       "url": "https://gis.rchss.sinica.edu.tw/",
-      "description": "中央研究院人文社會科學研究中心",
-      "category": "组织机构",
-      "tags": [],
+      "description": "中央研究院人文社会科学研究中心",
+      "category": "中国古籍",
+      "tags": [
+        "文本 > 中国古籍"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T03:44:30.149Z",
-      "updatedAt": "2025-10-30T03:44:30.149Z"
+      "updatedAt": "2025-10-30T03:44:30.149Z",
+      "categoryPath": "文本 > 中国古籍",
+      "updated_at": "2025-11-20T06:31:38.699Z"
     },
     {
       "id": 1761795762637,
       "title": "中国社会科学院考古研究所",
       "url": "http://kaogu.cssn.cn/zwb/",
       "description": "",
-      "category": "组织机构",
-      "tags": [],
+      "category": "中国古籍",
+      "tags": [
+        "文本 > 中国古籍"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T03:42:42.637Z",
-      "updatedAt": "2025-10-30T03:42:42.637Z"
+      "updatedAt": "2025-10-30T03:42:42.637Z",
+      "categoryPath": "文本 > 中国古籍",
+      "updated_at": "2025-11-20T06:31:54.313Z"
     },
     {
       "id": 1761794076599,
@@ -1614,12 +1700,16 @@
       "id": 1761794476534,
       "title": "离线世界历史地图",
       "url": "http://x768.com/w/twha.ja",
-      "description": "公元前4000年至现在，可离线下载。",
-      "category": "历史地图",
-      "tags": [],
+      "description": "公元前4000年至今的世界地图，可按年查看、可离线下载，仅供参考。",
+      "category": "地图-历史地图",
+      "tags": [
+        "地图-历史地图"
+      ],
       "level": 1,
       "createdAt": "2025-10-30T03:21:16.534Z",
-      "updatedAt": "2025-10-30T03:38:21.748Z"
+      "updatedAt": "2025-10-30T03:38:21.748Z",
+      "categoryPath": "地图-历史地图",
+      "updated_at": "2025-11-20T06:36:11.788Z"
     },
     {
       "id": 1761794916053,
@@ -1634,14 +1724,18 @@
     },
     {
       "id": 1761794693057,
-      "title": "David Rumsey Map",
+      "title": "世界旧地图 David Rumsey Map",
       "url": "https://www.davidrumsey.com/home",
-      "description": "包含超过 200,000 张地图。该馆藏重点关注 16 世纪至 21 世纪罕见的北美和南美地图，以及世界、亚洲、非洲、欧洲和大洋洲的地图。该藏品包括地图集、地球仪、挂图、学校地理、袖珍地图、探险书、海图以及各种制图材料，包括袖珍地图、墙壁地图、儿童地图和手稿地图。物品的年代从 1550 年左右到现在不等。",
-      "category": "历史地图",
-      "tags": [],
+      "description": "重点关注 16 世纪至 21 世纪罕见的北美和南美地图，以及世界、亚洲、非洲、欧洲和大洋洲的地图。该藏品包括地图集、地球仪、挂图、学校地理、袖珍地图、探险书、海图以及各种制图材料，包括袖珍地图、墙壁地图、儿童地图和手稿地图。物品的年代从 1550 年左右到现在不等。",
+      "category": "地图-历史地图",
+      "tags": [
+        "地图-历史地图"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T03:24:53.057Z",
-      "updatedAt": "2025-10-30T03:38:08.237Z"
+      "updatedAt": "2025-10-30T03:38:08.237Z",
+      "categoryPath": "地图-历史地图",
+      "updated_at": "2025-11-20T06:35:25.198Z"
     },
     {
       "id": 1761794547745,
@@ -1658,12 +1752,16 @@
       "id": 1761794374009,
       "title": "大历史在线",
       "url": "https://www.big-history.online/",
-      "description": "一个视觉化公益历史科普网站。",
-      "category": "历史",
-      "tags": [],
+      "description": "个人制作的一个视觉化公益历史科普网站。",
+      "category": "文本-在线百科-历史",
+      "tags": [
+        "文本-在线百科-历史"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T03:19:34.009Z",
-      "updatedAt": "2025-10-30T03:19:34.009Z"
+      "updatedAt": "2025-10-30T03:19:34.009Z",
+      "categoryPath": "文本-在线百科-历史",
+      "updated_at": "2025-11-20T06:37:40.012Z"
     },
     {
       "id": 1761794317049,
@@ -1724,23 +1822,31 @@
       "id": 1761791717106,
       "title": "花火会",
       "url": "https://www.spark.red/",
-      "description": "中国国内一热心程序员创建的副业交流社区。",
-      "category": "副业",
-      "tags": [],
+      "description": "一热心程序员创建的副业交流社区。",
+      "category": "资讯-副业",
+      "tags": [
+        "资讯-副业"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T02:35:17.106Z",
-      "updatedAt": "2025-10-30T02:35:29.167Z"
+      "updatedAt": "2025-10-30T02:35:29.167Z",
+      "categoryPath": "资讯-副业",
+      "updated_at": "2025-11-20T06:38:18.008Z"
     },
     {
       "id": 1761791692949,
       "title": "Upwork",
       "url": "https://www.upwork.com/",
-      "description": "自由职业者工作社区，请仔细甄别信息。",
-      "category": "副业",
-      "tags": [],
+      "description": "自由职业者工作社区，请仔细甄别信息！",
+      "category": "资讯-副业",
+      "tags": [
+        "资讯-副业"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T02:34:52.949Z",
-      "updatedAt": "2025-10-30T02:34:52.949Z"
+      "updatedAt": "2025-10-30T02:34:52.949Z",
+      "categoryPath": "资讯-副业",
+      "updated_at": "2025-11-20T06:38:31.076Z"
     },
     {
       "id": 1761791655373,
@@ -1790,23 +1896,31 @@
       "id": 1761791164254,
       "title": "EaseUS",
       "url": "https://www.easeus.com/",
-      "description": "数据管理、恢复工具。",
-      "category": "数据工具",
-      "tags": [],
+      "description": "数据管理、恢复工具",
+      "category": "工具-IT工具-数据工具",
+      "tags": [
+        "工具-IT工具-数据工具"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T02:26:04.254Z",
-      "updatedAt": "2025-10-30T02:26:04.254Z"
+      "updatedAt": "2025-10-30T02:26:04.254Z",
+      "categoryPath": "工具-IT工具-数据工具",
+      "updated_at": "2025-11-20T06:40:01.125Z"
     },
     {
       "id": 1761791124354,
       "title": "眺览",
       "url": "https://tillglance.com/",
-      "description": "通过研究人眼的阅读注意力机制与扫视──凝视转换过程，让引擎预判眼跳凝视位置，我们将此技术称为眺览。在引擎的标注下，读者就节约了寻找下一次眼跳位置的时间。在同样阅读量与理解程度下，经验读者可平均减少21%阅读时间。",
-      "category": "应用工具",
-      "tags": [],
+      "description": "让引擎预判眼跳凝视位置并标注",
+      "category": "工具-IT工具-应用工具",
+      "tags": [
+        "工具-IT工具-应用工具"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T02:25:24.354Z",
-      "updatedAt": "2025-10-30T02:25:24.354Z"
+      "updatedAt": "2025-10-30T02:25:24.354Z",
+      "categoryPath": "工具-IT工具-应用工具",
+      "updated_at": "2025-11-20T06:39:53.226Z"
     },
     {
       "id": 1761791051590,
@@ -1834,12 +1948,16 @@
       "id": 1761790899767,
       "title": "手机号注册信息查询",
       "url": "https://www.reg007.com/",
-      "description": "可一键查询手机号注册过哪些网站。基于其实现方式褒贬不一，结果仅供参考，注意个人隐私。",
-      "category": "应用工具",
-      "tags": [],
+      "description": "可一键查询手机号注册过哪些网站。基于其实现方式褒贬不一，结果仅供参考，注意个人隐私！",
+      "category": "工具-IT工具-应用工具",
+      "tags": [
+        "工具-IT工具-应用工具"
+      ],
       "level": 1,
       "createdAt": "2025-10-30T02:21:39.767Z",
-      "updatedAt": "2025-10-30T02:21:39.767Z"
+      "updatedAt": "2025-10-30T02:21:39.767Z",
+      "categoryPath": "工具-IT工具-应用工具",
+      "updated_at": "2025-11-20T06:40:08.510Z"
     },
     {
       "id": 1761789437373,
@@ -1868,11 +1986,15 @@
       "title": "digiKam",
       "url": "https://www.digikam.org/",
       "description": "一款开源数码照片管理应用程序，可在 Linux、Windows 和 macOS 上运行。它提供了一套全面的工具，用于导入、管理、编辑和共享照片、原始文件和视频。",
-      "category": "图片",
-      "tags": [],
+      "category": "工具-图片",
+      "tags": [
+        "工具-图片"
+      ],
       "level": 2,
       "createdAt": "2025-10-30T01:53:44.532Z",
-      "updatedAt": "2025-10-30T01:53:54.747Z"
+      "updatedAt": "2025-10-30T01:53:54.747Z",
+      "categoryPath": "工具-图片",
+      "updated_at": "2025-11-20T06:40:14.153Z"
     },
     {
       "id": 1761788997750,
@@ -1922,12 +2044,16 @@
       "id": 1761787446666,
       "title": "Python",
       "url": "https://www.python.org/",
-      "description": "备用：https://www.python.org/?spm=5176.28103460.0.0.b9a5451eZvnUr8",
-      "category": "编程",
-      "tags": [],
+      "description": "编程网站。备用：https://www.python.org/?spm=5176.28103460.0.0.b9a5451eZvnUr8",
+      "category": "工具-IT工具-编程",
+      "tags": [
+        "工具-IT工具-编程"
+      ],
       "level": 3,
       "createdAt": "2025-10-30T01:24:06.666Z",
-      "updatedAt": "2025-10-30T01:24:06.666Z"
+      "updatedAt": "2025-10-30T01:24:06.666Z",
+      "categoryPath": "工具-IT工具-编程",
+      "updated_at": "2025-11-20T06:42:12.366Z"
     },
     {
       "id": 1761787195905,
@@ -2451,11 +2577,15 @@
       "title": "扣子",
       "url": "https://www.coze.cn/",
       "description": "",
-      "category": "AI",
-      "tags": [],
-      "level": 2,
+      "category": "工具-AI",
+      "tags": [
+        "工具-AI"
+      ],
+      "level": 1,
       "createdAt": "2025-10-29T02:34:03.250Z",
-      "updatedAt": "2025-10-29T02:34:03.250Z"
+      "updatedAt": "2025-10-29T02:34:03.250Z",
+      "categoryPath": "工具-AI",
+      "updated_at": "2025-11-20T06:47:41.826Z"
     },
     {
       "id": 1761646974462,
@@ -3287,7 +3417,7 @@
       "title": "流行出版物搜索",
       "url": "https://nashnw.myqnapcloud.com:8083/",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 1,
       "createdAt": "2025-10-28T09:32:10.253Z",
@@ -3298,7 +3428,7 @@
       "title": "鸠摩搜索",
       "url": "https://www.jiumodiary.com/",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T09:31:36.129Z",
@@ -3309,7 +3439,7 @@
       "title": "TheFuture电子书搜索",
       "url": "https://bks.thefuture.top/",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T09:31:23.926Z",
@@ -3353,7 +3483,7 @@
       "title": "bookget 数字古籍图书下载工具",
       "url": "https://github.com/deweizhu/bookget?tab=readme-ov-file",
       "description": "",
-      "category": "图书资源",
+      "category": "下载资源",
       "tags": [],
       "level": 2,
       "createdAt": "2025-10-28T09:29:56.176Z",
@@ -5605,30 +5735,157 @@
       "title": "MiniMax",
       "url": "https://www.minimaxi.com/",
       "description": "",
-      "category": "工具 > AI",
+      "category": "AI",
       "categoryPath": "工具 > AI",
       "level": 2,
       "created_at": "2025-11-19T14:48:25.274Z",
       "tags": [
-        "工具 > AI",
-        "音频工具"
+        "工具 > AI"
       ],
-      "id": "site_1763563705274_wbmpw2oa2"
+      "id": "site_1763563705274_wbmpw2oa2",
+      "updated_at": "2025-11-20T06:07:11.832Z"
     },
     {
       "title": "画本妖鸡",
       "url": "https://www.huabenyaoji.com/#/",
       "description": "多人有声剧文本处理协作系统",
-      "category": "音频工具",
-      "categoryPath": "音频工具",
+      "category": "音声工具",
+      "categoryPath": "工具 > 音声 > 音声工具",
       "level": 2,
       "created_at": "2025-11-19T14:49:44.172Z",
       "tags": [
-        "音频工具"
+        "工具 > 音声 > 音声工具"
       ],
-      "id": "site_1763563784172_nakbjj2j8"
+      "id": "site_1763563784172_nakbjj2j8",
+      "updated_at": "2025-11-20T06:07:14.830Z"
+    },
+    {
+      "title": "中国国家大剧院",
+      "url": "https://www.chncpa.org/",
+      "description": "",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:45:28.014Z",
+      "tags": [
+        "工具 > 音声 > 音声资源",
+        "音声资源"
+      ],
+      "id": "site_1763617528014_4x3d7lx5r"
+    },
+    {
+      "title": "淘声网",
+      "url": "https://www.tosound.com/",
+      "description": "声音素材、游戏音效、影视配乐、实地录音、音乐样本、节奏音源等声音资源库。",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:45:58.341Z",
+      "tags": [
+        "工具 > 音声 > 音声资源",
+        "音声资源"
+      ],
+      "id": "site_1763617558341_7yuyociq2"
+    },
+    {
+      "title": "古典音乐",
+      "url": "https://www.ncpa-classic.com/index.shtml",
+      "description": "中国国家大剧院子频道",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:46:37.087Z",
+      "tags": [
+        "工具 > 音声 > 音声资源",
+        "音声资源"
+      ],
+      "id": "site_1763617597087_eyf7ijcmj"
+    },
+    {
+      "title": "一百首古典音乐入门",
+      "url": "https://ncpa-classic.cntv.cn/special/gdyysx/top100/index.shtml",
+      "description": "中国国家大剧院古典音乐子频道",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:47:17.821Z",
+      "tags": [
+        "工具 > 音声 > 音声资源",
+        "音声资源"
+      ],
+      "id": "site_1763617637821_f75y20l0i"
+    },
+    {
+      "title": "音兔无损",
+      "url": "https://www.ytws.net/",
+      "description": "高品质无损音乐下载",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:47:36.779Z",
+      "tags": [
+        "工具 > 音声 > 音声资源",
+        "音声资源"
+      ],
+      "id": "site_1763617656779_nsbc1bmyw"
+    },
+    {
+      "title": "库克数字音乐馆",
+      "url": "https://share.zjlib.cn/sso/login/custom/zj-library2?",
+      "description": "浙江图书馆入口，需要读者证登录。",
+      "category": "音声资源",
+      "categoryPath": "工具 > 音声 > 音声资源",
+      "level": 2,
+      "created_at": "2025-11-20T05:48:26.267Z",
+      "tags": [
+        "工具 > 音声 > 音声资源"
+      ],
+      "id": "site_1763617706267_wtnca7kvp",
+      "updated_at": "2025-11-20T06:05:28.293Z"
+    },
+    {
+      "title": "布里斯托大学中国旧照片",
+      "url": "https://hpcbristol.net/",
+      "description": "国外私人手中的大量现代中国图像中定位、数字化、存档和在线发布照片。",
+      "category": "中国",
+      "categoryPath": "图像 > 中国",
+      "level": 2,
+      "created_at": "2025-11-20T06:00:46.754Z",
+      "tags": [
+        "图像 > 中国",
+        "中国"
+      ],
+      "id": "site_1763618446754_vsp46c5sw"
+    },
+    {
+      "title": "中国大百科全书（第三版 网络版）",
+      "url": "https://www.zgbk.com/ecph/subject?SiteID=1&ID=44889",
+      "description": "涵盖了文化、文学、科学、教育、历史、社会、经济、艺术等多个领域，中国大百科全书出版社推出的网络版《中国百科全书》。",
+      "category": "综合百科",
+      "categoryPath": "文本 > 在线百科 > 综合百科",
+      "level": 2,
+      "created_at": "2025-11-20T06:02:05.980Z",
+      "tags": [
+        "文本 > 在线百科 > 综合百科",
+        "综合百科"
+      ],
+      "id": "site_1763618525980_l9mwfpshw"
+    },
+    {
+      "title": "AQ健康管家",
+      "url": "https://www.antaq.com/",
+      "description": "阿里推出的医学咨询AI，可解答医学问题 、解读报告、检索文献。",
+      "category": "AI",
+      "categoryPath": "工具 > AI",
+      "level": 2,
+      "created_at": "2025-11-20T06:46:21.299Z",
+      "tags": [
+        "工具 > AI"
+      ],
+      "id": "site_1763621181300_39rny7bxc",
+      "updated_at": "2025-11-20T06:47:21.908Z"
     }
   ],
-  "exportDate": "2025-11-19T14:50:01.999Z",
+  "exportDate": "2025-11-20T06:55:22.945Z",
   "version": "1.0"
 }

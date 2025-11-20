@@ -1,20 +1,20 @@
 /* CSS变量定义 - 优化对比度的黑色和古铜色中国风赛博科技风格 */
 :root {
     /* 主色调 - 优化对比度版本 */
-    --primary-color: #1E1E1E; /* 稍微调亮的主背景，提高可读性 */
-    --secondary-color: #2D2D2D; /* 稍微调亮的次要背景色 */
-    --card-background: #282828; /* 稍微调亮的卡片背景，更好地衬托内容 */
+    --primary-color: #2b2b2a; /* 稍微调亮的主背景，提高可读性 */
+    --secondary-color: #343331; /* 稍微调亮的次要背景色 */
+    --card-background: #2e2e31; /* 更浅的卡片背景，提升视觉清晰度和突出度 */
     
     /* 古铜色调 - 保持原有风格 */
-    --bronze-light: #D4A76A; /* 亮古铜色，主要强调色 */
+    --bronze-light: #d6ae5ee8; /* 亮古铜色，主要强调色 */
     --bronze-medium: #A87C45; /* 中古铜色 */
     --bronze-dark: #8B5A2B; /* 深古铜色 */
     --bronze-hover: #E6B473; /* 悬停时的亮古铜色 */
     
     /* 文本颜色 - 优化对比度 */
     --text-primary: #FFFFFF; /* 主文本改为纯白色，提高与深色背景的对比度 */
-    --text-secondary: #CCCCCC; /* 次要文本调亮，更易阅读 */
-    --text-muted: #999999; /* 弱化文本也适当调亮 */
+    --text-secondary: #dad7c1; /* 次要文本调亮，更易阅读 */
+    --text-muted: #9e9a7c; /* 弱化文本也适当调亮 */
     
     /* 边框和阴影 - 增加可见度 */
     --border-color: #404040; /* 边框颜色加深，提高可见度 */
@@ -23,7 +23,7 @@
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
     
     /* 圆角 */
-    --border-radius: 8px;
+    --border-radius: 6px;
     --border-radius-sm: 4px;
     --border-radius-lg: 12px;
     
@@ -155,7 +155,8 @@ body {
     }
 }
 
-.sidebar::before {
+/* 已删除侧边栏顶部的边框线 */
+/* .sidebar::before {
     content: '';
     position: absolute;
     top: 0;
@@ -163,7 +164,7 @@ body {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, transparent, var(--bronze-light), transparent);
-}
+} */
 
 .sidebar-header {
     padding: var(--spacing-sm) var(--spacing-lg); /* 减小上下padding */
@@ -783,7 +784,7 @@ body {
 /* 网站描述样式 - 使用标准CSS属性提高兼容性 */
 .site-description {
     font-size: 13px;
-    color: var(--text-secondary);
+    color: #E6E6E6; /* 更浅更白的颜色，突出显示，便于阅读 */
     line-height: 1.5;
     margin-bottom: calc(var(--spacing-sm) / 2);
     flex: 1;
@@ -903,12 +904,58 @@ body {
     min-height: 80px;
 }
 
-/* 按钮组样式 */
+/* 模态框操作按钮 */
 .modal-actions {
     display: flex;
     justify-content: flex-end;
     gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
+}
+
+/* 网站详情项样式 */
+.detail-item {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.detail-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--bronze-light);
+    line-height: 1.4;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.detail-item a {
+    color: var(--bronze-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.detail-item a:hover {
+    color: var(--bronze-hover);
+    text-decoration: underline;
 }
 
 .btn-primary, .btn-secondary {
