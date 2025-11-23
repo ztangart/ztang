@@ -34,7 +34,7 @@ const categoryHierarchy = [
     {
         name: '文本',
         children: [
-            { name: '在线百科', children: [{ name: '综合百科' }, { name: '历史' }, { name: '艺术史' }] },
+            { name: '在线文本', children: [{ name: '百科' }, { name: '历史' }, { name: '艺术' }, { name: '宗教' }] },
             { name: '中国古籍' },
             { name: '外国古籍' },
             { name: '专题古籍' },
@@ -51,9 +51,8 @@ const categoryHierarchy = [
                 children: [
                     { name: '图书馆' },
                     { name: '图书信息' },
-                    { name: '出版社' },
-                    { name: '宗教' },
-                    { name: '图书资源' }
+                    { name: '图书资源' },
+                    { name: '图书出版社' }
                 ]
             }
         ]
@@ -169,7 +168,20 @@ async function loadData() {
     try {
         const response = await fetch('data.json');
         const data = await response.json();
-        AppState.allSites = data.sites || [];
+        
+        // 处理数据，合并category和categoryPath字段为categoryPath
+        const processedSites = (data.sites || []).map(site => {
+            // 如果存在categoryPath字段，使用它；如果不存在但存在category字段，使用category字段
+            // 如果两个字段都存在，优先使用categoryPath（为了兼容旧数据）
+            return {
+                ...site,
+                // 确保只有categoryPath字段
+                categoryPath: site.categoryPath || site.category,
+                category: undefined // 删除重复的category字段以减少内存使用
+            };
+        });
+        
+        AppState.allSites = processedSites;
         
         // 应用默认筛选和排序（按时间从新到旧）
         applyFiltersAndSort();
@@ -506,24 +518,24 @@ function initCategories() {
     const textSubCategories = document.createElement('ul');
     textSubCategories.className = 'category-submenu';
     
-    // 在线百科子菜单 - 简化为两层结构
+    // 在线文本子菜单 - 简化为两层结构
     const encyclopediaLi = document.createElement('li');
     const encyclopediaHeader = document.createElement('a');
     encyclopediaHeader.href = '#';
     encyclopediaHeader.className = 'category-link category-header has-submenu';
-    encyclopediaHeader.dataset.category = '在线百科';
-    encyclopediaHeader.textContent = '在线百科';
+    encyclopediaHeader.dataset.category = '在线文本';
+    encyclopediaHeader.textContent = '在线文本';
     const encyclopediaArrow = document.createElement('span');
     encyclopediaArrow.className = 'submenu-arrow';
     encyclopediaArrow.textContent = '›';
     encyclopediaHeader.appendChild(encyclopediaArrow);
     encyclopediaLi.appendChild(encyclopediaHeader);
     
-    // 在线百科的子菜单
+    // 在线文本的子菜单
     const encyclopediaSubmenu = document.createElement('ul');
     encyclopediaSubmenu.className = 'category-submenu';
     
-    const encyclopediaSubItems = ['综合百科', '历史', '艺术史'];
+    const encyclopediaSubItems = ['百科', '历史', '艺术', '宗教'];
     encyclopediaSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -602,7 +614,7 @@ function initCategories() {
     const bookSubmenu = document.createElement('ul');
     bookSubmenu.className = 'category-submenu';
     
-    const bookSubItems = ['图书馆', '图书信息', '出版社', '宗教', '图书资源'];
+    const bookSubItems = ['图书馆', '图书信息', '图书资源', '图书出版社'];
     bookSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -655,11 +667,16 @@ function initCategories() {
     
     // 欧洲分类 - 带子菜单
     const europeLi = document.createElement('li');
+    europeLi.className = 'has-submenu'; // 添加标识类
     const europeHeader = document.createElement('a');
     europeHeader.href = '#';
-    europeHeader.className = 'category-link category-header';
+    europeHeader.className = 'category-link category-header has-submenu';
     europeHeader.dataset.category = '欧洲';
     europeHeader.textContent = '欧洲';
+    const europeArrow = document.createElement('span');
+    europeArrow.className = 'submenu-arrow';
+    europeArrow.textContent = '›';
+    europeHeader.appendChild(europeArrow);
     europeLi.appendChild(europeHeader);
     
     // 欧洲的子菜单
@@ -1156,9 +1173,15 @@ async function refreshData() {
 // 导出数据功能
 function exportData() {
     try {
+        // 处理站点数据，移除category字段
+        const processedSites = AppState.allSites.map(site => {
+            const { category, ...rest } = site; // 使用解构赋值移除category字段
+            return rest;
+        });
+        
         // 创建数据对象
         const exportData = {
-            sites: AppState.allSites,
+            sites: processedSites,
             exportDate: new Date().toISOString(),
             version: '1.0'
         };
@@ -1596,8 +1619,7 @@ function showAddDataModal() {
                 title: title, // 使用title而非name，与现有数据保持一致
                 url: url,
                 description: description,
-                category: category.includes(' > ') ? category.split(' > ').pop() : category, // 只使用最后一级作为category
-                categoryPath: category, // 分类路径（完整路径）
+                categoryPath: category, // 只使用完整路径作为categoryPath
                 level: level, // 使用数字类型
                 created_at: new Date().toISOString(), // 使用created_at而非created，与applyFiltersAndSort函数保持一致
                 tags: tags, // 添加tags以支持多分类匹配
@@ -2386,12 +2408,14 @@ function editSite(site) {
                 title: title,
                 url: url,
                 description: description,
-                categoryPath: category, // 使用完整路径作为categoryPath
-                category: category.includes(' > ') ? category.split(' > ').pop() : category, // 只使用最后一级作为category
+                categoryPath: category, // 只使用完整路径作为categoryPath
                 level: getNumLevel(levelValue),
                 updated_at: new Date().toISOString(),
                 tags: [category] // 添加完整分类路径作为标签以支持筛选
             };
+            
+            // 删除可能存在的category字段，确保数据一致性
+            delete updatedSite.category;
             
             // 找到并更新AppState中的网站
             const index = AppState.allSites.findIndex(s => (s.id && s.id === site.id) || s.title === site.title);
@@ -2539,40 +2563,77 @@ function applyFiltersAndSort() {
         
         if (newCategories.includes(currentCategory)) {
             // 对于新添加的菜单，需要特殊处理分类匹配
-            // 尝试多种匹配方式：完全匹配category、部分匹配category、匹配tags
-            results = results.filter(site => 
-                site.category === currentCategory || 
-                site.category?.includes(currentCategory) || 
-                site.tags?.includes(currentCategory) ||
+            // 使用categoryPath字段进行匹配，因为数据加载时已经将category合并到categoryPath
+            results = results.filter(site => {
+                // 空值检查
+                if (!site) return false;
+                
+                // 检查tags字段
+                const hasMatchingTag = site.tags && site.tags.includes(currentCategory);
+                
+                // 检查categoryPath字段
+                const hasMatchingCategoryPath = site.categoryPath && 
+                                              (site.categoryPath === currentCategory || 
+                                               site.categoryPath.includes(currentCategory) ||
+                                               site.categoryPath.includes(` > ${currentCategory}`) ||
+                                               site.categoryPath.includes(`${currentCategory} > `));
+                
                 // 针对特定分类的特殊处理
-                (currentCategory === 'AI' && (site.category?.includes('AI') || site.tags?.includes('AI'))) ||
-                (currentCategory === '办公文档' && (site.category?.includes('文档') || site.category?.includes('办公'))) ||
-                (currentCategory === '图片' && (site.category?.includes('图片') || site.category?.includes('图像'))) ||
-                (currentCategory === '游戏' && site.category?.includes('游戏')) ||
-                (currentCategory === '设计' && site.category?.includes('设计'))
-            );
+                const hasSpecialMatching = 
+                    (currentCategory === 'AI' && (site.categoryPath?.includes('AI') || site.tags?.includes('AI'))) ||
+                    (currentCategory === '办公文档' && (site.categoryPath?.includes('文档') || site.categoryPath?.includes('办公'))) ||
+                    (currentCategory === '图片' && (site.categoryPath?.includes('图片') || site.categoryPath?.includes('图像'))) ||
+                    (currentCategory === '游戏' && (site.categoryPath?.includes('游戏'))) ||
+                    (currentCategory === '设计' && (site.categoryPath?.includes('设计')));
+                
+                return hasMatchingTag || hasMatchingCategoryPath || hasSpecialMatching;
+            });
         } else {
-            // 原有的分类匹配逻辑
-            results = results.filter(site => site.category === currentCategory || site.tags?.includes(currentCategory));
+            // 优化的分类匹配逻辑，只使用categoryPath字段
+            results = results.filter(site => {
+                if (!site) return false;
+                return site.tags?.includes(currentCategory) ||
+                       site.categoryPath === currentCategory ||
+                       (site.categoryPath && (site.categoryPath.includes(currentCategory) ||
+                                            site.categoryPath.includes(` > ${currentCategory}`) ||
+                                            site.categoryPath.includes(`${currentCategory} > `)));
+            });
         }
     }
     
     // 应用搜索筛选
     if (currentSearchTerm) {
         const searchTerm = currentSearchTerm.toLowerCase().trim();
-        results = results.filter(site => 
-            site.title.toLowerCase().includes(searchTerm) ||
-            site.description.toLowerCase().includes(searchTerm) ||
-            (site.tags && site.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
-        );
+        results = results.filter(site => {
+            if (!site) return false;
+            return (site.title && site.title.toLowerCase().includes(searchTerm)) ||
+                   (site.description && site.description.toLowerCase().includes(searchTerm)) ||
+                   (site.categoryPath && site.categoryPath.toLowerCase().includes(searchTerm)) ||
+                   (site.tags && site.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+        });
     }
     
     // 应用排序
     const sortFunctions = {
-        name: (a, b) => a.title.localeCompare(b.title, 'zh-CN'),
-        created: (a, b) => new Date(b.created_at || b.createdAt) - new Date(a.created_at || a.createdAt),
-        level: (a, b) => (b.level || 0) - (a.level || 0)
+        name: (a, b) => {
+            const titleA = (a && a.title) || '';
+            const titleB = (b && b.title) || '';
+            return titleA.localeCompare(titleB, 'zh-CN');
+        },
+        created: (a, b) => {
+            const dateA = new Date((a && (a.created_at || a.createdAt)) || 0);
+            const dateB = new Date((b && (b.created_at || b.createdAt)) || 0);
+            return dateB - dateA;
+        },
+        level: (a, b) => {
+            const levelA = (a && a.level) || 0;
+            const levelB = (b && b.level) || 0;
+            return levelB - levelA;
+        }
     };
+    
+    // 过滤掉可能的null或undefined条目
+    results = results.filter(site => site != null);
     
     const sortFunc = sortFunctions[currentSort] || sortFunctions.created;
     results.sort(sortFunc);
