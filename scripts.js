@@ -1606,13 +1606,7 @@ function showAddDataModal() {
                 level = 3; // 其他
             }
             
-            // 创建tags数组，包含当前分类以支持子分类筛选
-            const tags = [category];
-            
-            // 如果当前AppState有具体分类，也加入到tags中以提高匹配率
-            if (AppState.currentCategory && AppState.currentCategory !== 'all' && AppState.currentCategory !== category) {
-                tags.push(AppState.currentCategory);
-            }
+            // 不再创建tags数组
             
             // 收集表单数据，确保与现有数据格式一致
             const newSite = {
@@ -1622,7 +1616,7 @@ function showAddDataModal() {
                 categoryPath: category, // 只使用完整路径作为categoryPath
                 level: level, // 使用数字类型
                 created_at: new Date().toISOString(), // 使用created_at而非created，与applyFiltersAndSort函数保持一致
-                tags: tags, // 添加tags以支持多分类匹配
+
                 // 自动生成ID
                 id: 'site_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
             };
@@ -2411,7 +2405,7 @@ function editSite(site) {
                 categoryPath: category, // 只使用完整路径作为categoryPath
                 level: getNumLevel(levelValue),
                 updated_at: new Date().toISOString(),
-                tags: [category] // 添加完整分类路径作为标签以支持筛选
+                // 删除tags字段
             };
             
             // 删除可能存在的category字段，确保数据一致性
@@ -2568,8 +2562,7 @@ function applyFiltersAndSort() {
                 // 空值检查
                 if (!site) return false;
                 
-                // 检查tags字段
-                const hasMatchingTag = site.tags && site.tags.includes(currentCategory);
+                // 不再检查tags字段
                 
                 // 检查categoryPath字段
                 const hasMatchingCategoryPath = site.categoryPath && 
@@ -2580,20 +2573,19 @@ function applyFiltersAndSort() {
                 
                 // 针对特定分类的特殊处理
                 const hasSpecialMatching = 
-                    (currentCategory === 'AI' && (site.categoryPath?.includes('AI') || site.tags?.includes('AI'))) ||
+                    (currentCategory === 'AI' && site.categoryPath?.includes('AI')) ||
                     (currentCategory === '办公文档' && (site.categoryPath?.includes('文档') || site.categoryPath?.includes('办公'))) ||
                     (currentCategory === '图片' && (site.categoryPath?.includes('图片') || site.categoryPath?.includes('图像'))) ||
                     (currentCategory === '游戏' && (site.categoryPath?.includes('游戏'))) ||
                     (currentCategory === '设计' && (site.categoryPath?.includes('设计')));
                 
-                return hasMatchingTag || hasMatchingCategoryPath || hasSpecialMatching;
+                return hasMatchingCategoryPath || hasSpecialMatching;
             });
         } else {
             // 优化的分类匹配逻辑，只使用categoryPath字段
             results = results.filter(site => {
                 if (!site) return false;
-                return site.tags?.includes(currentCategory) ||
-                       site.categoryPath === currentCategory ||
+                return site.categoryPath === currentCategory ||
                        (site.categoryPath && (site.categoryPath.includes(currentCategory) ||
                                             site.categoryPath.includes(` > ${currentCategory}`) ||
                                             site.categoryPath.includes(`${currentCategory} > `)));
@@ -2609,7 +2601,7 @@ function applyFiltersAndSort() {
             return (site.title && site.title.toLowerCase().includes(searchTerm)) ||
                    (site.description && site.description.toLowerCase().includes(searchTerm)) ||
                    (site.categoryPath && site.categoryPath.toLowerCase().includes(searchTerm)) ||
-                   (site.tags && site.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+                   false;
         });
     }
     
