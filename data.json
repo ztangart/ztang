@@ -5188,8 +5188,112 @@
       "created_at": "2025-11-20T06:46:21.299Z",
       "id": "site_1763621181300_39rny7bxc",
       "updated_at": "2025-11-20T06:47:21.908Z"
+    },
+    {
+      "title": "东亚语言数据中心",
+      "url": "http://minoritylanguages.cn/",
+      "description": "收集了1100个汉语方言点,302个民族语语言点，拥有100G左右的东亚语言数据库音频,5.5G/274余万条记录的汉语方言汉字音数据库。",
+      "categoryPath": "工具 > 字典翻译 > 中文",
+      "level": 2,
+      "created_at": "2025-11-23T12:19:33.339Z",
+      "tags": [
+        "工具 > 字典翻译 > 中文",
+        "中文"
+      ],
+      "id": "site_1763900373339_qfgzhnzd9"
+    },
+    {
+      "title": "灵光",
+      "url": "https://www.lingguang.com/chat",
+      "description": "阿里旗下专注轻应用的AI",
+      "categoryPath": "工具 > AI",
+      "level": 2,
+      "created_at": "2025-11-23T12:20:21.674Z",
+      "tags": [
+        "工具 > AI",
+        "AI"
+      ],
+      "id": "site_1763900421674_d8kxv7wvq"
+    },
+    {
+      "title": "哩布哩布AI",
+      "url": "https://www.liblib.art/inspiration",
+      "description": "图片、视频创作AI",
+      "categoryPath": "工具 > 视频 > 视频工具",
+      "level": 2,
+      "created_at": "2025-11-23T12:21:06.052Z",
+      "tags": [
+        "工具 > 视频 > 视频工具"
+      ],
+      "id": "site_1763900466052_7h48516eu",
+      "updated_at": "2025-11-23T12:21:56.189Z"
+    },
+    {
+      "title": "即梦AI",
+      "url": "https://jimeng.jianying.com/ai-tool/home/",
+      "description": "抖音旗下图片、视频创作工具",
+      "categoryPath": "工具 > 视频 > 视频工具",
+      "level": 2,
+      "created_at": "2025-11-23T12:21:51.727Z",
+      "tags": [
+        "工具 > 视频 > 视频工具",
+        "视频工具"
+      ],
+      "id": "site_1763900511727_pfe310l6s"
+    },
+    {
+      "title": "玻尔AI",
+      "url": "https://www.bohrium.com/",
+      "description": "科学文献",
+      "categoryPath": "工具 > 知识管理 > 论文相关",
+      "level": 2,
+      "created_at": "2025-11-23T12:22:32.580Z",
+      "tags": [
+        "工具 > 知识管理 > 论文相关",
+        "论文相关"
+      ],
+      "id": "site_1763900552580_kmd35d34g"
+    },
+    {
+      "title": "Cloudflare",
+      "url": "https://www.cloudflare-cn.com/",
+      "description": "全球连通云平台，一站式网络、安全和开发人员服务平台。",
+      "categoryPath": "工具 > IT工具 > 数据工具",
+      "level": 2,
+      "created_at": "2025-11-23T12:24:18.234Z",
+      "tags": [
+        "工具 > IT工具 > 数据工具",
+        "数据工具"
+      ],
+      "id": "site_1763900658234_69i91dxar"
+    },
+    {
+      "title": "Gemini",
+      "url": "https://gemini.google.com/?hl=zh-cn",
+      "description": "谷歌旗下AI",
+      "categoryPath": "工具 > AI",
+      "level": 2,
+      "created_at": "2025-11-23T12:25:26.811Z",
+      "tags": [
+        "工具 > AI",
+        "AI"
+      ],
+      "id": "site_1763900726811_7pm3wiwgx"
+    },
+    {
+      "title": "Grok",
+      "url": "https://grok.online/zh/",
+      "description": "马斯克旗下AI",
+      "categoryPath": "工具 > AI",
+      "level": 2,
+      "created_at": "2025-11-23T12:26:51.900Z",
+      "tags": [
+        "工具 > AI",
+        "AI"
+      ],
+      "id": "site_1763900811900_eysa1naqd"
     }
   ],
-  "exportDate": "2025-11-22T10:36:45.336Z",
+  "exportDate": "2025-11-23T12:30:35.848Z",
   "version": "1.0"
 }
