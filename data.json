@@ -60,7 +60,7 @@
       "level": 2,
       "createdAt": "2025-11-14T02:47:35.209Z",
       "updatedAt": "2025-11-14T02:47:35.209Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1763088314644,
@@ -164,7 +164,7 @@
       "level": 1,
       "createdAt": "2025-11-08T01:51:07.911Z",
       "updatedAt": "2025-11-08T01:51:25.546Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761794759732,
@@ -184,7 +184,7 @@
       "level": 1,
       "createdAt": "2025-11-08T01:49:50.386Z",
       "updatedAt": "2025-11-08T01:49:50.386Z",
-      "categoryPath": "资讯-文化",
+      "categoryPath": "资讯-文化资讯",
       "updated_at": "2025-11-20T06:17:18.595Z"
     },
     {
@@ -195,7 +195,7 @@
       "level": 2,
       "createdAt": "2025-11-08T01:49:20.222Z",
       "updatedAt": "2025-11-08T01:49:20.222Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761795729600,
@@ -205,7 +205,7 @@
       "level": 2,
       "createdAt": "2025-10-30T03:42:09.600Z",
       "updatedAt": "2025-11-08T01:48:02.989Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1762566392770,
@@ -1308,7 +1308,7 @@
       "level": 2,
       "createdAt": "2025-10-30T04:01:10.666Z",
       "updatedAt": "2025-10-30T04:01:10.666Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761796746564,
@@ -1593,7 +1593,7 @@
       "level": 2,
       "createdAt": "2025-10-30T02:35:17.106Z",
       "updatedAt": "2025-10-30T02:35:29.167Z",
-      "categoryPath": "资讯-副业",
+      "categoryPath": "资讯-副业资讯",
       "updated_at": "2025-11-20T06:38:18.008Z"
     },
     {
@@ -1604,7 +1604,7 @@
       "level": 2,
       "createdAt": "2025-10-30T02:34:52.949Z",
       "updatedAt": "2025-10-30T02:34:52.949Z",
-      "categoryPath": "资讯-副业",
+      "categoryPath": "资讯-副业资讯",
       "updated_at": "2025-11-20T06:38:31.076Z"
     },
     {
@@ -1615,7 +1615,7 @@
       "level": 2,
       "createdAt": "2025-10-30T02:34:15.373Z",
       "updatedAt": "2025-10-30T02:34:15.373Z",
-      "categoryPath": "资讯-副业"
+      "categoryPath": "资讯-副业资讯"
     },
     {
       "id": 1761791605485,
@@ -1625,7 +1625,7 @@
       "level": 1,
       "createdAt": "2025-10-30T02:33:25.485Z",
       "updatedAt": "2025-10-30T02:33:25.485Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761791296343,
@@ -2240,7 +2240,7 @@
       "level": 1,
       "createdAt": "2025-10-29T02:35:53.784Z",
       "updatedAt": "2025-10-29T02:35:53.784Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761705285369,
@@ -2461,7 +2461,7 @@
       "level": 2,
       "createdAt": "2025-10-28T10:07:38.797Z",
       "updatedAt": "2025-10-28T10:07:38.797Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761645974520,
@@ -2501,7 +2501,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:53:33.367Z",
       "updatedAt": "2025-10-28T09:53:33.367Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761645204269,
@@ -2511,7 +2511,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:53:24.269Z",
       "updatedAt": "2025-10-28T09:53:24.269Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761645193440,
@@ -2521,7 +2521,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:53:13.440Z",
       "updatedAt": "2025-10-28T09:53:13.440Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761645181859,
@@ -2531,7 +2531,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:53:01.859Z",
       "updatedAt": "2025-10-28T09:53:01.859Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761645171299,
@@ -2541,7 +2541,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:52:51.299Z",
       "updatedAt": "2025-10-28T09:52:51.299Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761645157477,
@@ -2551,7 +2551,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:52:37.477Z",
       "updatedAt": "2025-10-28T09:52:37.477Z",
-      "categoryPath": "资讯-教育"
+      "categoryPath": "资讯-教育资讯"
     },
     {
       "id": 1761644554497,
@@ -2601,7 +2601,7 @@
       "level": 1,
       "createdAt": "2025-10-28T09:41:17.391Z",
       "updatedAt": "2025-10-28T09:41:17.391Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644464183,
@@ -2611,7 +2611,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:41:04.183Z",
       "updatedAt": "2025-10-28T09:41:04.183Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644455342,
@@ -2621,7 +2621,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:55.342Z",
       "updatedAt": "2025-10-28T09:40:55.342Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644445351,
@@ -2631,7 +2631,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:45.351Z",
       "updatedAt": "2025-10-28T09:40:45.351Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644437416,
@@ -2641,7 +2641,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:37.416Z",
       "updatedAt": "2025-10-28T09:40:37.416Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644428911,
@@ -2651,7 +2651,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:28.911Z",
       "updatedAt": "2025-10-28T09:40:28.911Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644420429,
@@ -2661,7 +2661,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:20.429Z",
       "updatedAt": "2025-10-28T09:40:20.429Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644411541,
@@ -2671,7 +2671,7 @@
       "level": 2,
       "createdAt": "2025-10-28T09:40:11.541Z",
       "updatedAt": "2025-10-28T09:40:11.541Z",
-      "categoryPath": "资讯-文化"
+      "categoryPath": "资讯-文化资讯"
     },
     {
       "id": 1761644384152,
@@ -4441,7 +4441,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:13:21.390Z",
       "updatedAt": "2025-10-28T08:13:21.390Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761639085577,
@@ -4461,7 +4461,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:11:16.198Z",
       "updatedAt": "2025-10-28T08:11:16.198Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761639065938,
@@ -4471,7 +4471,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:11:05.938Z",
       "updatedAt": "2025-10-28T08:11:05.938Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761639056893,
@@ -4481,7 +4481,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:10:56.893Z",
       "updatedAt": "2025-10-28T08:10:56.893Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761639034769,
@@ -4491,7 +4491,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:10:34.769Z",
       "updatedAt": "2025-10-28T08:10:34.769Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761639021172,
@@ -4511,7 +4511,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:10:00.217Z",
       "updatedAt": "2025-10-28T08:10:00.217Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638981746,
@@ -4521,7 +4521,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:09:41.746Z",
       "updatedAt": "2025-10-28T08:09:41.746Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638961764,
@@ -4531,7 +4531,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:09:21.764Z",
       "updatedAt": "2025-10-28T08:09:21.764Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638939452,
@@ -4541,7 +4541,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:08:59.452Z",
       "updatedAt": "2025-10-28T08:08:59.452Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638892781,
@@ -4551,7 +4551,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:08:12.780Z",
       "updatedAt": "2025-10-28T08:08:12.780Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638733574,
@@ -4561,7 +4561,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:05:33.574Z",
       "updatedAt": "2025-10-28T08:05:33.574Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638724212,
@@ -4571,7 +4571,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:05:24.212Z",
       "updatedAt": "2025-10-28T08:05:24.212Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638714739,
@@ -4581,7 +4581,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:05:14.739Z",
       "updatedAt": "2025-10-28T08:05:14.739Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638702454,
@@ -4591,7 +4591,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:05:02.454Z",
       "updatedAt": "2025-10-28T08:05:02.454Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638689571,
@@ -4601,7 +4601,7 @@
       "level": 2,
       "createdAt": "2025-10-28T08:04:49.571Z",
       "updatedAt": "2025-10-28T08:04:49.571Z",
-      "categoryPath": "资讯-艺术"
+      "categoryPath": "资讯-艺术资讯"
     },
     {
       "id": 1761638418455,

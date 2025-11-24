@@ -105,10 +105,10 @@ const categoryHierarchy = [
     {
         name: '资讯',
         children: [
-            { name: '艺术' },
-            { name: '文化' },
-            { name: '教育' },
-            { name: '副业' }
+            { name: '艺术资讯' },
+            { name: '文化资讯' },
+            { name: '教育资讯' },
+            { name: '副业资讯' }
         ]
     },
     {
@@ -992,7 +992,7 @@ function initCategories() {
     newsSubCategories.className = 'category-submenu news-sub-categories';
     
     // 资讯子分类
-    const newsSubItems = ['艺术', '文化', '教育', '副业'];
+    const newsSubItems = ['艺术资讯', '文化资讯', '教育资讯', '副业资讯'];
     newsSubItems.forEach(subItem => {
         const subLi = document.createElement('li');
         const subLink = document.createElement('a');
@@ -2577,7 +2577,9 @@ function applyFiltersAndSort() {
                     (currentCategory === '办公文档' && (site.categoryPath?.includes('文档') || site.categoryPath?.includes('办公'))) ||
                     (currentCategory === '图片' && (site.categoryPath?.includes('图片') || site.categoryPath?.includes('图像'))) ||
                     (currentCategory === '游戏' && (site.categoryPath?.includes('游戏'))) ||
-                    (currentCategory === '设计' && (site.categoryPath?.includes('设计')));
+                    (currentCategory === '设计' && (site.categoryPath?.includes('设计'))) ||
+                    // 确保图像-中国不加载文本-中国古籍的数据
+                    (currentCategory === '中国' && site.categoryPath?.includes('图像-中国') && !site.categoryPath?.includes('文本-中国古籍'));
                 
                 return hasMatchingCategoryPath || hasSpecialMatching;
             });
@@ -2585,10 +2587,23 @@ function applyFiltersAndSort() {
             // 优化的分类匹配逻辑，只使用categoryPath字段
             results = results.filter(site => {
                 if (!site) return false;
-                return site.categoryPath === currentCategory ||
-                       (site.categoryPath && (site.categoryPath.includes(currentCategory) ||
-                                            site.categoryPath.includes(` > ${currentCategory}`) ||
-                                            site.categoryPath.includes(`${currentCategory} > `)));
+                
+                // 确保图像-中国不加载文本-中国古籍的数据
+                if (currentCategory === '中国' && site.categoryPath?.includes('文本-中国古籍')) {
+                    return false;
+                }
+                
+                // 处理不同格式的分类路径分隔符（> 和 -）
+                const hasExactMatch = site.categoryPath === currentCategory;
+                const hasIncludedWithSpace = site.categoryPath && 
+                                          (site.categoryPath.includes(currentCategory) ||
+                                           site.categoryPath.includes(` > ${currentCategory}`) ||
+                                           site.categoryPath.includes(`${currentCategory} > `));
+                const hasIncludedWithDash = site.categoryPath && 
+                                          (site.categoryPath.includes(`-${currentCategory}`) ||
+                                           site.categoryPath.includes(`${currentCategory}-`));
+                
+                return hasExactMatch || hasIncludedWithSpace || hasIncludedWithDash;
             });
         }
     }
