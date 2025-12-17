@@ -5261,8 +5261,172 @@
       "level": 2,
       "created_at": "2025-11-23T12:26:51.900Z",
       "id": "site_1763900811900_eysa1naqd"
+    },
+    {
+      "title": "澳大利亚报刊数据库",
+      "url": "https://trove.nla.gov.au/",
+      "description": "",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-08T01:27:14.564Z",
+      "id": "site_1765157234564_gr52onasy"
+    },
+    {
+      "title": "澳门公共图书馆藏报刊数据库",
+      "url": "https://specialcollections.library.gov.mo/NPV/SearchByYear.aspx",
+      "description": "",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-08T01:27:33.927Z",
+      "id": "site_1765157253927_z6as7ejcv"
+    },
+    {
+      "title": "《香港旧报纸》数据库",
+      "url": "https://sls.hkpl.gov.hk/digital-collection/tc/collection_old-hk-newspapers.html",
+      "description": "",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-08T01:27:48.882Z",
+      "id": "site_1765157268882_m6yagq9z2"
+    },
+    {
+      "title": "新加坡华族文化中心",
+      "url": "https://singaporeccc.org.sg/zh-hans/",
+      "description": "",
+      "categoryPath": "文本 > 研究机构",
+      "level": 2,
+      "created_at": "2025-12-08T01:28:12.155Z",
+      "id": "site_1765157292155_yxxkohw16"
+    },
+    {
+      "title": "中国・アジア研究論文データベース",
+      "url": "https://spc.jst.go.jp/cad/homes",
+      "description": "收录了不少中国·亚洲相关的期刊上刊载的文章。不用注册，可以直接下载。",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-08T01:28:32.772Z",
+      "id": "site_1765157312772_gwm9uwfy1"
+    },
+    {
+      "title": "中国台湾人文及社会科学引文索引数据库",
+      "url": "https://tci.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi?o=dnclresource&tcihsspage=tcisearcharea&loadingjs=1&&cache=1764321476129",
+      "description": "",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-08T01:29:00.349Z",
+      "id": "site_1765157340349_uoeg7ebl8"
+    },
+    {
+      "title": "上海图书馆近代图书知识库",
+      "url": "https://jdts.library.sh.cn/categorySearch",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-08T01:29:15.072Z",
+      "id": "site_1765157355072_neg78inm1"
+    },
+    {
+      "title": "新加坡旧体诗库",
+      "url": "https://nus.edu.sg/nuslibraries/dsprojects/sg-jiutishi/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-08T01:29:44.233Z",
+      "id": "site_1765157384233_krzvr6qy4"
+    },
+    {
+      "title": "新加坡国立大学图书馆数字化收藏",
+      "url": "https://nus.edu.sg/nuslibraries/collections/special-collections",
+      "description": "",
+      "categoryPath": "文本 > 外国古籍",
+      "level": 2,
+      "created_at": "2025-12-08T01:30:17.038Z",
+      "id": "site_1765157417038_ty9pb9yal"
+    },
+    {
+      "title": "华人剪报资料库",
+      "url": "https://digital.lib.hkbu.edu.hk/newsclipping/index.php?language=sc",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-08T01:30:44.446Z",
+      "id": "site_1765157444446_n17u9q0zu"
+    },
+    {
+      "title": "中国家谱知识服务平台",
+      "url": "https://jiapu.library.sh.cn/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-08T01:31:04.609Z",
+      "id": "site_1765157464609_6hi7sigu2"
+    },
+    {
+      "title": "神户大学新闻记事文库",
+      "url": "https://da.lib.kobe-u.ac.jp/da/np/",
+      "description": "收录了明治末期至昭和45年的剪报资料",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-17T00:05:36.387Z",
+      "id": "site_1765929936387_pej9l33ji"
+    },
+    {
+      "title": "J-STAGE日文文献数据库",
+      "url": "https://www.jstage.jst.go.jp/browse/-char/en",
+      "description": "在日本迅速流通科学技术、人文社会科学方面的研究",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-17T00:06:07.004Z",
+      "id": "site_1765929967004_11kqhono4"
+    },
+    {
+      "title": "HathiTrust外文数据库",
+      "url": "https://www.hathitrust.org/",
+      "description": "已有数字化文献1700万余册，其中有2万余册中文图书可供免费浏览下载",
+      "categoryPath": "文本 > 图书 > 图书馆",
+      "level": 2,
+      "created_at": "2025-12-17T00:07:27.261Z",
+      "id": "site_1765930047261_d5ycz8mwt"
+    },
+    {
+      "title": "中国台湾博硕士论文加值系统",
+      "url": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/ccd=FnzXno/webmge?mode=basic",
+      "description": "中国台湾博硕士论文知识加值系统协助中国台湾地区的大学永久典藏，完善保存和永久免费使用博硕士学位论文电子全文",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-17T00:08:11.494Z",
+      "id": "site_1765930091494_oizpvw2oi",
+      "updated_at": "2025-12-17T00:08:32.772Z"
+    },
+    {
+      "title": "北京大学汉语史标注语料库",
+      "url": "https://ac.bnu.edu.cn/#/",
+      "description": "服务于汉语史研究的大型电脑语料库，其核心在于对从上古到近代的汉语文献进行分词、词性、句法等多层面标注，并利用现代信息技术实现深度数字化处理",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-17T00:09:14.231Z",
+      "id": "site_1765930154231_8jf04dsx2"
+    },
+    {
+      "title": "香港科技大学馆藏中国书籍",
+      "url": "https://library.hkust.edu.hk/",
+      "description": "",
+      "categoryPath": "文本 > 图书 > 图书馆",
+      "level": 2,
+      "created_at": "2025-12-17T00:09:42.783Z",
+      "id": "site_1765930182783_tnp0qaflr"
+    },
+    {
+      "title": "京都大学珍稀资料数字档案馆",
+      "url": "https://rmda.kulib.kyoto-u.ac.jp/en/collection",
+      "description": "",
+      "categoryPath": "文本 > 外国古籍",
+      "level": 2,
+      "created_at": "2025-12-17T00:10:08.486Z",
+      "id": "site_1765930208486_7w71s8xmv",
+      "updated_at": "2025-12-17T00:10:26.788Z"
     }
   ],
-  "exportDate": "2025-11-23T12:30:35.848Z",
+  "exportDate": "2025-12-17T00:11:19.026Z",
   "version": "1.0"
 }
