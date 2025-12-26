@@ -5425,8 +5425,71 @@
       "created_at": "2025-12-17T00:10:08.486Z",
       "id": "site_1765930208486_7w71s8xmv",
       "updated_at": "2025-12-17T00:10:26.788Z"
+    },
+    {
+      "title": "中国第二历史档案馆",
+      "url": "http://www.shac.net.cn/sy_59/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-26T02:58:39.084Z",
+      "id": "site_1766717919084_t9dpdzg73"
+    },
+    {
+      "title": "CHGiS系统：高精度的历史地理数据",
+      "url": "https://chgis.fas.harvard.edu/",
+      "description": "",
+      "categoryPath": "地图 > 历史地图",
+      "level": 2,
+      "created_at": "2025-12-26T02:59:32.514Z",
+      "id": "site_1766717972514_gu2vn7wjl"
+    },
+    {
+      "title": "全球汉籍影像开放集成系统",
+      "url": "https://guji.wenxianxue.cn/index",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-26T03:00:50.189Z",
+      "id": "site_1766718050189_qawerjwqt"
+    },
+    {
+      "title": "華人剪報資料庫",
+      "url": "https://digital.lib.hkbu.edu.hk/newsclipping/index.php",
+      "description": "",
+      "categoryPath": "文本 > 期刊杂志 > 平台",
+      "level": 2,
+      "created_at": "2025-12-26T03:01:11.512Z",
+      "id": "site_1766718071512_3tl6mxizf"
+    },
+    {
+      "title": "线装书文库",
+      "url": "https://xianzhuangshu.cn/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-26T03:01:24.744Z",
+      "id": "site_1766718084744_9vm8lgtxg"
+    },
+    {
+      "title": "看典古籍：一站式古籍数字化平台",
+      "url": "https://www.kandianguji.com/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-26T03:01:38.346Z",
+      "id": "site_1766718098346_83p2uycdf"
+    },
+    {
+      "title": "中国历代官员量化数据库 (CGED)",
+      "url": "https://searchjsl.leecampbellgroup.blog/",
+      "description": "",
+      "categoryPath": "文本 > 中国古籍",
+      "level": 2,
+      "created_at": "2025-12-26T03:01:49.454Z",
+      "id": "site_1766718109454_ul5mx6fkn"
     }
   ],
-  "exportDate": "2025-12-17T00:11:19.026Z",
+  "exportDate": "2025-12-26T03:01:53.144Z",
   "version": "1.0"
 }
